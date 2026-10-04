@@ -1,0 +1,2161 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Splice Console</title>
+<meta name="description" content="A console with two cartridge slots. Put two cartridges in and it weaves them into one new game, joining every beat with but or therefore.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111'/%3E%3Crect x='2' y='5' width='5' height='6' fill='%23fff'/%3E%3Crect x='9' y='5' width='5' height='6' fill='%23fff'/%3E%3C/svg%3E">
+</head><body>
+<style>
+/* IBM Plex Mono 400 and 600, subset to the characters this page uses and inlined so nothing loads from elsewhere. SIL OFL 1.1, licence in the repo under fonts/. */
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,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) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:600;font-display:swap;src:url(data:font/woff2;base64,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) format("woff2")}
+/* Layout: a Tinker-style technical bench. Stage (CRT + two-slot console) left, woven-story panel right, shelf of cartridges below. Line art, 1-2px rules, no fills beyond hatch. */
+:root{
+  --bg:#FFFFFF; --panel:#FFFFFF; --ink:#111111; --muted:#6E6E6E; --line:#D6D6D6; --rule:#111111;
+  --soft:#EFEFEF; --grid:#F2F2F2; --floor:#F7F7F7; --hatch:#9A9A9A; --glass:#0B0C0B; --bezel:#161616;
+  --rec:#D23A2A; --warn:#A8620A;
+  --ui:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  --code:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C0C0C; --panel:#0C0C0C; --ink:#F2F2F2; --muted:#9A9A9A; --line:#333333; --rule:#F2F2F2;
+    --soft:#222222; --grid:#151515; --floor:#121212; --hatch:#6A6A6A; --glass:#050505; --bezel:#000000;
+    --rec:#FF5A48; --warn:#F0A83C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C0C0C; --panel:#0C0C0C; --ink:#F2F2F2; --muted:#9A9A9A; --line:#333333; --rule:#F2F2F2;
+  --soft:#222222; --grid:#151515; --floor:#121212; --hatch:#6A6A6A; --glass:#050505; --bezel:#000000;
+  --rec:#FF5A48; --warn:#F0A83C; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:20px 48px}
+.wrap{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;border-bottom:2px solid var(--rule);padding-bottom:16px}
+.eyebrow{margin:0;font:700 11px/1.2 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{margin:6px 0 0;font:700 clamp(44px,8vw,84px)/.88 var(--ui);letter-spacing:-.045em}
+h1 sup{font-size:.22em;letter-spacing:.08em;vertical-align:top;margin-left:.3em;position:relative;top:.5em}
+.lede{margin:0;max-width:60ch;font-size:14px}
+.modebar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--rule)}
+.seg button{font:700 13px/1 var(--ui);letter-spacing:.02em;color:var(--ink);background:transparent;border:0;border-radius:0;padding:10px 16px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--rule)}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.hint{font:400 13px/1.35 var(--ui);color:var(--muted)}
+button:focus-visible,select:focus-visible,textarea:focus-visible,.cartbtn:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- credits bar: eyebrow type on a hairline. Gone in fullscreen. ---------- */
+.credits{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin:0;border-bottom:1px solid var(--line);padding-bottom:12px;font:700 11px/1.5 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.credits b{color:var(--ink)}
+.credits .r{margin-left:auto}
+.credits a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
+.credits a:hover{background:var(--ink);color:var(--bg)}
+.credits a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+@media (max-width:760px){.credits .r{margin-left:0}}
+:fullscreen .credits{display:none}
+@media (display-mode:fullscreen){.credits{display:none}}
+
+/* ---------- console bench ---------- */
+.bench{display:grid;grid-template-columns:minmax(0,1fr) 330px;grid-template-areas:"stage panel" "below panel";gap:16px;align-items:start}
+@media (max-width:980px){.bench{grid-template-columns:minmax(0,1fr);grid-template-areas:"stage" "below" "panel"}}
+.stagebox{grid-area:stage;container-type:inline-size;min-width:0}
+.rig{position:relative;width:100%;max-width:100%;aspect-ratio:100/86;border:1px solid var(--rule);overflow:hidden;
+  background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:2.5cqw 2.5cqw}
+.floor{position:absolute;left:0;right:0;top:79cqw;bottom:0;border-top:1.5px solid var(--rule);background:var(--floor)}
+.shadow{position:absolute;left:10cqw;width:84cqw;top:79cqw;height:2.4cqw;z-index:1;background:repeating-linear-gradient(135deg,var(--hatch) 0 1px,transparent 1px 4px)}
+.tv{position:absolute;left:16cqw;top:2.5cqw;width:68cqw;height:58.6cqw;background:var(--panel);border:2px solid var(--rule);border-radius:3cqw;z-index:1}
+.tv::before{content:"";position:absolute;left:10cqw;right:10cqw;bottom:-2.4cqw;height:2.4cqw;border:2px solid var(--rule);border-top:0;background:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 1.2cqw)}
+.bezel{position:absolute;left:2.4cqw;right:2.4cqw;top:2.4cqw;height:48.2cqw;background:var(--bezel);border:2px solid var(--rule);border-radius:2.6cqw}
+.glass{position:absolute;inset:1.6cqw;border-radius:3.4cqw/4.2cqw;overflow:hidden;background:var(--glass)}
+.glass canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges;transform-origin:50% 50%}
+.glass::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.22) 50%);background-size:100% calc(100% / 144)}
+.glass::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(ellipse at 50% 50%,transparent 58%,rgba(0,0,0,.5) 100%),linear-gradient(160deg,rgba(255,255,255,.10),transparent 38%);box-shadow:inset 0 0 2.4cqw rgba(0,0,0,.7)}
+.glass.off canvas{opacity:0}
+.glass.boot canvas{animation:crtOn .55s ease-out}
+.glass.shut canvas{animation:crtOff .32s ease-in forwards}
+@keyframes crtOn{0%{transform:scale(.15,.006);filter:brightness(5)}45%{transform:scale(1,.006);filter:brightness(3)}100%{transform:none;filter:none}}
+@keyframes crtOff{0%{transform:none}60%{transform:scale(1,.006);filter:brightness(4)}100%{transform:scale(0,.006);opacity:0}}
+.tvstrip{position:absolute;left:2.4cqw;right:2.4cqw;top:51.4cqw;height:5.4cqw;display:flex;align-items:center;justify-content:center;gap:2cqw}
+.knob{width:3.6cqw;height:3.6cqw;border:2px solid var(--rule);border-radius:50%;position:relative;background:var(--panel)}
+.knob::after{content:"";position:absolute;left:50%;top:12%;width:2px;height:38%;background:var(--rule);transform:translateX(-50%) rotate(var(--r,30deg));transform-origin:50% 100%}
+.tvbrand{font:700 clamp(6px,1.05cqw,11px)/1.1 var(--ui);letter-spacing:.14em;text-align:center;text-transform:uppercase}
+.tvbrand small{font-weight:400;color:var(--muted);letter-spacing:.08em}
+.deck-back{position:absolute;left:8cqw;top:62cqw;width:84cqw;height:3.2cqw;background:var(--panel);border:2px solid var(--rule);border-bottom:0;border-radius:2.4cqw 2.4cqw 0 0;z-index:2}
+.hole{position:absolute;top:1.2cqw;width:26cqw;height:2.4cqw;background:var(--bezel);border:2px solid var(--rule);border-bottom:0;border-radius:.6cqw .6cqw 0 0}
+.hole.h1,.lip.l1{left:6cqw}.hole.h2,.lip.l2{left:52cqw}
+.deck-fore{position:absolute;left:8cqw;top:64.6cqw;width:84cqw;height:14.4cqw;background:var(--panel);border:2px solid var(--rule);border-top:0;border-radius:0 0 1.4cqw 1.4cqw;z-index:4}
+.lip{position:absolute;top:0;width:26cqw;height:1.2cqw;background:var(--bezel);border:2px solid var(--rule);border-top:0;border-radius:0 0 .5cqw .5cqw}
+.sw{position:absolute;top:1cqw;width:7.4cqw;height:2.3cqw;border:2px solid var(--rule);background:var(--panel);border-radius:.5cqw;cursor:pointer;padding:0}
+.sw i{position:absolute;top:18%;bottom:18%;width:42%;left:6%;background:var(--ink);border-radius:.3cqw;transition:left .18s}
+.sw.pw{left:34.2cqw}.sw.rs{left:42.4cqw}
+.sw.pw[aria-pressed="true"] i{left:52%}
+.sw.rs i{left:29%;width:42%}
+.sw.rs:active i{transform:translateY(8%)}
+.swl{position:absolute;top:3.7cqw;width:7.4cqw;text-align:center;font:700 clamp(5px,.85cqw,10px)/1 var(--ui);letter-spacing:.14em;color:var(--muted)}
+.swl.pwl{left:34.2cqw}.swl.rsl{left:42.4cqw}
+.front{position:absolute;left:0;right:0;top:5.2cqw;bottom:0;border-top:2px solid var(--rule)}
+.front::before,.front::after{content:"";position:absolute;top:0;bottom:0;width:0;border-left:1px solid var(--rule)}
+.front::before{left:33cqw}.front::after{left:51cqw}
+.logo{position:absolute;left:3.2cqw;top:1.6cqw;font:700 3.1cqw/1 var(--ui);letter-spacing:-.04em}
+.sub{position:absolute;left:3.3cqw;top:5.4cqw;font:700 clamp(5px,.82cqw,10px)/1.2 var(--ui);letter-spacing:.14em;color:var(--muted);max-width:28cqw}
+.led{position:absolute;left:41.2cqw;top:2.6cqw;width:1.3cqw;height:1.3cqw;border-radius:50%;border:1.5px solid var(--rule);background:transparent}
+.led.on{background:var(--rec);border-color:var(--rec);box-shadow:0 0 .8cqw var(--rec)}
+.ledl{position:absolute;left:36.4cqw;top:5cqw;font:700 clamp(5px,.8cqw,10px)/1 var(--ui);letter-spacing:.14em;color:var(--muted)}
+.port{position:absolute;top:2.2cqw;width:8.6cqw;height:3.6cqw;border:2px solid var(--rule);border-radius:.8cqw 2cqw 2cqw .8cqw;background:radial-gradient(circle,var(--ink) 28%,transparent 32%) .6cqw 50%/1.9cqw 1.9cqw repeat-x}
+.port.p1{left:56cqw}.port.p2{left:68cqw}
+.portl{position:absolute;top:6.8cqw;font:700 clamp(5px,.8cqw,10px)/1 var(--ui);letter-spacing:.14em;color:var(--muted)}
+.slotc{position:absolute;top:52.2cqw;width:21.6cqw;height:12.6cqw;z-index:3;font-size:.9cqw}
+.slotc.s1{left:16.2cqw}.slotc.s2{left:62.2cqw}
+.slotc.drop .ghost{background:var(--soft)}
+.ghost{position:absolute;inset:0 0 1.6cqw;border:1.5px dashed var(--muted);border-radius:1.4em 1.4em .4em .4em;background:transparent;color:var(--muted);font:700 clamp(7px,1.05cqw,12px)/1.3 var(--ui);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4em;padding:0}
+.ghost b{color:var(--ink)}
+.ann{position:absolute;z-index:5;font:700 clamp(8px,1.05cqw,12px)/1.35 var(--ui);letter-spacing:.12em;text-transform:uppercase}
+.ann.a1,.ann.a2{top:81.8cqw;width:26cqw;text-align:center}
+.ann.a1{left:14cqw}.ann.a2{left:60cqw}
+.ann.tl{left:1.6cqw;top:1.4cqw;width:13cqw;color:var(--muted)}
+.ann.tr{right:1.6cqw;top:1.4cqw;width:13cqw;text-align:right}
+.ann span{display:block;font-weight:400;letter-spacing:.06em;color:var(--muted)}
+@media (max-width:560px){.ann.tl,.ann.tr{display:none}}
+
+/* cartridge (sized in em so it scales in the slot and on the shelf) */
+.cart{position:relative;width:24em;height:14em;color:var(--ink)}
+.cart::before{content:"";position:absolute;inset:0;background:var(--panel);border:.22em solid var(--rule);border-radius:1.5em 1.5em .4em .4em}
+.c-grip{position:absolute;left:5.5em;right:5.5em;top:.75em;height:1.3em;background:repeating-linear-gradient(90deg,var(--ink) 0 .18em,transparent .18em .85em)}
+.c-label{position:absolute;left:1.8em;right:1.8em;top:2.7em;bottom:1.7em;border:.18em solid var(--rule);padding:.75em;display:flex;flex-direction:column;justify-content:space-between;gap:.5em}
+.c-plate{background:var(--panel);border:.15em solid var(--rule);display:flex;gap:.8em;align-items:center;padding:.55em .7em;min-width:0}
+.c-icon{width:3.4em;height:3.4em;flex:none;color:var(--ink)}
+.c-icon svg{display:block;width:100%;height:100%}
+.c-txt{min-width:0}
+.c-txt b{display:block;font:700 1.55em/1 var(--ui);letter-spacing:-.02em;text-transform:uppercase;overflow-wrap:anywhere}
+.c-txt span{display:block;font:700 .82em/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.45em;white-space:nowrap}
+.c-code{display:flex;justify-content:space-between;gap:.4em}
+.c-code i{font:700 .8em/1 var(--ui);font-style:normal;letter-spacing:.14em;background:var(--panel);padding:.25em .45em;border:.15em solid var(--rule)}
+.pat0 .c-label{background:repeating-linear-gradient(135deg,var(--ink) 0 .13em,transparent .13em .7em)}
+.pat1 .c-label{background:repeating-linear-gradient(0deg,var(--ink) 0 .13em,transparent .13em .6em)}
+.pat2 .c-label{background:radial-gradient(circle,var(--ink) 34%,transparent 38%) 0 0/.75em .75em}
+.pat3 .c-label{background:repeating-conic-gradient(var(--ink) 0 25%,transparent 0 50%) 0 0/1.3em 1.3em}
+.pat4 .c-label{background:repeating-linear-gradient(90deg,var(--ink) 0 .13em,transparent .13em .6em)}
+.pat5 .c-label{background:repeating-linear-gradient(45deg,var(--ink) 0 .1em,transparent .1em .8em),repeating-linear-gradient(-45deg,var(--ink) 0 .1em,transparent .1em .8em)}
+.slotc .cart{cursor:pointer;width:24em;height:14em}
+.slotc .cart.in{animation:cartIn .5s cubic-bezier(.2,.9,.25,1)}
+.slotc .cart.out{animation:cartOut .3s ease-in forwards}
+@keyframes cartIn{0%{transform:translateY(-70%);opacity:0}60%{transform:translateY(4%);opacity:1}100%{transform:none}}
+@keyframes cartOut{to{transform:translateY(-80%);opacity:0}}
+
+.below{grid-area:below;display:flex;flex-direction:column;gap:16px;min-width:0}
+.padrow{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.pad{display:grid;grid-template-columns:auto auto auto;align-items:center;gap:14px 22px;padding:14px 26px;border:2px solid var(--rule);border-radius:80px;background:var(--panel);touch-action:none;user-select:none;-webkit-user-select:none;max-width:100%}
+.dpad{display:grid;grid-template-columns:repeat(3,34px);grid-template-rows:repeat(3,34px)}
+.dpad button,.dpad span{border:2px solid var(--rule);background:var(--panel);color:var(--ink);padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:none}
+.dpad span{border-width:0 0;background:var(--ink);border-radius:50%;transform:scale(.4)}
+.dpad .u{grid-area:1/2;border-bottom:0;border-radius:5px 5px 0 0}.dpad .l{grid-area:2/1;border-right:0;border-radius:5px 0 0 5px}.dpad .m{grid-area:2/2}.dpad .r{grid-area:2/3;border-left:0;border-radius:0 5px 5px 0}.dpad .d{grid-area:3/2;border-top:0;border-radius:0 0 5px 5px}
+.dpad svg{width:10px;height:10px;fill:currentColor}
+.mids{display:flex;flex-direction:column;align-items:center;gap:10px}
+.mids p{margin:0;font:700 11px/1 var(--ui);letter-spacing:.2em}
+.pills{display:flex;gap:10px}
+.pill{font:700 9px/1 var(--ui);letter-spacing:.12em;border:2px solid var(--rule);border-radius:12px;padding:6px 10px;background:var(--panel);color:var(--ink);cursor:pointer;transform:rotate(-20deg);touch-action:none}
+.face{position:relative;width:104px;height:96px}
+.fb{position:absolute;width:38px;height:38px;border:2px solid var(--rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 13px/1 var(--ui);background:var(--panel);color:var(--ink);touch-action:none;padding:0}
+.fb.x{left:33px;top:0;color:var(--muted);border-style:dashed}.fb.y{left:0;top:29px;color:var(--muted);border-style:dashed}
+.fb.a{right:0;top:29px;background:var(--ink);color:var(--bg);cursor:pointer}.fb.b{left:33px;bottom:0;cursor:pointer}
+.pad .held{background:var(--ink)!important;color:var(--bg)!important}
+.keys{margin:0;font-size:12.5px;color:var(--muted);max-width:40ch}
+.keys kbd{font:700 11px/1 var(--ui);border:1px solid var(--rule);padding:2px 5px;color:var(--ink)}
+.shelf h2,.panel h2,.ide h2{margin:0 0 12px;font:700 11px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.shelf h2 small,.panel h2 small,.ide h2 small{font:400 11px/1.2 var(--ui);letter-spacing:0;text-transform:none;color:var(--muted)}
+.shelf{border-top:2px solid var(--rule);padding-top:14px}
+.carts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px 14px}
+.cartbtn{background:transparent;border:0;padding:0;cursor:grab;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:6.2px;color:var(--ink)}
+.cartbtn:hover .cart{transform:translateY(-3px)}
+.cartbtn .cart{transition:transform .15s}
+.cartbtn .meta{font:400 12px/1.3 var(--ui);color:var(--muted);text-align:center}
+.cartbtn .meta b{color:var(--ink);font-weight:700}
+.cartbtn.inslot .cart{opacity:.28}
+.cartbtn.inslot .meta b::after{content:" · in slot " attr(data-slot)}
+.cartbtn.bad .meta{color:var(--rec)}
+.cartbtn.newcart .cart::before{border-style:dashed;border-color:var(--muted)}
+.newface{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 2.4em/1 var(--ui);letter-spacing:.06em;color:var(--muted)}
+
+.panel{grid-area:panel;border:1px solid var(--rule);padding:16px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.panel section+section{border-top:1px solid var(--line);padding-top:16px}
+.status{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{font:700 10.5px/1 var(--ui);letter-spacing:.1em;text-transform:uppercase;padding:5px 7px;border:1px solid var(--rule)}
+.chip.live{background:var(--ink);color:var(--bg)}
+.chip.rec{background:var(--rec);border-color:var(--rec);color:#fff}
+.beats{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.beats li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.beats li:first-child{border-top:0}
+.beats li.now{box-shadow:inset 3px 0 0 var(--ink);padding-left:8px;background:var(--soft)}
+.beats li.empty{display:block;color:var(--muted);font-size:13px}
+.beats p{margin:0;font-size:13.5px;line-height:1.35}
+.beats small{display:block;margin-top:3px;font-size:11.5px;color:var(--muted)}
+.diff{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.diff em{font:400 10.5px/1 var(--code);font-style:normal;border:1px solid var(--line);padding:2px 4px;color:var(--ink)}
+.conn{align-self:start;font:700 10px/1 var(--ui);letter-spacing:.1em;text-align:center;padding:5px 4px;border:1px solid var(--rule)}
+.conn.c-but{background:var(--ink);color:var(--bg)}
+.conn.c-therefore{background:repeating-linear-gradient(135deg,var(--soft) 0 3px,var(--panel) 3px 7px)}
+.conn.c-setup{border-style:dashed}
+.trace{margin:0;font:400 11px/1.55 var(--code);white-space:pre;overflow-x:auto;color:var(--ink);background:var(--soft);padding:10px;max-height:260px;overflow-y:auto}
+details summary{cursor:pointer;font:700 11px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;padding:4px 0}
+details[open] summary{margin-bottom:10px}
+.row{display:flex;flex-wrap:wrap;gap:6px}
+.btn{font:700 12px/1 var(--ui);color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:0;padding:8px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover:not(:disabled){background:var(--soft)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary:hover:not(:disabled){background:var(--ink);opacity:.86}
+.btn.danger{color:var(--rec);border-color:var(--rec)}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);margin:0;max-width:calc(100% - 32px);background:var(--ink);color:var(--bg);font:500 13px/1.35 var(--ui);padding:9px 13px;z-index:50}
+
+/* ---------- IDE ---------- */
+.ide{display:grid;grid-template-columns:210px minmax(0,1fr) 330px;gap:16px;align-items:start}
+@media (max-width:1100px){.ide{grid-template-columns:200px minmax(0,1fr)}.ide .wpv{grid-column:1/-1}}
+@media (max-width:760px){.ide{grid-template-columns:minmax(0,1fr)}}
+.lib{border:1px solid var(--rule);padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.lib ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.lib li button{width:100%;text-align:left;background:transparent;border:0;border-top:1px solid var(--line);padding:8px 6px;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.lib li:first-child button{border-top:0}
+.lib li button b{font:700 13px/1.2 var(--ui);text-transform:uppercase;letter-spacing:.01em}
+.lib li button span{font:400 11px/1.2 var(--code);color:var(--muted)}
+.lib li button[aria-current="true"]{background:var(--ink);color:var(--bg)}
+.lib li button[aria-current="true"] span{color:inherit;opacity:.75}
+.tag{font:700 9px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;padding:2px 4px;margin-left:6px;vertical-align:1px}
+.editor{border:1px solid var(--rule);min-width:0;display:flex;flex-direction:column}
+.ed-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px;border-bottom:1px solid var(--rule)}
+.fname{font:600 12.5px/1 var(--code);margin-right:auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ed-body{display:grid;grid-template-columns:46px minmax(0,1fr);height:min(560px,70vh);min-height:320px}
+.gutter{overflow:hidden;border-right:1px solid var(--line);font:400 12.5px/20px var(--code);color:var(--muted);text-align:right;padding:10px 8px 10px 0;user-select:none}
+.gutter div.err{color:var(--rec);font-weight:600}
+.gutter div.warn{color:var(--warn);font-weight:600}
+.code{position:relative;overflow:hidden;min-width:0}
+.code pre,.code textarea{position:absolute;inset:0;margin:0;padding:10px 12px;font:400 12.5px/20px var(--code);white-space:pre;overflow:auto;tab-size:2;border:0;letter-spacing:0}
+.code pre{pointer-events:none;color:var(--ink);overflow:hidden}
+.code textarea{background:transparent;color:transparent;caret-color:var(--ink);resize:none;outline:none;width:100%;height:100%}
+.code textarea::selection{background:rgba(127,127,127,.35);color:transparent}
+.t-key{font-weight:600}
+.t-conn{background:var(--ink);color:var(--bg);font-weight:600;padding:0 2px;margin:0 -2px}
+.t-op{text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.t-bad{color:var(--rec);text-decoration:wavy underline;font-weight:600}
+.t-com{color:var(--muted);font-style:italic}
+.t-num{color:var(--muted)}
+.t-dash,.t-punc{color:var(--muted)}
+.t-voc{border-bottom:1px dotted var(--muted)}
+.problems{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule);max-height:150px;overflow:auto}
+.problems li{display:grid;grid-template-columns:44px 52px minmax(0,1fr);gap:8px;padding:6px 10px;border-top:1px solid var(--line);font-size:12.5px;cursor:pointer}
+.problems li:first-child{border-top:0}
+.problems li b{font:600 11px/1.6 var(--code)}
+.problems li i{font:700 9.5px/1.9 var(--ui);font-style:normal;letter-spacing:.1em;text-transform:uppercase}
+.problems li.err i{color:var(--rec)}.problems li.warn i{color:var(--warn)}
+.problems li.ok{display:block;color:var(--muted);cursor:default}
+.wpv{border:1px solid var(--rule);padding:12px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.field{display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:700}
+select{font:inherit;font-size:13.5px;font-weight:400;border:1px solid var(--rule);border-radius:0;background:var(--panel);color:var(--ink);padding:7px 8px;width:100%}
+
+/* ---------- docs ---------- */
+.doc{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;align-items:start}
+@media (max-width:860px){.doc{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
+.toc{position:sticky;top:calc(16px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:2px;border-top:2px solid var(--rule);padding-top:10px}
+.toc a{color:var(--ink);text-decoration:none;font-size:13px;padding:3px 0}
+.toc a:hover{text-decoration:underline}
+.toc b{font:700 10px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:10px 0 4px}
+.prose{min-width:0;max-width:78ch}
+.prose section{border-top:1px solid var(--rule);padding-top:14px;margin-bottom:36px}
+.prose h2{margin:0 0 4px;font:700 30px/1.1 var(--ui);letter-spacing:-.025em;text-wrap:balance}
+.prose h2 span{display:block;font:700 11px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.prose h3{margin:22px 0 6px;font:700 16px/1.3 var(--ui)}
+.prose p,.prose li{font-size:14.5px;max-width:68ch}
+.prose code{font:400 13px/1 var(--code);background:var(--soft);padding:1px 4px}
+.prose pre{margin:12px 0;font:400 12.5px/1.6 var(--code);background:var(--soft);padding:14px 16px;overflow-x:auto;border-left:2px solid var(--rule)}
+.prose pre code{background:transparent;padding:0;font-size:inherit;line-height:inherit}
+.tbl{overflow-x:auto;margin:12px 0}
+.tbl table{border-collapse:collapse;width:100%;font-size:13px;min-width:480px}
+.tbl th{text-align:left;font:700 10.5px/1.2 var(--ui);letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--rule);padding:6px 10px 6px 0}
+.tbl td{border-bottom:1px solid var(--line);padding:7px 10px 7px 0;vertical-align:top}
+.tbl td:first-child{font:600 12.5px/1.4 var(--code);white-space:nowrap}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0}
+.flow div{border:1px solid var(--rule);padding:8px 10px;font:700 11px/1.2 var(--ui);letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.flow div small{display:block;font:400 11px/1.3 var(--code);letter-spacing:0;text-transform:none;color:var(--muted);margin-top:3px}
+.flow i{font-style:normal;color:var(--muted)}
+.flow div.hot{background:var(--ink);color:var(--bg)}
+.flow div.hot small{color:inherit;opacity:.75}
+.rules{counter-reset:r;list-style:none;padding:0}
+.rules li{counter-increment:r;padding-left:34px;position:relative;margin-bottom:10px}
+.rules li::before{content:counter(r);position:absolute;left:0;top:1px;width:22px;height:22px;border:1px solid var(--rule);font:700 11px/20px var(--ui);text-align:center}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px;margin:12px 0}
+.vgrid figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:4px;font:400 11px/1 var(--code);color:var(--muted)}
+.vgrid svg{width:40px;height:40px;color:var(--ink)}
+@media (prefers-reduced-motion: reduce){.glass.boot canvas,.glass.shut canvas,.slotc .cart.in,.slotc .cart.out{animation:none}.cartbtn .cart{transition:none}}
+</style>
+
+<div class="wrap">
+  <nav class="credits" aria-label="Credits">
+    <b>Splice Console</b>
+    <span>by <a href="https://twitter.com/nilsedison" target="_blank" rel="noopener">@nilsedison</a></span>
+    <a href="https://content.moldandyeast.com" target="_blank" rel="noopener">content.moldandyeast.com</a>
+    <a href="https://github.com/moldandyeast/splicedemo" target="_blank" rel="noopener">Source on GitHub</a>
+    <span class="r">After <a href="https://x.com/Flomerboy/status/2106626224286052560" target="_blank" rel="noopener">@flomerboy</a> and <a href="https://www.youtube.com/watch?v=vGUNqq3jVLg&amp;t=3s" target="_blank" rel="noopener">but / therefore</a></span>
+  </nav>
+  <header>
+    <div>
+      <p class="eyebrow">Two-slot procedural console · CART-1 protocol</p>
+      <h1>SPLICE<sup>SP-2</sup></h1>
+    </div>
+    <p class="lede">A console with two cartridge slots, after an idea by flomerboy. A cartridge is not a game. It holds story beats and rules written in a small YAML language. Put two in and the console weaves them into one new game, joining every beat with <b>but</b> or <b>therefore</b>, never "and then". Swap the slots and you get a different game.</p>
+  </header>
+
+  <div class="modebar">
+    <div class="seg" role="tablist" aria-label="View">
+      <button role="tab" id="tab-console" aria-selected="true" aria-controls="v-console" data-v="console">Console</button>
+      <button role="tab" id="tab-ide" aria-selected="false" aria-controls="v-ide" data-v="ide">Cart IDE</button>
+      <button role="tab" id="tab-protocol" aria-selected="false" aria-controls="v-protocol" data-v="protocol">Protocol</button>
+      <button role="tab" id="tab-api" aria-selected="false" aria-controls="v-api" data-v="api">JS API</button>
+    </div>
+    <span class="hint" id="viewHint">Insert two cartridges, switch the power on, press Start.</span>
+  </div>
+
+  <!-- ================= CONSOLE ================= -->
+  <main id="v-console" role="tabpanel" aria-labelledby="tab-console" class="bench">
+    <div class="stagebox">
+      <div class="rig" id="rig">
+        <div class="floor"></div>
+        <div class="shadow"></div>
+        <div class="ann tl">Fig. 01<span>SP-2 and 14" monitor, front elevation</span></div>
+        <div class="ann tr" id="rigStatus">Power off<span>—</span></div>
+        <div class="tv">
+          <div class="bezel"><div class="glass off" id="glass"><canvas id="scr" width="192" height="144" role="img" aria-label="Game screen"></canvas></div></div>
+          <div class="tvstrip"><span class="knob" style="--r:-40deg"></span><span class="tvbrand">Splice Vision<br><small>14" B/W</small></span><span class="knob" style="--r:50deg"></span></div>
+        </div>
+        <div class="deck-back"><span class="hole h1"></span><span class="hole h2"></span></div>
+        <div class="slotc s1" id="slot0" data-slot="0"></div>
+        <div class="slotc s2" id="slot1" data-slot="1"></div>
+        <div class="deck-fore">
+          <span class="lip l1"></span><span class="lip l2"></span>
+          <button class="sw pw" id="bPower" aria-pressed="false" aria-label="Power" title="Power"><i></i></button><span class="swl pwl">Power</span>
+          <button class="sw rs" id="bReset" aria-label="Reset" title="Reset: re-weave the inserted carts"><i></i></button><span class="swl rsl">Reset</span>
+          <div class="front">
+            <span class="logo">SPLICE</span><span class="sub">SP-2 · Two-slot entertainment system</span>
+            <span class="led" id="led"></span><span class="ledl">Power</span>
+            <span class="port p1"></span><span class="port p2"></span>
+            <span class="portl" style="left:59.2cqw">1</span><span class="portl" style="left:71.2cqw">2</span>
+          </div>
+        </div>
+        <div class="ann a1">Slot I · World<span>sets genre, hero, palette</span></div>
+        <div class="ann a2">Slot II · Trouble<span>brings foes, art, complications</span></div>
+      </div>
+    </div>
+
+    <div class="below">
+      <div class="padrow">
+        <div class="pad" id="pad" aria-label="Controller">
+          <div class="dpad">
+            <button class="u" data-k="up" aria-label="Up"><svg viewBox="0 0 10 10"><path d="M5 1l4 7H1z"/></svg></button>
+            <button class="l" data-k="left" aria-label="Left"><svg viewBox="0 0 10 10"><path d="M1 5l7-4v8z"/></svg></button>
+            <span class="m"></span>
+            <button class="r" data-k="right" aria-label="Right"><svg viewBox="0 0 10 10"><path d="M9 5L2 1v8z"/></svg></button>
+            <button class="d" data-k="down" aria-label="Down"><svg viewBox="0 0 10 10"><path d="M5 9L1 2h8z"/></svg></button>
+          </div>
+          <div class="mids"><div class="pills"><button class="pill" data-k="select">SELECT</button><button class="pill" data-k="start">START</button></div><p>SPLICE</p></div>
+          <div class="face"><span class="fb x">X</span><span class="fb y">Y</span><button class="fb b" data-k="a" aria-label="B button">B</button><button class="fb a" data-k="a" aria-label="A button">A</button></div>
+        </div>
+        <p class="keys"><kbd>←↑→↓</kbd> or <kbd>WASD</kbd> move. <kbd>Z</kbd> <kbd>X</kbd> <kbd>Space</kbd> are A and B (jump or fire). <kbd>Enter</kbd> is Start and pauses. <kbd>Shift</kbd> is Select, which skips to the next beat.</p>
+      </div>
+      <section class="shelf" aria-label="Cartridge shelf">
+        <h2>Cartridge shelf <small>Click to insert into the next free slot, or drag onto a slot. Click a cart in the console to eject it.</small></h2>
+        <div class="carts" id="shelf"></div>
+      </section>
+    </div>
+
+    <aside class="panel" aria-label="Woven story">
+      <section>
+        <h2>On the screen <small id="planMeta">—</small></h2>
+        <div class="status"><span class="chip" id="chipPower">Off</span><span class="chip" id="chipMode">Idle</span><span class="chip" id="chipBeat" hidden></span></div>
+      </section>
+      <section>
+        <h2>Woven story <small>slot I = therefore, slot II = but</small></h2>
+        <ol class="beats" id="beats"></ol>
+      </section>
+      <section>
+        <details id="traceBox"><summary>Splice trace</summary><pre class="trace" id="trace"></pre></details>
+      </section>
+      <section class="row">
+        <button class="btn" id="bSwap" title="Swap the two cartridges">Swap slots</button>
+        <button class="btn" id="bSound" aria-pressed="true">Sound on</button>
+        <button class="btn" id="bEditI">Open slot I in IDE</button>
+      </section>
+    </aside>
+  </main>
+
+  <!-- ================= IDE ================= -->
+  <main id="v-ide" role="tabpanel" aria-labelledby="tab-ide" class="ide" hidden>
+    <aside class="lib">
+      <h2>Library <small id="libCount"></small></h2>
+      <ul id="libList"></ul>
+      <button class="btn" id="bNew">New cartridge</button>
+    </aside>
+    <section class="editor" aria-label="Cartridge editor">
+      <div class="ed-bar">
+        <span class="fname" id="fname">cart.yaml</span>
+        <span class="chip" id="edState">Valid</span>
+        <button class="btn primary" id="bBurn" title="Save to the shelf (Ctrl/Cmd+S)">Burn cartridge</button>
+        <button class="btn" id="bPlayI">Play in slot I</button>
+        <button class="btn" id="bPlayII">Play in slot II</button>
+        <button class="btn" id="bCopy">Copy YAML</button>
+        <button class="btn" id="bRestore" hidden>Restore original</button>
+        <button class="btn danger" id="bDelete" hidden>Delete</button>
+      </div>
+      <div class="ed-body">
+        <div class="gutter" id="gutter" aria-hidden="true"></div>
+        <div class="code"><pre id="hl" aria-hidden="true"></pre><textarea id="src" spellcheck="false" wrap="off" autocomplete="off" autocapitalize="off" aria-label="Cartridge YAML source"></textarea></div>
+      </div>
+      <ul class="problems" id="problems" aria-live="polite"></ul>
+    </section>
+    <aside class="wpv">
+      <h2>Weave preview <small>live, as you type</small></h2>
+      <label class="field">Partner cartridge<select id="wPartner"></select></label>
+      <div class="field">This cart goes in
+        <div class="seg" role="radiogroup" aria-label="Slot for this cart"><button id="wI" role="radio" aria-selected="true" aria-checked="true">Slot I</button><button id="wII" role="radio" aria-selected="false" aria-checked="false">Slot II</button></div>
+      </div>
+      <ol class="beats" id="wBeats"></ol>
+      <details><summary>Splice trace</summary><pre class="trace" id="wTrace"></pre></details>
+    </aside>
+  </main>
+
+  <!-- ================= PROTOCOL ================= -->
+  <main id="v-protocol" role="tabpanel" aria-labelledby="tab-protocol" class="doc" hidden>
+    <nav class="toc" aria-label="Protocol contents">
+      <b>Protocol</b>
+      <a href="#p-idea">The idea</a><a href="#p-engine">Engine notes</a><a href="#p-schema">CART-1 schema</a><a href="#p-rules">But and therefore</a><a href="#p-weave">Weave algorithm</a><a href="#p-merge">Merge policy</a><a href="#p-vocab">Vocabulary</a><a href="#p-author">Authoring rules</a>
+    </nav>
+    <div class="prose">
+      <section id="p-idea">
+        <h2><span>01 · Concept</span>Two slots, one game</h2>
+        <p>Every cartridge describes a small slice of a game: a world, a cast, a look, and a short list of story beats. Each beat changes the rules of play. Insert one cart and it plays on its own. Insert two and the console splices them: slot I supplies the world and the spine of the story, slot II supplies trouble. The pair is woven into a single sequence of beats, and every beat becomes a level whose rules are solved on the spot.</p>
+        <div class="flow" aria-label="Pipeline">
+          <div>Cart I<small>lunar-post.yaml</small></div><i>+</i><div>Cart II<small>snake-pit.yaml</small></div><i>→</i>
+          <div>Parse<small>YAML</small></div><i>→</i><div>Validate<small>CART-1 schema</small></div><i>→</i>
+          <div class="hot">Weave<small>but / therefore</small></div><i>→</i><div>Plan<small>beats + rule states</small></div><i>→</i><div>Engine<small>levels solved live</small></div>
+        </div>
+        <p>The same pair always produces the same game, because the seed is a hash of the two cart ids in slot order. Swap the carts and the seed, the genre, the art and the story order all change.</p>
+      </section>
+      <section id="p-engine">
+        <h2><span>02 · Research</span>What we kept from Tinker Studio</h2>
+        <p>Tinker Studio is our procedural animation engine: a robot whose every pose is solved from constraints, IK and springs, driven by a timeline of clips. Splice reuses its principles, moved from animation to game design.</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Tinker Studio</th><th>Splice</th></tr></thead>
+          <tbody>
+            <tr><td>Clips, not keyframes</td><td>Beats, not levels. A beat only says which rules apply. The engine builds the level from those rules, the way the rig blends between clips through its springs.</td></tr>
+            <tr><td>Seeded random generator</td><td>The seed is FNV-1a of <code>idI|idII</code>, plus the beat index. Same carts, same game. A retry rebuilds the identical level.</td></tr>
+            <tr><td>Fixed timestep, 240 Hz</td><td>Fixed timestep at 60 Hz with an accumulator, so physics and spawns replay the same on every machine.</td></tr>
+            <tr><td>Constraints instead of animation</td><td>Constraints instead of hand-made maps. Platform ledges are anchored within jump range of the layer below. Top-down rooms only place pillars on even cells, so every room stays connected.</td></tr>
+            <tr><td>Behaviours as modes</td><td>Verbs, hazards and twists are registered modules with the same small interface, so carts can name them and anyone can add more through the API.</td></tr>
+            <tr><td>Technical-drawing look</td><td>One bit per pixel, four art treatments (solid, outline, dither, stripe) and three palettes. The hardware is drawn as line art with hatched shadows.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+      <section id="p-schema">
+        <h2><span>03 · Language</span>The CART-1 schema</h2>
+        <p>A cartridge is one YAML document. Five sections, all short.</p>
+<pre><code>cart: 1                 # protocol version, required
+id: lunar-post          # 2–24 chars, lowercase, digits, dashes
+title: Lunar Post       # up to 18 characters
+role: spine             # spine | trouble | either  (slot hint)
+style:
+  art: outline          # solid | outline | dither | stripe
+  palette: paper        # paper | night | lcd
+world:                  # only read from slot I
+  verb: platform        # platform | topdown | shmup | runner
+  hero: astronaut       # any sprite
+cast:
+  item: letter          # what you collect
+  foe: blob             # what hunts you (slot II's foe wins)
+beats:                  # 1–6 beats, played in order
+  - setup: the last mail carrier on the moon has six letters to deliver
+    set: { goal: collect, count: 6, hazards: [walker] }
+  - but: the low gravity makes every jump drift
+    add: { twists: [lowgrav] }
+  - therefore: you climb toward the relay tower to send them home
+    set: { goal: reach }
+    add: { density: 1 }</code></pre>
+        <h3>Beat operations</h3>
+        <div class="tbl"><table>
+          <thead><tr><th>Op</th><th>Works on</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td>set</td><td>any rule key</td><td>Replaces the value. Lists are replaced whole.</td></tr>
+            <tr><td>add</td><td>hazards, twists, count, time, distance, timer, density</td><td>Lists gain new names. Numbers are summed, so <code>add: { density: 1 }</code> raises pressure.</td></tr>
+            <tr><td>drop</td><td>hazard or twist names</td><td>Removes them. <code>drop: [dark]</code> turns the lights back on.</td></tr>
+          </tbody>
+        </table></div>
+        <p>Rule keys are <code>verb hero item foe goal count time distance timer density art palette hazards twists</code>. State carries forward from beat to beat, so a beat only states what changes.</p>
+      </section>
+      <section id="p-rules">
+        <h2><span>04 · Story</span>But and therefore</h2>
+        <p>Trey Parker and Matt Stone's rule for South Park: if the beats of your story are joined by "and then", it is boring. Join them with "but" (a complication) or "therefore" (a consequence) and the story drives itself. CART-1 builds this into the grammar.</p>
+        <ol class="rules">
+          <li>A beat's story line is keyed by exactly one connector: <code>setup</code>, <code>but</code> or <code>therefore</code>.</li>
+          <li><code>and</code> and <code>then</code> are rejected by the parser. They are not connectors.</li>
+          <li>A beat that changes no rule is reported as an "and then", because nothing in play changes. If woven beats still land on the same rules, the weaver raises density by one so every beat is felt.</li>
+          <li>When carts are woven, connectors strictly alternate: SETUP, BUT, THEREFORE, BUT… The weaver rewrites a beat's connector when its position demands it, and logs the rewrite.</li>
+          <li>Write story lines as clauses that read after either word: "the snakes wake up and start to hunt".</li>
+        </ol>
+      </section>
+      <section id="p-weave">
+        <h2><span>05 · Composition</span>The weave algorithm</h2>
+<pre><code>weave(I, II):
+  seed   = fnv1a(I.id + "|" + II.id)
+  state  = defaults ← I.world ← I.style ← I.cast
+  state.art  ← II.style.art        # slot II paints the game
+  state.foe  ← II.cast.foe         # slot II brings the trouble
+  queue  = [I.beat1]               # the setup always comes from slot I
+  then alternate II, I, II, I…     # leftovers from the longer cart follow
+  trim to 8 beats
+  for beat n in queue:
+    conn  = n == 0 ? SETUP : (n odd ? BUT : THEREFORE)
+    state = apply(state, beat.set, beat.add, beat.drop)
+            # slot II may not change verb or hero: "world is owned by slot I"
+    last beat: density + 1  (the finale)
+  return plan { title, seed, beats[ {conn, text, src, state, diff} ], trace }</code></pre>
+        <p>Because slot II beats land on odd positions they usually read as BUT, and slot I beats as THEREFORE: the second cart complicates, the first cart responds. With one cart, its own beats alternate in order.</p>
+      </section>
+      <section id="p-merge">
+        <h2><span>06 · Interop</span>Channels and merge policy</h2>
+        <p>Every key belongs to a channel, and each channel has one owner. This is what lets any cart combine with any other without conflicts.</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Channel</th><th>Owner</th><th>Policy</th></tr></thead>
+          <tbody>
+            <tr><td>world.verb, world.hero</td><td>Slot I</td><td>Locked. Slot II writes are ignored and logged.</td></tr>
+            <tr><td>style.palette</td><td>Slot I</td><td>Falls back to slot II when slot I has none.</td></tr>
+            <tr><td>style.art</td><td>Slot II</td><td>Slot II paints over slot I.</td></tr>
+            <tr><td>cast.item</td><td>Slot I</td><td>Falls back to slot II.</td></tr>
+            <tr><td>cast.foe</td><td>Slot II</td><td>Overrides slot I.</td></tr>
+            <tr><td>beats</td><td>Both</td><td>Interleaved, connectors re-assigned by position.</td></tr>
+            <tr><td>goal, counts, hazards, twists</td><td>Whoever's beat is playing</td><td>set replaces, add stacks, drop removes. Carries forward.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+      <section id="p-vocab">
+        <h2><span>07 · Reference</span>Vocabulary</h2>
+        <p>Generated from the engine's live registry. Names you register through the API appear here and become valid CART-1 at once.</p>
+        <div id="vocab"></div>
+      </section>
+      <section id="p-author">
+        <h2><span>08 · Craft</span>Authoring rules</h2>
+        <ol class="rules">
+          <li>Three or four beats per cart. Six is the limit; a woven game is capped at eight.</li>
+          <li>Give every beat one clear rule change the player can feel: a new hazard, a twist, a new goal.</li>
+          <li>Spine carts should set <code>world</code> and a goal in their setup. Trouble carts can leave the world out and only add pressure.</li>
+          <li>Keep titles to 18 characters and story lines under 90 so they fit the label and the story card.</li>
+          <li>Test a cart in both slots. A good cart is fun as the world and as the trouble.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <!-- ================= API ================= -->
+  <main id="v-api" role="tabpanel" aria-labelledby="tab-api" class="doc" hidden>
+    <nav class="toc" aria-label="API contents">
+      <b>JS API</b>
+      <a href="#a-overview">Overview</a><a href="#a-parse">Parse and validate</a><a href="#a-weave">Weave</a><a href="#a-console">Console</a><a href="#a-library">Library</a><a href="#a-register">Register modules</a><a href="#a-modules">Module interface</a>
+    </nav>
+    <div class="prose">
+      <section id="a-overview">
+        <h2><span>window.Splice</span>Overview</h2>
+        <p>Everything on this page runs on one global, <code>window.Splice</code>. Open the browser console on this page to try any example below.</p>
+<pre><code>Splice.version     // "1.0.0"
+Splice.protocol    // "CART-1"
+Splice.vocab()     // { verbs:[…], hazards:[…], twists:[…], goals:[…], arts:[…], palettes:[…], sprites:[…] }</code></pre>
+      </section>
+      <section id="a-parse">
+        <h2><span>Language</span>Parse and validate</h2>
+<pre><code>const res = Splice.parse(yamlText)
+// { ok: true, cart: {…}, issues: [ { sev:'warn', line: 12, msg:'Beat 3 changes no rules…' } ] }
+
+Splice.validate(cartObject)   // issues without line numbers</code></pre>
+        <p><code>ok</code> is false when any issue has <code>sev: 'error'</code>. Warnings never block play.</p>
+      </section>
+      <section id="a-weave">
+        <h2><span>Protocol</span>Weave</h2>
+<pre><code>const plan = Splice.weave('lunar-post', 'snake-pit')   // ids or parsed cart objects
+plan.title      // "Lunar Post × Snake Pit"
+plan.hex        // seed as hex
+plan.beats[1]   // { conn:'BUT', text:'an explorer drops into…', src:'II', state:{ verb:'platform', … }, diff:['goal → collect 5 gems'] }
+plan.log        // the splice trace, one string per line</code></pre>
+      </section>
+      <section id="a-console">
+        <h2><span>Hardware</span>Console</h2>
+<pre><code>const c = Splice.console
+c.insert(0, 'star-siege')       // slot 0 is slot I, slot 1 is slot II
+c.insert(1, 'blackout')
+c.power(true)                   // boots, weaves, shows the title screen
+c.press('start')                // simulate a controller tap: up down left right a start select
+c.swap(); c.reset()
+const off = c.on('beat', b => console.log(b.conn, b.text))
+// events: power, insert, eject, weave, beat, clear, death, end
+c.status                        // { power, mode, beat, deaths, slots }</code></pre>
+        <p>Changing a cartridge while the power is on behaves like real hardware: the picture breaks and you press Reset.</p>
+      </section>
+      <section id="a-library">
+        <h2><span>Shelf</span>Library</h2>
+<pre><code>Splice.library.list()           // ['lunar-post', 'snake-pit', …]
+Splice.library.get('snake-pit') // parsed cart
+Splice.library.add(yamlText)    // validates, then puts it on the shelf; returns the parse result
+Splice.library.remove('my-cart')</code></pre>
+        <p>Carts you burn in the IDE are kept in this browser only.</p>
+      </section>
+      <section id="a-register">
+        <h2><span>Extend</span>Register modules</h2>
+<pre><code>// a new sprite, usable as hero, item or foe
+Splice.register.sprite('duck', ['........','..##....','.#.##...','.####...','..######','..#####.','...###..','........'])
+
+// a new twist: ice makes the hero slide
+Splice.register.twist('ice', {
+  label: 'Ice', desc: 'Floors are slippery.',
+  tick(L) { if (L.p.vx !== undefined) L.p.x += (L.p.lastVx || 0) * 0.6; L.p.lastVx = L.p.vx; }
+})
+
+// a new palette
+Splice.register.palette('amber', { label:'Amber', desc:'Amber phosphor.', c:['#120B00', '#FFB000'] })</code></pre>
+        <p>After registering, the names validate in the IDE, appear in the vocabulary, and work in any beat: <code>add: { twists: [ice] }</code>.</p>
+      </section>
+      <section id="a-modules">
+        <h2><span>Interface</span>Module interface</h2>
+        <div class="tbl"><table>
+          <thead><tr><th>Kind</th><th>Shape</th></tr></thead>
+          <tbody>
+            <tr><td>verb</td><td><code>{ label, desc, scrolling, stomp, build(L), update(L, input), solid(L, cx, cy), spots(L) }</code></td></tr>
+            <tr><td>hazard</td><td><code>{ label, desc, killable, init(L), tick(L), update(L, e) }</code></td></tr>
+            <tr><td>twist</td><td><code>{ label, desc, build?(L), tick?(L) }</code></td></tr>
+            <tr><td>art</td><td><code>{ label, desc, fn(x, y, edge) → bool }</code> decides which pixels of a sprite or tile are lit</td></tr>
+            <tr><td>palette</td><td><code>{ label, desc, c: [paper, ink] }</code></td></tr>
+            <tr><td>sprite</td><td>eight strings of eight characters, <code>#</code> lit and <code>.</code> dark</td></tr>
+          </tbody>
+        </table></div>
+        <p><code>L</code> is the live level: <code>L.p</code> the player, <code>L.ents</code> entities, <code>L.s</code> the resolved rule state, <code>L.rng()</code> the seeded generator, <code>L.t</code> frames elapsed. <code>input</code> is <code>{ x, y, a, aP, upP, start }</code>.</p>
+      </section>
+    </div>
+  </main>
+</div>
+<p class="toast" id="toast" role="status" hidden></p>
+
+<!-- js-yaml 4.1.0, vendored inline (MIT, licence in the repo under vendor/) -->
+<script>/*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT */
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).jsyaml={})}(this,(function(e){"use strict";function t(e){return null==e}var n={isNothing:t,isObject:function(e){return"object"==typeof e&&null!==e},toArray:function(e){return Array.isArray(e)?e:t(e)?[]:[e]},repeat:function(e,t){var n,i="";for(n=0;n<t;n+=1)i+=e;return i},isNegativeZero:function(e){return 0===e&&Number.NEGATIVE_INFINITY===1/e},extend:function(e,t){var n,i,r,o;if(t)for(n=0,i=(o=Object.keys(t)).length;n<i;n+=1)e[r=o[n]]=t[r];return e}};function i(e,t){var n="",i=e.reason||"(unknown reason)";return e.mark?(e.mark.name&&(n+='in "'+e.mark.name+'" '),n+="("+(e.mark.line+1)+":"+(e.mark.column+1)+")",!t&&e.mark.snippet&&(n+="\n\n"+e.mark.snippet),i+" "+n):i}function r(e,t){Error.call(this),this.name="YAMLException",this.reason=e,this.mark=t,this.message=i(this,!1),Error.captureStackTrace?Error.captureStackTrace(this,this.constructor):this.stack=(new Error).stack||""}r.prototype=Object.create(Error.prototype),r.prototype.constructor=r,r.prototype.toString=function(e){return this.name+": "+i(this,e)};var o=r;function a(e,t,n,i,r){var o="",a="",l=Math.floor(r/2)-1;return i-t>l&&(t=i-l+(o=" ... ").length),n-i>l&&(n=i+l-(a=" ...").length),{str:o+e.slice(t,n).replace(/\t/g,"→")+a,pos:i-t+o.length}}function l(e,t){return n.repeat(" ",t-e.length)+e}var c=function(e,t){if(t=Object.create(t||null),!e.buffer)return null;t.maxLength||(t.maxLength=79),"number"!=typeof t.indent&&(t.indent=1),"number"!=typeof t.linesBefore&&(t.linesBefore=3),"number"!=typeof t.linesAfter&&(t.linesAfter=2);for(var i,r=/\r?\n|\r|\0/g,o=[0],c=[],s=-1;i=r.exec(e.buffer);)c.push(i.index),o.push(i.index+i[0].length),e.position<=i.index&&s<0&&(s=o.length-2);s<0&&(s=o.length-1);var u,p,f="",d=Math.min(e.line+t.linesAfter,c.length).toString().length,h=t.maxLength-(t.indent+d+3);for(u=1;u<=t.linesBefore&&!(s-u<0);u++)p=a(e.buffer,o[s-u],c[s-u],e.position-(o[s]-o[s-u]),h),f=n.repeat(" ",t.indent)+l((e.line-u+1).toString(),d)+" | "+p.str+"\n"+f;for(p=a(e.buffer,o[s],c[s],e.position,h),f+=n.repeat(" ",t.indent)+l((e.line+1).toString(),d)+" | "+p.str+"\n",f+=n.repeat("-",t.indent+d+3+p.pos)+"^\n",u=1;u<=t.linesAfter&&!(s+u>=c.length);u++)p=a(e.buffer,o[s+u],c[s+u],e.position-(o[s]-o[s+u]),h),f+=n.repeat(" ",t.indent)+l((e.line+u+1).toString(),d)+" | "+p.str+"\n";return f.replace(/\n$/,"")},s=["kind","multi","resolve","construct","instanceOf","predicate","represent","representName","defaultStyle","styleAliases"],u=["scalar","sequence","mapping"];var p=function(e,t){if(t=t||{},Object.keys(t).forEach((function(t){if(-1===s.indexOf(t))throw new o('Unknown option "'+t+'" is met in definition of "'+e+'" YAML type.')})),this.options=t,this.tag=e,this.kind=t.kind||null,this.resolve=t.resolve||function(){return!0},this.construct=t.construct||function(e){return e},this.instanceOf=t.instanceOf||null,this.predicate=t.predicate||null,this.represent=t.represent||null,this.representName=t.representName||null,this.defaultStyle=t.defaultStyle||null,this.multi=t.multi||!1,this.styleAliases=function(e){var t={};return null!==e&&Object.keys(e).forEach((function(n){e[n].forEach((function(e){t[String(e)]=n}))})),t}(t.styleAliases||null),-1===u.indexOf(this.kind))throw new o('Unknown kind "'+this.kind+'" is specified for "'+e+'" YAML type.')};function f(e,t){var n=[];return e[t].forEach((function(e){var t=n.length;n.forEach((function(n,i){n.tag===e.tag&&n.kind===e.kind&&n.multi===e.multi&&(t=i)})),n[t]=e})),n}function d(e){return this.extend(e)}d.prototype.extend=function(e){var t=[],n=[];if(e instanceof p)n.push(e);else if(Array.isArray(e))n=n.concat(e);else{if(!e||!Array.isArray(e.implicit)&&!Array.isArray(e.explicit))throw new o("Schema.extend argument should be a Type, [ Type ], or a schema definition ({ implicit: [...], explicit: [...] })");e.implicit&&(t=t.concat(e.implicit)),e.explicit&&(n=n.concat(e.explicit))}t.forEach((function(e){if(!(e instanceof p))throw new o("Specified list of YAML types (or a single Type object) contains a non-Type object.");if(e.loadKind&&"scalar"!==e.loadKind)throw new o("There is a non-scalar type in the implicit list of a schema. Implicit resolving of such types is not supported.");if(e.multi)throw new o("There is a multi type in the implicit list of a schema. Multi tags can only be listed as explicit.")})),n.forEach((function(e){if(!(e instanceof p))throw new o("Specified list of YAML types (or a single Type object) contains a non-Type object.")}));var i=Object.create(d.prototype);return i.implicit=(this.implicit||[]).concat(t),i.explicit=(this.explicit||[]).concat(n),i.compiledImplicit=f(i,"implicit"),i.compiledExplicit=f(i,"explicit"),i.compiledTypeMap=function(){var e,t,n={scalar:{},sequence:{},mapping:{},fallback:{},multi:{scalar:[],sequence:[],mapping:[],fallback:[]}};function i(e){e.multi?(n.multi[e.kind].push(e),n.multi.fallback.push(e)):n[e.kind][e.tag]=n.fallback[e.tag]=e}for(e=0,t=arguments.length;e<t;e+=1)arguments[e].forEach(i);return n}(i.compiledImplicit,i.compiledExplicit),i};var h=d,g=new p("tag:yaml.org,2002:str",{kind:"scalar",construct:function(e){return null!==e?e:""}}),m=new p("tag:yaml.org,2002:seq",{kind:"sequence",construct:function(e){return null!==e?e:[]}}),y=new p("tag:yaml.org,2002:map",{kind:"mapping",construct:function(e){return null!==e?e:{}}}),b=new h({explicit:[g,m,y]});var A=new p("tag:yaml.org,2002:null",{kind:"scalar",resolve:function(e){if(null===e)return!0;var t=e.length;return 1===t&&"~"===e||4===t&&("null"===e||"Null"===e||"NULL"===e)},construct:function(){return null},predicate:function(e){return null===e},represent:{canonical:function(){return"~"},lowercase:function(){return"null"},uppercase:function(){return"NULL"},camelcase:function(){return"Null"},empty:function(){return""}},defaultStyle:"lowercase"});var v=new p("tag:yaml.org,2002:bool",{kind:"scalar",resolve:function(e){if(null===e)return!1;var t=e.length;return 4===t&&("true"===e||"True"===e||"TRUE"===e)||5===t&&("false"===e||"False"===e||"FALSE"===e)},construct:function(e){return"true"===e||"True"===e||"TRUE"===e},predicate:function(e){return"[object Boolean]"===Object.prototype.toString.call(e)},represent:{lowercase:function(e){return e?"true":"false"},uppercase:function(e){return e?"TRUE":"FALSE"},camelcase:function(e){return e?"True":"False"}},defaultStyle:"lowercase"});function w(e){return 48<=e&&e<=55}function k(e){return 48<=e&&e<=57}var C=new p("tag:yaml.org,2002:int",{kind:"scalar",resolve:function(e){if(null===e)return!1;var t,n,i=e.length,r=0,o=!1;if(!i)return!1;if("-"!==(t=e[r])&&"+"!==t||(t=e[++r]),"0"===t){if(r+1===i)return!0;if("b"===(t=e[++r])){for(r++;r<i;r++)if("_"!==(t=e[r])){if("0"!==t&&"1"!==t)return!1;o=!0}return o&&"_"!==t}if("x"===t){for(r++;r<i;r++)if("_"!==(t=e[r])){if(!(48<=(n=e.charCodeAt(r))&&n<=57||65<=n&&n<=70||97<=n&&n<=102))return!1;o=!0}return o&&"_"!==t}if("o"===t){for(r++;r<i;r++)if("_"!==(t=e[r])){if(!w(e.charCodeAt(r)))return!1;o=!0}return o&&"_"!==t}}if("_"===t)return!1;for(;r<i;r++)if("_"!==(t=e[r])){if(!k(e.charCodeAt(r)))return!1;o=!0}return!(!o||"_"===t)},construct:function(e){var t,n=e,i=1;if(-1!==n.indexOf("_")&&(n=n.replace(/_/g,"")),"-"!==(t=n[0])&&"+"!==t||("-"===t&&(i=-1),t=(n=n.slice(1))[0]),"0"===n)return 0;if("0"===t){if("b"===n[1])return i*parseInt(n.slice(2),2);if("x"===n[1])return i*parseInt(n.slice(2),16);if("o"===n[1])return i*parseInt(n.slice(2),8)}return i*parseInt(n,10)},predicate:function(e){return"[object Number]"===Object.prototype.toString.call(e)&&e%1==0&&!n.isNegativeZero(e)},represent:{binary:function(e){return e>=0?"0b"+e.toString(2):"-0b"+e.toString(2).slice(1)},octal:function(e){return e>=0?"0o"+e.toString(8):"-0o"+e.toString(8).slice(1)},decimal:function(e){return e.toString(10)},hexadecimal:function(e){return e>=0?"0x"+e.toString(16).toUpperCase():"-0x"+e.toString(16).toUpperCase().slice(1)}},defaultStyle:"decimal",styleAliases:{binary:[2,"bin"],octal:[8,"oct"],decimal:[10,"dec"],hexadecimal:[16,"hex"]}}),x=new RegExp("^(?:[-+]?(?:[0-9][0-9_]*)(?:\\.[0-9_]*)?(?:[eE][-+]?[0-9]+)?|\\.[0-9_]+(?:[eE][-+]?[0-9]+)?|[-+]?\\.(?:inf|Inf|INF)|\\.(?:nan|NaN|NAN))$");var I=/^[-+]?[0-9]+e/;var S=new p("tag:yaml.org,2002:float",{kind:"scalar",resolve:function(e){return null!==e&&!(!x.test(e)||"_"===e[e.length-1])},construct:function(e){var t,n;return n="-"===(t=e.replace(/_/g,"").toLowerCase())[0]?-1:1,"+-".indexOf(t[0])>=0&&(t=t.slice(1)),".inf"===t?1===n?Number.POSITIVE_INFINITY:Number.NEGATIVE_INFINITY:".nan"===t?NaN:n*parseFloat(t,10)},predicate:function(e){return"[object Number]"===Object.prototype.toString.call(e)&&(e%1!=0||n.isNegativeZero(e))},represent:function(e,t){var i;if(isNaN(e))switch(t){case"lowercase":return".nan";case"uppercase":return".NAN";case"camelcase":return".NaN"}else if(Number.POSITIVE_INFINITY===e)switch(t){case"lowercase":return".inf";case"uppercase":return".INF";case"camelcase":return".Inf"}else if(Number.NEGATIVE_INFINITY===e)switch(t){case"lowercase":return"-.inf";case"uppercase":return"-.INF";case"camelcase":return"-.Inf"}else if(n.isNegativeZero(e))return"-0.0";return i=e.toString(10),I.test(i)?i.replace("e",".e"):i},defaultStyle:"lowercase"}),O=b.extend({implicit:[A,v,C,S]}),j=O,T=new RegExp("^([0-9][0-9][0-9][0-9])-([0-9][0-9])-([0-9][0-9])$"),N=new RegExp("^([0-9][0-9][0-9][0-9])-([0-9][0-9]?)-([0-9][0-9]?)(?:[Tt]|[ \\t]+)([0-9][0-9]?):([0-9][0-9]):([0-9][0-9])(?:\\.([0-9]*))?(?:[ \\t]*(Z|([-+])([0-9][0-9]?)(?::([0-9][0-9]))?))?$");var F=new p("tag:yaml.org,2002:timestamp",{kind:"scalar",resolve:function(e){return null!==e&&(null!==T.exec(e)||null!==N.exec(e))},construct:function(e){var t,n,i,r,o,a,l,c,s=0,u=null;if(null===(t=T.exec(e))&&(t=N.exec(e)),null===t)throw new Error("Date resolve error");if(n=+t[1],i=+t[2]-1,r=+t[3],!t[4])return new Date(Date.UTC(n,i,r));if(o=+t[4],a=+t[5],l=+t[6],t[7]){for(s=t[7].slice(0,3);s.length<3;)s+="0";s=+s}return t[9]&&(u=6e4*(60*+t[10]+ +(t[11]||0)),"-"===t[9]&&(u=-u)),c=new Date(Date.UTC(n,i,r,o,a,l,s)),u&&c.setTime(c.getTime()-u),c},instanceOf:Date,represent:function(e){return e.toISOString()}});var E=new p("tag:yaml.org,2002:merge",{kind:"scalar",resolve:function(e){return"<<"===e||null===e}}),M="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=\n\r";var L=new p("tag:yaml.org,2002:binary",{kind:"scalar",resolve:function(e){if(null===e)return!1;var t,n,i=0,r=e.length,o=M;for(n=0;n<r;n++)if(!((t=o.indexOf(e.charAt(n)))>64)){if(t<0)return!1;i+=6}return i%8==0},construct:function(e){var t,n,i=e.replace(/[\r\n=]/g,""),r=i.length,o=M,a=0,l=[];for(t=0;t<r;t++)t%4==0&&t&&(l.push(a>>16&255),l.push(a>>8&255),l.push(255&a)),a=a<<6|o.indexOf(i.charAt(t));return 0===(n=r%4*6)?(l.push(a>>16&255),l.push(a>>8&255),l.push(255&a)):18===n?(l.push(a>>10&255),l.push(a>>2&255)):12===n&&l.push(a>>4&255),new Uint8Array(l)},predicate:function(e){return"[object Uint8Array]"===Object.prototype.toString.call(e)},represent:function(e){var t,n,i="",r=0,o=e.length,a=M;for(t=0;t<o;t++)t%3==0&&t&&(i+=a[r>>18&63],i+=a[r>>12&63],i+=a[r>>6&63],i+=a[63&r]),r=(r<<8)+e[t];return 0===(n=o%3)?(i+=a[r>>18&63],i+=a[r>>12&63],i+=a[r>>6&63],i+=a[63&r]):2===n?(i+=a[r>>10&63],i+=a[r>>4&63],i+=a[r<<2&63],i+=a[64]):1===n&&(i+=a[r>>2&63],i+=a[r<<4&63],i+=a[64],i+=a[64]),i}}),_=Object.prototype.hasOwnProperty,D=Object.prototype.toString;var U=new p("tag:yaml.org,2002:omap",{kind:"sequence",resolve:function(e){if(null===e)return!0;var t,n,i,r,o,a=[],l=e;for(t=0,n=l.length;t<n;t+=1){if(i=l[t],o=!1,"[object Object]"!==D.call(i))return!1;for(r in i)if(_.call(i,r)){if(o)return!1;o=!0}if(!o)return!1;if(-1!==a.indexOf(r))return!1;a.push(r)}return!0},construct:function(e){return null!==e?e:[]}}),q=Object.prototype.toString;var Y=new p("tag:yaml.org,2002:pairs",{kind:"sequence",resolve:function(e){if(null===e)return!0;var t,n,i,r,o,a=e;for(o=new Array(a.length),t=0,n=a.length;t<n;t+=1){if(i=a[t],"[object Object]"!==q.call(i))return!1;if(1!==(r=Object.keys(i)).length)return!1;o[t]=[r[0],i[r[0]]]}return!0},construct:function(e){if(null===e)return[];var t,n,i,r,o,a=e;for(o=new Array(a.length),t=0,n=a.length;t<n;t+=1)i=a[t],r=Object.keys(i),o[t]=[r[0],i[r[0]]];return o}}),R=Object.prototype.hasOwnProperty;var B=new p("tag:yaml.org,2002:set",{kind:"mapping",resolve:function(e){if(null===e)return!0;var t,n=e;for(t in n)if(R.call(n,t)&&null!==n[t])return!1;return!0},construct:function(e){return null!==e?e:{}}}),K=j.extend({implicit:[F,E],explicit:[L,U,Y,B]}),P=Object.prototype.hasOwnProperty,W=/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x84\x86-\x9F\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/,H=/[\x85\u2028\u2029]/,$=/[,\[\]\{\}]/,G=/^(?:!|!!|![a-z\-]+!)$/i,V=/^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\-#;\/\?:@&=\+\$,_\.!~\*'\(\)\[\]])*$/i;function Z(e){return Object.prototype.toString.call(e)}function J(e){return 10===e||13===e}function Q(e){return 9===e||32===e}function z(e){return 9===e||32===e||10===e||13===e}function X(e){return 44===e||91===e||93===e||123===e||125===e}function ee(e){var t;return 48<=e&&e<=57?e-48:97<=(t=32|e)&&t<=102?t-97+10:-1}function te(e){return 48===e?"\0":97===e?"":98===e?"\b":116===e||9===e?"\t":110===e?"\n":118===e?"\v":102===e?"\f":114===e?"\r":101===e?"":32===e?" ":34===e?'"':47===e?"/":92===e?"\\":78===e?"":95===e?" ":76===e?"\u2028":80===e?"\u2029":""}function ne(e){return e<=65535?String.fromCharCode(e):String.fromCharCode(55296+(e-65536>>10),56320+(e-65536&1023))}for(var ie=new Array(256),re=new Array(256),oe=0;oe<256;oe++)ie[oe]=te(oe)?1:0,re[oe]=te(oe);function ae(e,t){this.input=e,this.filename=t.filename||null,this.schema=t.schema||K,this.onWarning=t.onWarning||null,this.legacy=t.legacy||!1,this.json=t.json||!1,this.listener=t.listener||null,this.implicitTypes=this.schema.compiledImplicit,this.typeMap=this.schema.compiledTypeMap,this.length=e.length,this.position=0,this.line=0,this.lineStart=0,this.lineIndent=0,this.firstTabInLine=-1,this.documents=[]}function le(e,t){var n={name:e.filename,buffer:e.input.slice(0,-1),position:e.position,line:e.line,column:e.position-e.lineStart};return n.snippet=c(n),new o(t,n)}function ce(e,t){throw le(e,t)}function se(e,t){e.onWarning&&e.onWarning.call(null,le(e,t))}var ue={YAML:function(e,t,n){var i,r,o;null!==e.version&&ce(e,"duplication of %YAML directive"),1!==n.length&&ce(e,"YAML directive accepts exactly one argument"),null===(i=/^([0-9]+)\.([0-9]+)$/.exec(n[0]))&&ce(e,"ill-formed argument of the YAML directive"),r=parseInt(i[1],10),o=parseInt(i[2],10),1!==r&&ce(e,"unacceptable YAML version of the document"),e.version=n[0],e.checkLineBreaks=o<2,1!==o&&2!==o&&se(e,"unsupported YAML version of the document")},TAG:function(e,t,n){var i,r;2!==n.length&&ce(e,"TAG directive accepts exactly two arguments"),i=n[0],r=n[1],G.test(i)||ce(e,"ill-formed tag handle (first argument) of the TAG directive"),P.call(e.tagMap,i)&&ce(e,'there is a previously declared suffix for "'+i+'" tag handle'),V.test(r)||ce(e,"ill-formed tag prefix (second argument) of the TAG directive");try{r=decodeURIComponent(r)}catch(t){ce(e,"tag prefix is malformed: "+r)}e.tagMap[i]=r}};function pe(e,t,n,i){var r,o,a,l;if(t<n){if(l=e.input.slice(t,n),i)for(r=0,o=l.length;r<o;r+=1)9===(a=l.charCodeAt(r))||32<=a&&a<=1114111||ce(e,"expected valid JSON character");else W.test(l)&&ce(e,"the stream contains non-printable characters");e.result+=l}}function fe(e,t,i,r){var o,a,l,c;for(n.isObject(i)||ce(e,"cannot merge mappings; the provided source object is unacceptable"),l=0,c=(o=Object.keys(i)).length;l<c;l+=1)a=o[l],P.call(t,a)||(t[a]=i[a],r[a]=!0)}function de(e,t,n,i,r,o,a,l,c){var s,u;if(Array.isArray(r))for(s=0,u=(r=Array.prototype.slice.call(r)).length;s<u;s+=1)Array.isArray(r[s])&&ce(e,"nested arrays are not supported inside keys"),"object"==typeof r&&"[object Object]"===Z(r[s])&&(r[s]="[object Object]");if("object"==typeof r&&"[object Object]"===Z(r)&&(r="[object Object]"),r=String(r),null===t&&(t={}),"tag:yaml.org,2002:merge"===i)if(Array.isArray(o))for(s=0,u=o.length;s<u;s+=1)fe(e,t,o[s],n);else fe(e,t,o,n);else e.json||P.call(n,r)||!P.call(t,r)||(e.line=a||e.line,e.lineStart=l||e.lineStart,e.position=c||e.position,ce(e,"duplicated mapping key")),"__proto__"===r?Object.defineProperty(t,r,{configurable:!0,enumerable:!0,writable:!0,value:o}):t[r]=o,delete n[r];return t}function he(e){var t;10===(t=e.input.charCodeAt(e.position))?e.position++:13===t?(e.position++,10===e.input.charCodeAt(e.position)&&e.position++):ce(e,"a line break is expected"),e.line+=1,e.lineStart=e.position,e.firstTabInLine=-1}function ge(e,t,n){for(var i=0,r=e.input.charCodeAt(e.position);0!==r;){for(;Q(r);)9===r&&-1===e.firstTabInLine&&(e.firstTabInLine=e.position),r=e.input.charCodeAt(++e.position);if(t&&35===r)do{r=e.input.charCodeAt(++e.position)}while(10!==r&&13!==r&&0!==r);if(!J(r))break;for(he(e),r=e.input.charCodeAt(e.position),i++,e.lineIndent=0;32===r;)e.lineIndent++,r=e.input.charCodeAt(++e.position)}return-1!==n&&0!==i&&e.lineIndent<n&&se(e,"deficient indentation"),i}function me(e){var t,n=e.position;return!(45!==(t=e.input.charCodeAt(n))&&46!==t||t!==e.input.charCodeAt(n+1)||t!==e.input.charCodeAt(n+2)||(n+=3,0!==(t=e.input.charCodeAt(n))&&!z(t)))}function ye(e,t){1===t?e.result+=" ":t>1&&(e.result+=n.repeat("\n",t-1))}function be(e,t){var n,i,r=e.tag,o=e.anchor,a=[],l=!1;if(-1!==e.firstTabInLine)return!1;for(null!==e.anchor&&(e.anchorMap[e.anchor]=a),i=e.input.charCodeAt(e.position);0!==i&&(-1!==e.firstTabInLine&&(e.position=e.firstTabInLine,ce(e,"tab characters must not be used in indentation")),45===i)&&z(e.input.charCodeAt(e.position+1));)if(l=!0,e.position++,ge(e,!0,-1)&&e.lineIndent<=t)a.push(null),i=e.input.charCodeAt(e.position);else if(n=e.line,we(e,t,3,!1,!0),a.push(e.result),ge(e,!0,-1),i=e.input.charCodeAt(e.position),(e.line===n||e.lineIndent>t)&&0!==i)ce(e,"bad indentation of a sequence entry");else if(e.lineIndent<t)break;return!!l&&(e.tag=r,e.anchor=o,e.kind="sequence",e.result=a,!0)}function Ae(e){var t,n,i,r,o=!1,a=!1;if(33!==(r=e.input.charCodeAt(e.position)))return!1;if(null!==e.tag&&ce(e,"duplication of a tag property"),60===(r=e.input.charCodeAt(++e.position))?(o=!0,r=e.input.charCodeAt(++e.position)):33===r?(a=!0,n="!!",r=e.input.charCodeAt(++e.position)):n="!",t=e.position,o){do{r=e.input.charCodeAt(++e.position)}while(0!==r&&62!==r);e.position<e.length?(i=e.input.slice(t,e.position),r=e.input.charCodeAt(++e.position)):ce(e,"unexpected end of the stream within a verbatim tag")}else{for(;0!==r&&!z(r);)33===r&&(a?ce(e,"tag suffix cannot contain exclamation marks"):(n=e.input.slice(t-1,e.position+1),G.test(n)||ce(e,"named tag handle cannot contain such characters"),a=!0,t=e.position+1)),r=e.input.charCodeAt(++e.position);i=e.input.slice(t,e.position),$.test(i)&&ce(e,"tag suffix cannot contain flow indicator characters")}i&&!V.test(i)&&ce(e,"tag name cannot contain such characters: "+i);try{i=decodeURIComponent(i)}catch(t){ce(e,"tag name is malformed: "+i)}return o?e.tag=i:P.call(e.tagMap,n)?e.tag=e.tagMap[n]+i:"!"===n?e.tag="!"+i:"!!"===n?e.tag="tag:yaml.org,2002:"+i:ce(e,'undeclared tag handle "'+n+'"'),!0}function ve(e){var t,n;if(38!==(n=e.input.charCodeAt(e.position)))return!1;for(null!==e.anchor&&ce(e,"duplication of an anchor property"),n=e.input.charCodeAt(++e.position),t=e.position;0!==n&&!z(n)&&!X(n);)n=e.input.charCodeAt(++e.position);return e.position===t&&ce(e,"name of an anchor node must contain at least one character"),e.anchor=e.input.slice(t,e.position),!0}function we(e,t,i,r,o){var a,l,c,s,u,p,f,d,h,g=1,m=!1,y=!1;if(null!==e.listener&&e.listener("open",e),e.tag=null,e.anchor=null,e.kind=null,e.result=null,a=l=c=4===i||3===i,r&&ge(e,!0,-1)&&(m=!0,e.lineIndent>t?g=1:e.lineIndent===t?g=0:e.lineIndent<t&&(g=-1)),1===g)for(;Ae(e)||ve(e);)ge(e,!0,-1)?(m=!0,c=a,e.lineIndent>t?g=1:e.lineIndent===t?g=0:e.lineIndent<t&&(g=-1)):c=!1;if(c&&(c=m||o),1!==g&&4!==i||(d=1===i||2===i?t:t+1,h=e.position-e.lineStart,1===g?c&&(be(e,h)||function(e,t,n){var i,r,o,a,l,c,s,u=e.tag,p=e.anchor,f={},d=Object.create(null),h=null,g=null,m=null,y=!1,b=!1;if(-1!==e.firstTabInLine)return!1;for(null!==e.anchor&&(e.anchorMap[e.anchor]=f),s=e.input.charCodeAt(e.position);0!==s;){if(y||-1===e.firstTabInLine||(e.position=e.firstTabInLine,ce(e,"tab characters must not be used in indentation")),i=e.input.charCodeAt(e.position+1),o=e.line,63!==s&&58!==s||!z(i)){if(a=e.line,l=e.lineStart,c=e.position,!we(e,n,2,!1,!0))break;if(e.line===o){for(s=e.input.charCodeAt(e.position);Q(s);)s=e.input.charCodeAt(++e.position);if(58===s)z(s=e.input.charCodeAt(++e.position))||ce(e,"a whitespace character is expected after the key-value separator within a block mapping"),y&&(de(e,f,d,h,g,null,a,l,c),h=g=m=null),b=!0,y=!1,r=!1,h=e.tag,g=e.result;else{if(!b)return e.tag=u,e.anchor=p,!0;ce(e,"can not read an implicit mapping pair; a colon is missed")}}else{if(!b)return e.tag=u,e.anchor=p,!0;ce(e,"can not read a block mapping entry; a multiline key may not be an implicit key")}}else 63===s?(y&&(de(e,f,d,h,g,null,a,l,c),h=g=m=null),b=!0,y=!0,r=!0):y?(y=!1,r=!0):ce(e,"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line"),e.position+=1,s=i;if((e.line===o||e.lineIndent>t)&&(y&&(a=e.line,l=e.lineStart,c=e.position),we(e,t,4,!0,r)&&(y?g=e.result:m=e.result),y||(de(e,f,d,h,g,m,a,l,c),h=g=m=null),ge(e,!0,-1),s=e.input.charCodeAt(e.position)),(e.line===o||e.lineIndent>t)&&0!==s)ce(e,"bad indentation of a mapping entry");else if(e.lineIndent<t)break}return y&&de(e,f,d,h,g,null,a,l,c),b&&(e.tag=u,e.anchor=p,e.kind="mapping",e.result=f),b}(e,h,d))||function(e,t){var n,i,r,o,a,l,c,s,u,p,f,d,h=!0,g=e.tag,m=e.anchor,y=Object.create(null);if(91===(d=e.input.charCodeAt(e.position)))a=93,s=!1,o=[];else{if(123!==d)return!1;a=125,s=!0,o={}}for(null!==e.anchor&&(e.anchorMap[e.anchor]=o),d=e.input.charCodeAt(++e.position);0!==d;){if(ge(e,!0,t),(d=e.input.charCodeAt(e.position))===a)return e.position++,e.tag=g,e.anchor=m,e.kind=s?"mapping":"sequence",e.result=o,!0;h?44===d&&ce(e,"expected the node content, but found ','"):ce(e,"missed comma between flow collection entries"),f=null,l=c=!1,63===d&&z(e.input.charCodeAt(e.position+1))&&(l=c=!0,e.position++,ge(e,!0,t)),n=e.line,i=e.lineStart,r=e.position,we(e,t,1,!1,!0),p=e.tag,u=e.result,ge(e,!0,t),d=e.input.charCodeAt(e.position),!c&&e.line!==n||58!==d||(l=!0,d=e.input.charCodeAt(++e.position),ge(e,!0,t),we(e,t,1,!1,!0),f=e.result),s?de(e,o,y,p,u,f,n,i,r):l?o.push(de(e,null,y,p,u,f,n,i,r)):o.push(u),ge(e,!0,t),44===(d=e.input.charCodeAt(e.position))?(h=!0,d=e.input.charCodeAt(++e.position)):h=!1}ce(e,"unexpected end of the stream within a flow collection")}(e,d)?y=!0:(l&&function(e,t){var i,r,o,a,l,c=1,s=!1,u=!1,p=t,f=0,d=!1;if(124===(a=e.input.charCodeAt(e.position)))r=!1;else{if(62!==a)return!1;r=!0}for(e.kind="scalar",e.result="";0!==a;)if(43===(a=e.input.charCodeAt(++e.position))||45===a)1===c?c=43===a?3:2:ce(e,"repeat of a chomping mode identifier");else{if(!((o=48<=(l=a)&&l<=57?l-48:-1)>=0))break;0===o?ce(e,"bad explicit indentation width of a block scalar; it cannot be less than one"):u?ce(e,"repeat of an indentation width identifier"):(p=t+o-1,u=!0)}if(Q(a)){do{a=e.input.charCodeAt(++e.position)}while(Q(a));if(35===a)do{a=e.input.charCodeAt(++e.position)}while(!J(a)&&0!==a)}for(;0!==a;){for(he(e),e.lineIndent=0,a=e.input.charCodeAt(e.position);(!u||e.lineIndent<p)&&32===a;)e.lineIndent++,a=e.input.charCodeAt(++e.position);if(!u&&e.lineIndent>p&&(p=e.lineIndent),J(a))f++;else{if(e.lineIndent<p){3===c?e.result+=n.repeat("\n",s?1+f:f):1===c&&s&&(e.result+="\n");break}for(r?Q(a)?(d=!0,e.result+=n.repeat("\n",s?1+f:f)):d?(d=!1,e.result+=n.repeat("\n",f+1)):0===f?s&&(e.result+=" "):e.result+=n.repeat("\n",f):e.result+=n.repeat("\n",s?1+f:f),s=!0,u=!0,f=0,i=e.position;!J(a)&&0!==a;)a=e.input.charCodeAt(++e.position);pe(e,i,e.position,!1)}}return!0}(e,d)||function(e,t){var n,i,r;if(39!==(n=e.input.charCodeAt(e.position)))return!1;for(e.kind="scalar",e.result="",e.position++,i=r=e.position;0!==(n=e.input.charCodeAt(e.position));)if(39===n){if(pe(e,i,e.position,!0),39!==(n=e.input.charCodeAt(++e.position)))return!0;i=e.position,e.position++,r=e.position}else J(n)?(pe(e,i,r,!0),ye(e,ge(e,!1,t)),i=r=e.position):e.position===e.lineStart&&me(e)?ce(e,"unexpected end of the document within a single quoted scalar"):(e.position++,r=e.position);ce(e,"unexpected end of the stream within a single quoted scalar")}(e,d)||function(e,t){var n,i,r,o,a,l,c;if(34!==(l=e.input.charCodeAt(e.position)))return!1;for(e.kind="scalar",e.result="",e.position++,n=i=e.position;0!==(l=e.input.charCodeAt(e.position));){if(34===l)return pe(e,n,e.position,!0),e.position++,!0;if(92===l){if(pe(e,n,e.position,!0),J(l=e.input.charCodeAt(++e.position)))ge(e,!1,t);else if(l<256&&ie[l])e.result+=re[l],e.position++;else if((a=120===(c=l)?2:117===c?4:85===c?8:0)>0){for(r=a,o=0;r>0;r--)(a=ee(l=e.input.charCodeAt(++e.position)))>=0?o=(o<<4)+a:ce(e,"expected hexadecimal character");e.result+=ne(o),e.position++}else ce(e,"unknown escape sequence");n=i=e.position}else J(l)?(pe(e,n,i,!0),ye(e,ge(e,!1,t)),n=i=e.position):e.position===e.lineStart&&me(e)?ce(e,"unexpected end of the document within a double quoted scalar"):(e.position++,i=e.position)}ce(e,"unexpected end of the stream within a double quoted scalar")}(e,d)?y=!0:!function(e){var t,n,i;if(42!==(i=e.input.charCodeAt(e.position)))return!1;for(i=e.input.charCodeAt(++e.position),t=e.position;0!==i&&!z(i)&&!X(i);)i=e.input.charCodeAt(++e.position);return e.position===t&&ce(e,"name of an alias node must contain at least one character"),n=e.input.slice(t,e.position),P.call(e.anchorMap,n)||ce(e,'unidentified alias "'+n+'"'),e.result=e.anchorMap[n],ge(e,!0,-1),!0}(e)?function(e,t,n){var i,r,o,a,l,c,s,u,p=e.kind,f=e.result;if(z(u=e.input.charCodeAt(e.position))||X(u)||35===u||38===u||42===u||33===u||124===u||62===u||39===u||34===u||37===u||64===u||96===u)return!1;if((63===u||45===u)&&(z(i=e.input.charCodeAt(e.position+1))||n&&X(i)))return!1;for(e.kind="scalar",e.result="",r=o=e.position,a=!1;0!==u;){if(58===u){if(z(i=e.input.charCodeAt(e.position+1))||n&&X(i))break}else if(35===u){if(z(e.input.charCodeAt(e.position-1)))break}else{if(e.position===e.lineStart&&me(e)||n&&X(u))break;if(J(u)){if(l=e.line,c=e.lineStart,s=e.lineIndent,ge(e,!1,-1),e.lineIndent>=t){a=!0,u=e.input.charCodeAt(e.position);continue}e.position=o,e.line=l,e.lineStart=c,e.lineIndent=s;break}}a&&(pe(e,r,o,!1),ye(e,e.line-l),r=o=e.position,a=!1),Q(u)||(o=e.position+1),u=e.input.charCodeAt(++e.position)}return pe(e,r,o,!1),!!e.result||(e.kind=p,e.result=f,!1)}(e,d,1===i)&&(y=!0,null===e.tag&&(e.tag="?")):(y=!0,null===e.tag&&null===e.anchor||ce(e,"alias node should not have any properties")),null!==e.anchor&&(e.anchorMap[e.anchor]=e.result)):0===g&&(y=c&&be(e,h))),null===e.tag)null!==e.anchor&&(e.anchorMap[e.anchor]=e.result);else if("?"===e.tag){for(null!==e.result&&"scalar"!==e.kind&&ce(e,'unacceptable node kind for !<?> tag; it should be "scalar", not "'+e.kind+'"'),s=0,u=e.implicitTypes.length;s<u;s+=1)if((f=e.implicitTypes[s]).resolve(e.result)){e.result=f.construct(e.result),e.tag=f.tag,null!==e.anchor&&(e.anchorMap[e.anchor]=e.result);break}}else if("!"!==e.tag){if(P.call(e.typeMap[e.kind||"fallback"],e.tag))f=e.typeMap[e.kind||"fallback"][e.tag];else for(f=null,s=0,u=(p=e.typeMap.multi[e.kind||"fallback"]).length;s<u;s+=1)if(e.tag.slice(0,p[s].tag.length)===p[s].tag){f=p[s];break}f||ce(e,"unknown tag !<"+e.tag+">"),null!==e.result&&f.kind!==e.kind&&ce(e,"unacceptable node kind for !<"+e.tag+'> tag; it should be "'+f.kind+'", not "'+e.kind+'"'),f.resolve(e.result,e.tag)?(e.result=f.construct(e.result,e.tag),null!==e.anchor&&(e.anchorMap[e.anchor]=e.result)):ce(e,"cannot resolve a node with !<"+e.tag+"> explicit tag")}return null!==e.listener&&e.listener("close",e),null!==e.tag||null!==e.anchor||y}function ke(e){var t,n,i,r,o=e.position,a=!1;for(e.version=null,e.checkLineBreaks=e.legacy,e.tagMap=Object.create(null),e.anchorMap=Object.create(null);0!==(r=e.input.charCodeAt(e.position))&&(ge(e,!0,-1),r=e.input.charCodeAt(e.position),!(e.lineIndent>0||37!==r));){for(a=!0,r=e.input.charCodeAt(++e.position),t=e.position;0!==r&&!z(r);)r=e.input.charCodeAt(++e.position);for(i=[],(n=e.input.slice(t,e.position)).length<1&&ce(e,"directive name must not be less than one character in length");0!==r;){for(;Q(r);)r=e.input.charCodeAt(++e.position);if(35===r){do{r=e.input.charCodeAt(++e.position)}while(0!==r&&!J(r));break}if(J(r))break;for(t=e.position;0!==r&&!z(r);)r=e.input.charCodeAt(++e.position);i.push(e.input.slice(t,e.position))}0!==r&&he(e),P.call(ue,n)?ue[n](e,n,i):se(e,'unknown document directive "'+n+'"')}ge(e,!0,-1),0===e.lineIndent&&45===e.input.charCodeAt(e.position)&&45===e.input.charCodeAt(e.position+1)&&45===e.input.charCodeAt(e.position+2)?(e.position+=3,ge(e,!0,-1)):a&&ce(e,"directives end mark is expected"),we(e,e.lineIndent-1,4,!1,!0),ge(e,!0,-1),e.checkLineBreaks&&H.test(e.input.slice(o,e.position))&&se(e,"non-ASCII line breaks are interpreted as content"),e.documents.push(e.result),e.position===e.lineStart&&me(e)?46===e.input.charCodeAt(e.position)&&(e.position+=3,ge(e,!0,-1)):e.position<e.length-1&&ce(e,"end of the stream or a document separator is expected")}function Ce(e,t){t=t||{},0!==(e=String(e)).length&&(10!==e.charCodeAt(e.length-1)&&13!==e.charCodeAt(e.length-1)&&(e+="\n"),65279===e.charCodeAt(0)&&(e=e.slice(1)));var n=new ae(e,t),i=e.indexOf("\0");for(-1!==i&&(n.position=i,ce(n,"null byte is not allowed in input")),n.input+="\0";32===n.input.charCodeAt(n.position);)n.lineIndent+=1,n.position+=1;for(;n.position<n.length-1;)ke(n);return n.documents}var xe={loadAll:function(e,t,n){null!==t&&"object"==typeof t&&void 0===n&&(n=t,t=null);var i=Ce(e,n);if("function"!=typeof t)return i;for(var r=0,o=i.length;r<o;r+=1)t(i[r])},load:function(e,t){var n=Ce(e,t);if(0!==n.length){if(1===n.length)return n[0];throw new o("expected a single document in the stream, but found more")}}},Ie=Object.prototype.toString,Se=Object.prototype.hasOwnProperty,Oe=65279,je={0:"\\0",7:"\\a",8:"\\b",9:"\\t",10:"\\n",11:"\\v",12:"\\f",13:"\\r",27:"\\e",34:'\\"',92:"\\\\",133:"\\N",160:"\\_",8232:"\\L",8233:"\\P"},Te=["y","Y","yes","Yes","YES","on","On","ON","n","N","no","No","NO","off","Off","OFF"],Ne=/^[-+]?[0-9_]+(?::[0-9_]+)+(?:\.[0-9_]*)?$/;function Fe(e){var t,i,r;if(t=e.toString(16).toUpperCase(),e<=255)i="x",r=2;else if(e<=65535)i="u",r=4;else{if(!(e<=4294967295))throw new o("code point within a string may not be greater than 0xFFFFFFFF");i="U",r=8}return"\\"+i+n.repeat("0",r-t.length)+t}function Ee(e){this.schema=e.schema||K,this.indent=Math.max(1,e.indent||2),this.noArrayIndent=e.noArrayIndent||!1,this.skipInvalid=e.skipInvalid||!1,this.flowLevel=n.isNothing(e.flowLevel)?-1:e.flowLevel,this.styleMap=function(e,t){var n,i,r,o,a,l,c;if(null===t)return{};for(n={},r=0,o=(i=Object.keys(t)).length;r<o;r+=1)a=i[r],l=String(t[a]),"!!"===a.slice(0,2)&&(a="tag:yaml.org,2002:"+a.slice(2)),(c=e.compiledTypeMap.fallback[a])&&Se.call(c.styleAliases,l)&&(l=c.styleAliases[l]),n[a]=l;return n}(this.schema,e.styles||null),this.sortKeys=e.sortKeys||!1,this.lineWidth=e.lineWidth||80,this.noRefs=e.noRefs||!1,this.noCompatMode=e.noCompatMode||!1,this.condenseFlow=e.condenseFlow||!1,this.quotingType='"'===e.quotingType?2:1,this.forceQuotes=e.forceQuotes||!1,this.replacer="function"==typeof e.replacer?e.replacer:null,this.implicitTypes=this.schema.compiledImplicit,this.explicitTypes=this.schema.compiledExplicit,this.tag=null,this.result="",this.duplicates=[],this.usedDuplicates=null}function Me(e,t){for(var i,r=n.repeat(" ",t),o=0,a=-1,l="",c=e.length;o<c;)-1===(a=e.indexOf("\n",o))?(i=e.slice(o),o=c):(i=e.slice(o,a+1),o=a+1),i.length&&"\n"!==i&&(l+=r),l+=i;return l}function Le(e,t){return"\n"+n.repeat(" ",e.indent*t)}function _e(e){return 32===e||9===e}function De(e){return 32<=e&&e<=126||161<=e&&e<=55295&&8232!==e&&8233!==e||57344<=e&&e<=65533&&e!==Oe||65536<=e&&e<=1114111}function Ue(e){return De(e)&&e!==Oe&&13!==e&&10!==e}function qe(e,t,n){var i=Ue(e),r=i&&!_e(e);return(n?i:i&&44!==e&&91!==e&&93!==e&&123!==e&&125!==e)&&35!==e&&!(58===t&&!r)||Ue(t)&&!_e(t)&&35===e||58===t&&r}function Ye(e,t){var n,i=e.charCodeAt(t);return i>=55296&&i<=56319&&t+1<e.length&&(n=e.charCodeAt(t+1))>=56320&&n<=57343?1024*(i-55296)+n-56320+65536:i}function Re(e){return/^\n* /.test(e)}function Be(e,t,n,i,r,o,a,l){var c,s,u=0,p=null,f=!1,d=!1,h=-1!==i,g=-1,m=De(s=Ye(e,0))&&s!==Oe&&!_e(s)&&45!==s&&63!==s&&58!==s&&44!==s&&91!==s&&93!==s&&123!==s&&125!==s&&35!==s&&38!==s&&42!==s&&33!==s&&124!==s&&61!==s&&62!==s&&39!==s&&34!==s&&37!==s&&64!==s&&96!==s&&function(e){return!_e(e)&&58!==e}(Ye(e,e.length-1));if(t||a)for(c=0;c<e.length;u>=65536?c+=2:c++){if(!De(u=Ye(e,c)))return 5;m=m&&qe(u,p,l),p=u}else{for(c=0;c<e.length;u>=65536?c+=2:c++){if(10===(u=Ye(e,c)))f=!0,h&&(d=d||c-g-1>i&&" "!==e[g+1],g=c);else if(!De(u))return 5;m=m&&qe(u,p,l),p=u}d=d||h&&c-g-1>i&&" "!==e[g+1]}return f||d?n>9&&Re(e)?5:a?2===o?5:2:d?4:3:!m||a||r(e)?2===o?5:2:1}function Ke(e,t,n,i,r){e.dump=function(){if(0===t.length)return 2===e.quotingType?'""':"''";if(!e.noCompatMode&&(-1!==Te.indexOf(t)||Ne.test(t)))return 2===e.quotingType?'"'+t+'"':"'"+t+"'";var a=e.indent*Math.max(1,n),l=-1===e.lineWidth?-1:Math.max(Math.min(e.lineWidth,40),e.lineWidth-a),c=i||e.flowLevel>-1&&n>=e.flowLevel;switch(Be(t,c,e.indent,l,(function(t){return function(e,t){var n,i;for(n=0,i=e.implicitTypes.length;n<i;n+=1)if(e.implicitTypes[n].resolve(t))return!0;return!1}(e,t)}),e.quotingType,e.forceQuotes&&!i,r)){case 1:return t;case 2:return"'"+t.replace(/'/g,"''")+"'";case 3:return"|"+Pe(t,e.indent)+We(Me(t,a));case 4:return">"+Pe(t,e.indent)+We(Me(function(e,t){var n,i,r=/(\n+)([^\n]*)/g,o=(l=e.indexOf("\n"),l=-1!==l?l:e.length,r.lastIndex=l,He(e.slice(0,l),t)),a="\n"===e[0]||" "===e[0];var l;for(;i=r.exec(e);){var c=i[1],s=i[2];n=" "===s[0],o+=c+(a||n||""===s?"":"\n")+He(s,t),a=n}return o}(t,l),a));case 5:return'"'+function(e){for(var t,n="",i=0,r=0;r<e.length;i>=65536?r+=2:r++)i=Ye(e,r),!(t=je[i])&&De(i)?(n+=e[r],i>=65536&&(n+=e[r+1])):n+=t||Fe(i);return n}(t)+'"';default:throw new o("impossible error: invalid scalar style")}}()}function Pe(e,t){var n=Re(e)?String(t):"",i="\n"===e[e.length-1];return n+(i&&("\n"===e[e.length-2]||"\n"===e)?"+":i?"":"-")+"\n"}function We(e){return"\n"===e[e.length-1]?e.slice(0,-1):e}function He(e,t){if(""===e||" "===e[0])return e;for(var n,i,r=/ [^ ]/g,o=0,a=0,l=0,c="";n=r.exec(e);)(l=n.index)-o>t&&(i=a>o?a:l,c+="\n"+e.slice(o,i),o=i+1),a=l;return c+="\n",e.length-o>t&&a>o?c+=e.slice(o,a)+"\n"+e.slice(a+1):c+=e.slice(o),c.slice(1)}function $e(e,t,n,i){var r,o,a,l="",c=e.tag;for(r=0,o=n.length;r<o;r+=1)a=n[r],e.replacer&&(a=e.replacer.call(n,String(r),a)),(Ve(e,t+1,a,!0,!0,!1,!0)||void 0===a&&Ve(e,t+1,null,!0,!0,!1,!0))&&(i&&""===l||(l+=Le(e,t)),e.dump&&10===e.dump.charCodeAt(0)?l+="-":l+="- ",l+=e.dump);e.tag=c,e.dump=l||"[]"}function Ge(e,t,n){var i,r,a,l,c,s;for(a=0,l=(r=n?e.explicitTypes:e.implicitTypes).length;a<l;a+=1)if(((c=r[a]).instanceOf||c.predicate)&&(!c.instanceOf||"object"==typeof t&&t instanceof c.instanceOf)&&(!c.predicate||c.predicate(t))){if(n?c.multi&&c.representName?e.tag=c.representName(t):e.tag=c.tag:e.tag="?",c.represent){if(s=e.styleMap[c.tag]||c.defaultStyle,"[object Function]"===Ie.call(c.represent))i=c.represent(t,s);else{if(!Se.call(c.represent,s))throw new o("!<"+c.tag+'> tag resolver accepts not "'+s+'" style');i=c.represent[s](t,s)}e.dump=i}return!0}return!1}function Ve(e,t,n,i,r,a,l){e.tag=null,e.dump=n,Ge(e,n,!1)||Ge(e,n,!0);var c,s=Ie.call(e.dump),u=i;i&&(i=e.flowLevel<0||e.flowLevel>t);var p,f,d="[object Object]"===s||"[object Array]"===s;if(d&&(f=-1!==(p=e.duplicates.indexOf(n))),(null!==e.tag&&"?"!==e.tag||f||2!==e.indent&&t>0)&&(r=!1),f&&e.usedDuplicates[p])e.dump="*ref_"+p;else{if(d&&f&&!e.usedDuplicates[p]&&(e.usedDuplicates[p]=!0),"[object Object]"===s)i&&0!==Object.keys(e.dump).length?(!function(e,t,n,i){var r,a,l,c,s,u,p="",f=e.tag,d=Object.keys(n);if(!0===e.sortKeys)d.sort();else if("function"==typeof e.sortKeys)d.sort(e.sortKeys);else if(e.sortKeys)throw new o("sortKeys must be a boolean or a function");for(r=0,a=d.length;r<a;r+=1)u="",i&&""===p||(u+=Le(e,t)),c=n[l=d[r]],e.replacer&&(c=e.replacer.call(n,l,c)),Ve(e,t+1,l,!0,!0,!0)&&((s=null!==e.tag&&"?"!==e.tag||e.dump&&e.dump.length>1024)&&(e.dump&&10===e.dump.charCodeAt(0)?u+="?":u+="? "),u+=e.dump,s&&(u+=Le(e,t)),Ve(e,t+1,c,!0,s)&&(e.dump&&10===e.dump.charCodeAt(0)?u+=":":u+=": ",p+=u+=e.dump));e.tag=f,e.dump=p||"{}"}(e,t,e.dump,r),f&&(e.dump="&ref_"+p+e.dump)):(!function(e,t,n){var i,r,o,a,l,c="",s=e.tag,u=Object.keys(n);for(i=0,r=u.length;i<r;i+=1)l="",""!==c&&(l+=", "),e.condenseFlow&&(l+='"'),a=n[o=u[i]],e.replacer&&(a=e.replacer.call(n,o,a)),Ve(e,t,o,!1,!1)&&(e.dump.length>1024&&(l+="? "),l+=e.dump+(e.condenseFlow?'"':"")+":"+(e.condenseFlow?"":" "),Ve(e,t,a,!1,!1)&&(c+=l+=e.dump));e.tag=s,e.dump="{"+c+"}"}(e,t,e.dump),f&&(e.dump="&ref_"+p+" "+e.dump));else if("[object Array]"===s)i&&0!==e.dump.length?(e.noArrayIndent&&!l&&t>0?$e(e,t-1,e.dump,r):$e(e,t,e.dump,r),f&&(e.dump="&ref_"+p+e.dump)):(!function(e,t,n){var i,r,o,a="",l=e.tag;for(i=0,r=n.length;i<r;i+=1)o=n[i],e.replacer&&(o=e.replacer.call(n,String(i),o)),(Ve(e,t,o,!1,!1)||void 0===o&&Ve(e,t,null,!1,!1))&&(""!==a&&(a+=","+(e.condenseFlow?"":" ")),a+=e.dump);e.tag=l,e.dump="["+a+"]"}(e,t,e.dump),f&&(e.dump="&ref_"+p+" "+e.dump));else{if("[object String]"!==s){if("[object Undefined]"===s)return!1;if(e.skipInvalid)return!1;throw new o("unacceptable kind of an object to dump "+s)}"?"!==e.tag&&Ke(e,e.dump,t,a,u)}null!==e.tag&&"?"!==e.tag&&(c=encodeURI("!"===e.tag[0]?e.tag.slice(1):e.tag).replace(/!/g,"%21"),c="!"===e.tag[0]?"!"+c:"tag:yaml.org,2002:"===c.slice(0,18)?"!!"+c.slice(18):"!<"+c+">",e.dump=c+" "+e.dump)}return!0}function Ze(e,t){var n,i,r=[],o=[];for(Je(e,r,o),n=0,i=o.length;n<i;n+=1)t.duplicates.push(r[o[n]]);t.usedDuplicates=new Array(i)}function Je(e,t,n){var i,r,o;if(null!==e&&"object"==typeof e)if(-1!==(r=t.indexOf(e)))-1===n.indexOf(r)&&n.push(r);else if(t.push(e),Array.isArray(e))for(r=0,o=e.length;r<o;r+=1)Je(e[r],t,n);else for(r=0,o=(i=Object.keys(e)).length;r<o;r+=1)Je(e[i[r]],t,n)}function Qe(e,t){return function(){throw new Error("Function yaml."+e+" is removed in js-yaml 4. Use yaml."+t+" instead, which is now safe by default.")}}var ze=p,Xe=h,et=b,tt=O,nt=j,it=K,rt=xe.load,ot=xe.loadAll,at={dump:function(e,t){var n=new Ee(t=t||{});n.noRefs||Ze(e,n);var i=e;return n.replacer&&(i=n.replacer.call({"":i},"",i)),Ve(n,0,i,!0,!0)?n.dump+"\n":""}}.dump,lt=o,ct={binary:L,float:S,map:y,null:A,pairs:Y,set:B,timestamp:F,bool:v,int:C,merge:E,omap:U,seq:m,str:g},st=Qe("safeLoad","load"),ut=Qe("safeLoadAll","loadAll"),pt=Qe("safeDump","dump"),ft={Type:ze,Schema:Xe,FAILSAFE_SCHEMA:et,JSON_SCHEMA:tt,CORE_SCHEMA:nt,DEFAULT_SCHEMA:it,load:rt,loadAll:ot,dump:at,YAMLException:lt,types:ct,safeLoad:st,safeLoadAll:ut,safeDump:pt};e.CORE_SCHEMA=nt,e.DEFAULT_SCHEMA=it,e.FAILSAFE_SCHEMA=et,e.JSON_SCHEMA=tt,e.Schema=Xe,e.Type=ze,e.YAMLException=lt,e.default=ft,e.dump=at,e.load=rt,e.loadAll=ot,e.safeDump=pt,e.safeLoad=st,e.safeLoadAll=ut,e.types=ct,Object.defineProperty(e,"__esModule",{value:!0})}));</script>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function fnv(s){ let h = 0x811c9dc5; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+function mulberry(a){ return function(){ a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+// ============================================================
+// 1. REGISTRY — the vocabulary of CART-1
+// ============================================================
+const SPRITE_SRC = {
+  astronaut:['..####..','.#....#.','.#.##.#.','.#....#.','..####..','.######.','..#..#..','.##..##.'],
+  explorer:['..###...','.#####..','..###...','...#....','.#####..','#.###.#.','..#.#...','.##.##..'],
+  knight:['...##...','..####..','..#.##..','..####..','.######.','#.####.#','..#..#..','..#..#..'],
+  cat:['#.....#.','##...##.','#######.','#.#.#.#.','#######.','.#####..','.#...#..','.#...#..'],
+  robot:['.######.','.#.##.#.','.######.','...##...','.######.','#.####.#','..#..#..','.##..##.'],
+  frog:['........','.##..##.','#.#..#.#','########','#......#','.######.','#.#..#.#','........'],
+  ship:['...##...','...##...','..####..','..#..#..','.######.','########','##.##.##','#......#'],
+  letter:['........','########','##....##','#.#..#.#','#..##..#','#......#','########','........'],
+  coin:['..####..','.#....#.','#..##..#','#.#..#.#','#.#..#.#','#..##..#','.#....#.','..####..'],
+  gem:['........','.######.','#.#..#.#','########','.#....#.','..#..#..','...##...','........'],
+  key:['........','.##.....','#..#####','#..#.#.#','.##.....','........','........','........'],
+  star:['...#....','...#....','..###...','#######.','.#####..','.##.##..','#.....#.','........'],
+  fly:['........','.#...#..','#.#.#.#.','.#.#.#..','..###...','...#....','........','........'],
+  bolt:['...##...','..####..','.##..##.','.#....#.','.##..##.','..####..','...##...','........'],
+  fish:['........','........','#...###.','##.#...#','.###.#.#','##.#...#','#...###.','........'],
+  blob:['........','..####..','.######.','##.##.##','########','########','#.#..#.#','........'],
+  snake:['........','....###.','...#.#.#','...####.','.....#..','.####...','#.....##','.######.'],
+  bat:['........','#......#','##.##.##','########','#.#..#.#','...##...','........','........'],
+  drone:['#......#','.#....#.','..####..','.##..##.','.#.##.#.','..####..','.#....#.','#......#'],
+  ghost:['..####..','.######.','##.##.##','########','########','########','#.#.##.#','........'],
+  skull:['.######.','########','#..##..#','#..##..#','########','.##..##.','.######.','.#.#.#..'],
+  eye:['........','..####..','.#....#.','#..##..#','#.####.#','#..##..#','.#....#.','..####..'],
+  door:['.######.','#......#','#.####.#','#.#..#.#','#.#..#.#','#.#.##.#','#.#..#.#','########'],
+  turret:['...##...','...##...','..####..','.######.','.#.##.#.','.######.','########','#.#..#.#'],
+  rock:['..###...','.#####..','###.###.','#######.','##.####.','.#####..','..##....','........'],
+  mine:['#..##..#','.######.','.#....#.','##.##.##','##.##.##','.#....#.','.######.','#..##..#'],
+  spike:['........','........','...#....','..###...','..###...','.#####..','.#####..','#######.']
+};
+const SP = {};
+function prepSprite(name, rows){
+  const R = Array.from({length:8}, (_, y) => String(rows[y] || '').padEnd(8, '.').slice(0, 8));
+  const b = new Uint8Array(64), e = new Uint8Array(64);
+  for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) b[y*8+x] = R[y][x] === '#' ? 1 : 0;
+  for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++){
+    if (!b[y*8+x]) continue;
+    e[y*8+x] = (x === 0 || x === 7 || y === 0 || y === 7 || !b[y*8+x-1] || !b[y*8+x+1] || !b[(y-1)*8+x] || !b[(y+1)*8+x]) ? 1 : 0;
+  }
+  SP[name] = {b, e}; SPRITE_SRC[name] = R;
+}
+for (const k in SPRITE_SRC) prepSprite(k, SPRITE_SRC[k]);
+
+const REG = {
+  verbs:{}, hazards:{},
+  goals:{
+    collect:{label:'Collect', desc:'Pick up count items.'},
+    reach:{label:'Reach', desc:'Find the exit door. In scrolling games, travel the distance.'},
+    survive:{label:'Survive', desc:'Stay alive for time seconds.'},
+    defeat:{label:'Defeat', desc:'Take out count foes. Adds walkers if nothing can be defeated.'}
+  },
+  twists:{
+    dark:{label:'Dark', desc:'Only a small circle around the hero is lit.'},
+    mirror:{label:'Mirror', desc:'Left and right controls are swapped.'},
+    wind:{label:'Wind', desc:'A steady push to one side.'},
+    lowgrav:{label:'Low gravity', desc:'Jumps float higher and fall slower.'},
+    rush:{label:'Rush', desc:'Everything moves 40% faster.'},
+    wrap:{label:'Wrap', desc:'Leave one side of the screen, enter from the other.'},
+    timer:{label:'Timer', desc:'Finish before the clock runs out. Uses timer: seconds.'},
+    glitch:{label:'Glitch', desc:'The picture tears and shifts.'},
+    invert:{label:'Invert', desc:'Swaps ink and paper.'}
+  },
+  arts:{
+    solid:{label:'Solid', desc:'Filled pixels.', fn:() => true},
+    outline:{label:'Outline', desc:'Edges only, like a technical drawing.', fn:(x, y, e) => !!e},
+    dither:{label:'Dither', desc:'Edges plus a checkerboard fill.', fn:(x, y, e) => !!e || ((x + y) & 1) === 0},
+    stripe:{label:'Stripe', desc:'Edges plus scanline fill.', fn:(x, y, e) => !!e || (y & 1) === 0}
+  },
+  palettes:{
+    paper:{label:'Paper', desc:'Black ink on white.', c:['#ECECE4', '#141414']},
+    night:{label:'Night', desc:'White phosphor on black.', c:['#0A0A0A', '#EAEAE2']},
+    lcd:{label:'LCD', desc:'Handheld grey-green.', c:['#B5BC9C', '#22271A']}
+  }
+};
+
+// ============================================================
+// 2. ENGINE — 1-bit framebuffer, fixed timestep
+// ============================================================
+const SW = 192, SH = 144, COLS = 24, ROWS = 16, TOP = 16, PH = 128;
+const FB = new Uint8Array(SW * SH);
+let CLIPY = 0;
+const cls = (v = 0) => FB.fill(v);
+function pset(x, y, v = 1){ x |= 0; y |= 0; if (x < 0 || y < CLIPY || x >= SW || y >= SH) return; FB[y*SW+x] = v; }
+function rect(x, y, w, h, v = 1){ x |= 0; y |= 0; for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) pset(x+i, y+j, v); }
+function frame(x, y, w, h, v = 1){ for (let i = 0; i < w; i++){ pset(x+i, y, v); pset(x+i, y+h-1, v); } for (let j = 0; j < h; j++){ pset(x, y+j, v); pset(x+w-1, y+j, v); } }
+function hline(x0, x1, y, v = 1){ for (let x = x0; x <= x1; x++) pset(x, y, v); }
+function spr(name, x, y, flip, art, v = 1){
+  const s = SP[name] || SP.blob, f = (REG.arts[art] || REG.arts.solid).fn;
+  x = Math.round(x); y = Math.round(y);
+  for (let j = 0; j < 8; j++) for (let i = 0; i < 8; i++){
+    const k = j*8 + (flip ? 7 - i : i);
+    if (s.b[k] && f(i, j, s.e[k])) pset(x+i, y+j, v);
+  }
+}
+function tileDraw(cx, cy, type, art){
+  const x = cx*8, y = cy*8 + TOP;
+  if (type === 1){ const f = (REG.arts[art] || REG.arts.solid).fn; for (let j = 0; j < 8; j++) for (let i = 0; i < 8; i++){ const e = i === 0 || j === 0 || i === 7 || j === 7; if (f(i, j, e)) pset(x+i, y+j); } }
+  else if (type === 2){ for (let i = 0; i < 8; i++){ const h = [1,3,5,2,1,3,5,2][i]; for (let k = 0; k < h; k++) pset(x+i, y+7-k); } }
+}
+function ditherCircle(cx, cy, r){ for (let y = -r; y <= r; y++) for (let x = -r; x <= r; x++) if (x*x + y*y <= r*r && ((x + y) & 1) === 0) pset(cx+x, cy+y); }
+
+// 3x5 pixel font
+const FONT_SRC = {
+  A:'010101111101101',B:'110101110101110',C:'011100100100011',D:'110101101101110',E:'111100110100111',F:'111100110100100',G:'011100101101011',H:'101101111101101',I:'111010010010111',J:'001001001101010',K:'101101110101101',L:'100100100100111',M:'101111111101101',N:'110101101101101',O:'010101101101010',P:'110101110100100',Q:'010101101110011',R:'110101110101101',S:'011100010001110',T:'111010010010010',U:'101101101101111',V:'101101101101010',W:'101101111111101',X:'101101010101101',Y:'101101010010010',Z:'111001010100111',
+  '0':'111101101101111','1':'010110010010111','2':'110001010100111','3':'110001010001110','4':'101101111001001','5':'111100110001110','6':'011100111101111','7':'111001010010010','8':'111101111101111','9':'111101111001110',
+  '.':'000000000000010',',':'000000000010100','!':'010010010000010','?':'110001010000010',':':'000010000010000','-':'000000111000000',"'":'010010000000000','/':'001001010100100','+':'000010111010000','*':'000101010101000','×':'000101010101000','(':'001010010010001',')':'100010010010100','>':'100010001010100','<':'001010100010001','%':'101001010100101','=':'000111000111000','#':'111111111111111','_':'000000000000111','"':'101101000000000','&':'010101010101011','·':'000000010000000','—':'000000111000000','–':'000000111000000'
+};
+function text(s, x, y, v = 1, sc = 1){
+  s = String(s).toUpperCase();
+  for (const ch of s){
+    const g = FONT_SRC[ch];
+    if (g) for (let r = 0; r < 5; r++) for (let c = 0; c < 3; c++) if (g[r*3+c] === '1') rect(x + c*sc, y + r*sc, sc, sc, v);
+    x += 4*sc;
+  }
+}
+const tw = (s, sc = 1) => Math.max(0, String(s).length * 4 * sc - sc);
+const ctext = (s, y, v = 1, sc = 1) => text(s, (SW - tw(s, sc)) >> 1, y, v, sc);
+const rtext = (s, xr, y, v = 1, sc = 1) => text(s, xr - tw(s, sc), y, v, sc);
+function wrapWords(s, n){ const out = []; let line = ''; for (const w of String(s).split(/\s+/)){ if (!w) continue; if ((line + ' ' + w).trim().length > n){ if (line) out.push(line); line = w; } else line = (line + ' ' + w).trim(); } if (line) out.push(line); return out; }
+
+// ---------- physics helpers ----------
+function hitBox(L, x, y, w, h){
+  const V = REG.verbs[L.verb];
+  const x0 = Math.floor(x / 8), x1 = Math.floor((x + w - .001) / 8), y0 = Math.floor(y / 8), y1 = Math.floor((y + h - .001) / 8);
+  for (let cy = y0; cy <= y1; cy++) for (let cx = x0; cx <= x1; cx++) if (V.solid(L, cx, cy)) return true;
+  return false;
+}
+function move(L, b, dx, dy){
+  let hit = false;
+  const sx = Math.sign(dx), sy = Math.sign(dy);
+  let rx = Math.abs(dx), ry = Math.abs(dy);
+  while (rx > 0){ const st = Math.min(1, rx); if (hitBox(L, b.x + sx*st, b.y, b.w, b.h)){ hit = true; break; } b.x += sx*st; rx -= st; }
+  while (ry > 0){ const st = Math.min(1, ry); if (hitBox(L, b.x, b.y + sy*st, b.w, b.h)){ hit = true; break; } b.y += sy*st; ry -= st; }
+  return hit;
+}
+function wrapX(e){ if (e.x + e.w/2 < 0) e.x += SW; else if (e.x + e.w/2 > SW) e.x -= SW; }
+const ov = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+function touchesTile(L, b, type){
+  const x0 = Math.floor(b.x / 8), x1 = Math.floor((b.x + b.w - .001) / 8), y0 = Math.floor(b.y / 8), y1 = Math.floor((b.y + b.h - .001) / 8);
+  for (let cy = y0; cy <= y1; cy++) for (let cx = x0; cx <= x1; cx++){ if (cx < 0 || cy < 0 || cx >= COLS || cy >= ROWS) continue; if (L.tiles[cy*COLS+cx] === type) return true; }
+  return false;
+}
+function nudge(L, p, axis, dir){
+  for (let k = 1; k <= 5; k++) for (const s of [-1, 1]){
+    const ox = axis === 'x' ? s*k : 0, oy = axis === 'y' ? s*k : 0;
+    const tx = p.x + ox + (axis === 'y' ? dir : 0), ty = p.y + oy + (axis === 'x' ? dir : 0);
+    if (!hitBox(L, tx, ty, p.w, p.h)){ move(L, p, axis === 'x' ? s*.8 : 0, axis === 'y' ? s*.8 : 0); return; }
+  }
+}
+function spotList(L){ if (!L._spots) L._spots = REG.verbs[L.verb].spots(L); return L._spots; }
+function pickSpot(L, minD = 40, unique = true){
+  const S = spotList(L); if (!S.length) return null;
+  L.used = L.used || new Set(); const p = L.p;
+  for (let k = 0; k < 50; k++){
+    const i = (L.rng() * S.length) | 0, s = S[i];
+    if (unique && L.used.has(i)) continue;
+    if (k < 40 && Math.hypot(s.x - p.x, s.y - p.y) < minD) continue;
+    if (unique) L.used.add(i);
+    return s;
+  }
+  return S[(L.rng() * S.length) | 0];
+}
+function farthestSpot(L){ const S = spotList(L), p = L.p; let b = -1, bd = -1; S.forEach((s, i) => { const d = Math.hypot(s.x - p.x, s.y - p.y); if (d > bd){ bd = d; b = i; } }); if (b < 0) return null; (L.used = L.used || new Set()).add(b); return S[b]; }
+function spawnAt(L, base){
+  const s = pickSpot(L, 56, false); if (!s) return null;
+  const e = Object.assign({vx:0, vy:0, t:0, w:6, h:L.verb === 'topdown' ? 6 : 8}, base);
+  e.x = s.x + (8 - e.w) / 2; e.y = L.verb === 'topdown' ? s.y + (8 - e.h) / 2 : s.y + 8 - e.h;
+  L.ents.push(e); return e;
+}
+const spawnRate = (L, base) => base / (0.6 + 0.2 * L.s.density) / L.spd * (0.75 + L.rng() * 0.5);
+function every(L, key, base, fn){ if (L.tm[key] == null) L.tm[key] = 60 + L.rng() * 60; if (--L.tm[key] <= 0){ fn(L); L.tm[key] = spawnRate(L, base); } }
+function keepAlive(L, name, fn){ const alive = L.ents.reduce((a, e) => a + (e.h === name && !e.dead ? 1 : 0), 0); if (alive < (L.n[name] || 0)){ if (L.tm[name] == null) L.tm[name] = 150; if (--L.tm[name] <= 0){ fn(L); L.tm[name] = 150; } } }
+function puff(L, x, y, n = 6){ for (let i = 0; i < n; i++){ const a = L.rng() * 6.283, s = .5 + L.rng() * 1.4; L.fx.push({x, y, vx:Math.cos(a)*s, vy:Math.sin(a)*s, life:14 + L.rng()*10}); } }
+const DIRS = [[1,0],[-1,0],[0,1],[0,-1]];
+const isScroll = L => !!REG.verbs[L.verb].scrolling;
+
+// ---------- verbs ----------
+REG.verbs.platform = {
+  label:'Platformer', desc:'Side view with gravity. A or Up jumps. Land on foes to defeat them.', scrolling:false, stomp:true,
+  build(L){
+    const T = L.tiles, r = L.rng;
+    for (let x = 0; x < COLS; x++) T[15*COLS + x] = 1;
+    let prev = [{x:0, w:COLS}];
+    for (const row of [12, 9, 6, 3]){
+      const n = 2 + (r() < .55 ? 1 : 0), cur = [];
+      for (let k = 0; k < n; k++){
+        const a = prev[(r() * prev.length) | 0], w = 3 + ((r() * 4) | 0);
+        const x = clamp(Math.round(a.x + r() * (a.w + 8) - 6), 0, COLS - w);
+        for (let i = 0; i < w; i++) T[row*COLS + x + i] = 1;
+        cur.push({x, w});
+      }
+      prev = cur;
+    }
+    if (L.has('spikes')){ const runs = 2 + ((r() * 3) | 0); for (let k = 0; k < runs; k++){ const x = 5 + ((r() * 17) | 0); for (let i = 0; i < 2; i++) if (x + i < COLS) T[14*COLS + x + i] = 2; } }
+    L.p = {x:10, y:112, w:6, h:8, vx:0, vy:0, face:1, ground:false};
+  },
+  spots(L){ const o = []; for (let cy = 1; cy < ROWS - 1; cy++) for (let cx = 0; cx < COLS; cx++) if (L.tiles[cy*COLS + cx] === 0 && L.tiles[(cy+1)*COLS + cx] === 1) o.push({x:cx*8, y:cy*8}); return o; },
+  solid(L, cx, cy){ if (L.wrap) cx = ((cx % COLS) + COLS) % COLS; else if (cx < 0 || cx >= COLS) return true; if (cy < 0 || cy >= ROWS) return false; return L.tiles[cy*COLS + cx] === 1; },
+  update(L, I){
+    const p = L.p, lg = L.tw('lowgrav'), g = lg ? .13 : .25, jv = lg ? -3.1 : -3.7;
+    const ix = I.x * L.mir; if (ix) p.face = ix;
+    p.vx = ix * 1.3 * L.spd + L.wind;
+    p.vy = Math.min(p.vy + g, lg ? 2.6 : 4);
+    if ((I.aP || I.upP) && p.ground){ p.vy = jv; p.ground = false; sfx('jump'); }
+    if (!I.a && !(I.y < 0) && p.vy < -1.3) p.vy = -1.3;
+    move(L, p, p.vx, 0);
+    const vy = p.vy, hit = move(L, p, 0, vy);
+    p.ground = hit && vy > 0; if (hit) p.vy = 0;
+    if (L.wrap) wrapX(p);
+    if (p.y > PH) die(L, 'FELL');
+  }
+};
+REG.verbs.topdown = {
+  label:'Top-down', desc:'Rooms seen from above. Move in eight directions; A shoots the way you face.', scrolling:false, stomp:false,
+  build(L){
+    const T = L.tiles, r = L.rng;
+    for (let x = 0; x < COLS; x++){ T[x] = 1; T[15*COLS + x] = 1; }
+    for (let y = 0; y < ROWS; y++){ T[y*COLS] = 1; T[y*COLS + COLS - 1] = 1; }
+    for (let cy = 2; cy <= 14; cy += 2) for (let cx = 2; cx <= 22; cx += 2){
+      if (cx <= 4 && cy <= 4) continue;
+      const v = r();
+      if (v < .55) T[cy*COLS + cx] = 1; else if (L.has('spikes') && v < .72) T[cy*COLS + cx] = 2;
+    }
+    L.p = {x:9, y:9, w:6, h:6, fx:1, fy:0, cool:0};
+  },
+  spots(L){ const o = []; for (let cy = 1; cy < ROWS - 1; cy++) for (let cx = 1; cx < COLS - 1; cx++) if (L.tiles[cy*COLS + cx] === 0) o.push({x:cx*8, y:cy*8}); return o; },
+  solid(L, cx, cy){ if (cx < 0 || cy < 0 || cx >= COLS || cy >= ROWS) return true; return L.tiles[cy*COLS + cx] === 1; },
+  update(L, I){
+    const p = L.p, ix = I.x * L.mir, iy = I.y, sp = 1.1 * L.spd * ((ix && iy) ? .75 : 1);
+    if (ix || iy){ p.fx = ix; p.fy = iy; }
+    if (ix && move(L, p, ix*sp, 0) && !iy) nudge(L, p, 'y', ix);
+    if (iy && move(L, p, 0, iy*sp) && !ix) nudge(L, p, 'x', iy);
+    if (L.wind) move(L, p, L.wind * .6, 0);
+    if (p.cool > 0) p.cool--;
+    if (I.a && p.cool <= 0){ const n = Math.hypot(p.fx, p.fy) || 1; L.ents.push({k:'pb', x:p.x + 2, y:p.y + 2, w:2, h:2, vx:p.fx/n*2.8, vy:p.fy/n*2.8}); p.cool = 14; sfx('shoot'); }
+  }
+};
+REG.verbs.shmup = {
+  label:'Shooter', desc:'Vertical shooter. Move anywhere in the lower field; hold A to fire.', scrolling:true, stomp:false,
+  build(L){ L.p = {x:93, y:110, w:6, h:6, cool:0}; L.scrollV = 1.2 * L.spd; L.stars = []; for (let i = 0; i < 36; i++) L.stars.push({x:L.rng()*SW, y:L.rng()*PH, s:.3 + L.rng()}); },
+  spots(){ return []; }, solid(){ return false; },
+  update(L, I){
+    const p = L.p;
+    p.x += I.x * L.mir * 1.6 * L.spd + L.wind; p.y += I.y * 1.4 * L.spd;
+    if (L.wrap) wrapX(p); else p.x = clamp(p.x, 1, SW - 7);
+    p.y = clamp(p.y, 12, PH - 8);
+    if (p.cool > 0) p.cool--;
+    if (I.a && p.cool <= 0){ L.ents.push({k:'pb', x:p.x + 2, y:p.y - 4, w:2, h:4, vx:0, vy:-3.6}); p.cool = 9; sfx('shoot'); }
+    for (const s of L.stars){ s.y += s.s * L.scrollV; if (s.y > PH){ s.y -= PH; s.x = L.rng() * SW; } }
+    L.dist += L.scrollV;
+  }
+};
+REG.verbs.runner = {
+  label:'Runner', desc:'Auto-scrolling run. A or Up jumps; left and right adjust your place.', scrolling:true, stomp:true,
+  build(L){ L.ground = 112; L.p = {x:36, y:104, w:6, h:8, vx:0, vy:0, ground:true, face:1}; L.scrollV = 1.5 * L.spd; },
+  spots(){ return []; }, solid(){ return false; },
+  update(L, I){
+    const p = L.p, lg = L.tw('lowgrav'), g = lg ? .16 : .3, jv = lg ? -3.7 : -4.4;
+    p.x = clamp(p.x + I.x * L.mir * .9 + L.wind * .5, 6, 120);
+    p.vy = Math.min(p.vy + g, 5);
+    if ((I.aP || I.upP) && p.ground){ p.vy = jv; p.ground = false; sfx('jump'); }
+    if (!I.a && !(I.y < 0) && p.vy < -1.6) p.vy = -1.6;
+    p.y += p.vy;
+    if (p.y >= L.ground - p.h){ p.y = L.ground - p.h; p.vy = 0; p.ground = true; } else p.ground = false;
+    L.dist += L.scrollV;
+  }
+};
+
+// ---------- hazards ----------
+REG.hazards.walker = {
+  label:'Walker', desc:'Patrols back and forth. Can be defeated.', killable:true,
+  spawn(L){
+    const v = L.verb, f = L.s.foe, sp = .45 * L.spd;
+    if (v === 'platform') return spawnAt(L, {k:'foe', h:'walker', spr:f, kill:true, vx:L.rng() < .5 ? -sp : sp});
+    if (v === 'topdown'){ const d = DIRS[(L.rng() * 4) | 0]; return spawnAt(L, {k:'foe', h:'walker', spr:f, kill:true, vx:d[0]*.55*L.spd, vy:d[1]*.55*L.spd}); }
+    if (v === 'shmup'){ const x = 10 + L.rng() * (SW - 28); L.ents.push({k:'foe', h:'walker', spr:f, kill:true, x, bx:x, y:-8, w:6, h:6, vy:.5*L.spd, t:L.rng()*100}); return; }
+    L.ents.push({k:'foe', h:'walker', spr:f, kill:true, x:SW + 6, y:L.ground - 8, w:6, h:8, vx:-.5*L.spd, flip:true});
+  },
+  init(L){ if (!isScroll(L)){ L.n.walker = 1 + L.s.density; for (let i = 0; i < L.n.walker; i++) this.spawn(L); } },
+  tick(L){ if (isScroll(L)) every(L, 'walker', 130, l => this.spawn(l)); else keepAlive(L, 'walker', l => this.spawn(l)); },
+  update(L, e){
+    const v = L.verb;
+    if (v === 'platform'){
+      e.vy = Math.min(e.vy + .25, 4);
+      if (move(L, e, e.vx, 0)) e.vx = -e.vx;
+      else if (e.ground){ const fx = e.vx > 0 ? e.x + e.w + 1 : e.x - 1; const V = REG.verbs.platform; if (!V.solid(L, Math.floor(fx / 8), Math.floor((e.y + e.h + 2) / 8))) e.vx = -e.vx; }
+      const vy = e.vy, hit = move(L, e, 0, vy); e.ground = hit && vy > 0; if (hit) e.vy = 0;
+      if (L.wrap) wrapX(e); e.flip = e.vx < 0;
+    } else if (v === 'topdown'){
+      if (move(L, e, e.vx, e.vy) || (L.t % 80 === 0 && L.rng() < .35)){ const d = DIRS[(L.rng() * 4) | 0]; e.vx = d[0]*.55*L.spd; e.vy = d[1]*.55*L.spd; }
+      if (e.vx) e.flip = e.vx < 0;
+    } else if (v === 'shmup'){ e.t++; e.y += e.vy; e.x = e.bx + Math.sin(e.t * .05) * 20; }
+    else { e.x += e.vx; }
+  }
+};
+REG.hazards.chaser = {
+  label:'Chaser', desc:'Flies straight at the hero through walls. Can be defeated.', killable:true,
+  spawn(L){
+    const f = L.s.foe;
+    if (!isScroll(L)) return spawnAt(L, {k:'foe', h:'chaser', spr:f, kill:true, w:6, h:6});
+    if (L.verb === 'shmup') L.ents.push({k:'foe', h:'chaser', spr:f, kill:true, x:10 + L.rng()*(SW - 28), y:-8, w:6, h:6});
+    else L.ents.push({k:'foe', h:'chaser', spr:f, kill:true, x:SW + 6, y:60, by:56 + L.rng()*34, w:6, h:6, t:0});
+  },
+  init(L){ if (!isScroll(L)){ L.n.chaser = Math.max(1, L.s.density - 1); for (let i = 0; i < L.n.chaser; i++) this.spawn(L); } },
+  tick(L){ if (isScroll(L)) every(L, 'chaser', 170, l => this.spawn(l)); else keepAlive(L, 'chaser', l => this.spawn(l)); },
+  update(L, e){
+    const p = L.p; e.t = (e.t || 0) + 1;
+    if (!isScroll(L)){ if (L.t < 50) return; const dx = p.x - e.x, dy = p.y - e.y, d = Math.hypot(dx, dy) || 1, sp = .4 * L.spd; e.x += dx/d*sp; e.y += dy/d*sp; e.flip = dx < 0; }
+    else if (L.verb === 'shmup'){ e.y += .7 * L.spd; e.x += Math.sign(p.x - e.x) * .5 * L.spd; e.flip = p.x < e.x; }
+    else { e.x -= .5 * L.spd; e.y = e.by + Math.sin(e.t * .07) * 14; e.flip = true; }
+  }
+};
+REG.hazards.faller = {
+  label:'Faller', desc:'Rocks drop from above after a warning. Cannot be defeated.', killable:false,
+  spawn(L){
+    const v = L.verb, p = L.p;
+    if (v === 'topdown'){ L.ents.push({k:'foe', h:'faller', spr:'rock', x:clamp(p.x - 1 + (L.rng() - .5)*48, 8, SW - 16), y:clamp(p.y - 1 + (L.rng() - .5)*40, 8, PH - 16), w:8, h:8, wait:50, safe:true, life:10}); return; }
+    if (v === 'shmup'){ L.ents.push({k:'foe', h:'faller', spr:'rock', x:L.rng()*(SW - 8), y:-8, w:7, h:7, vy:1.9*L.spd}); return; }
+    const x = v === 'runner' ? 110 + L.rng()*70 : clamp(p.x + (L.rng() - .5)*90, 2, SW - 10);
+    L.ents.push({k:'foe', h:'faller', spr:'rock', x, y:-8, w:7, h:7, vy:0, wait:v === 'runner' ? 20 : 36, safe:true});
+  },
+  init(){},
+  tick(L){ every(L, 'faller', 110, l => this.spawn(l)); },
+  update(L, e){
+    if (e.wait > 0){ e.wait--; if (e.wait > 0) return; e.safe = false; }
+    if (L.verb === 'topdown'){ if (--e.life <= 0){ e.dead = true; puff(L, e.x + 4, e.y + 4); } return; }
+    if (L.verb === 'shmup'){ e.y += e.vy; return; }
+    e.vy = Math.min(e.vy + .14, 3.4); e.y += e.vy;
+    if (L.verb === 'platform' && e.y > 0 && hitBox(L, e.x, e.y, e.w, e.h)){ e.dead = true; puff(L, e.x + 3, e.y + 6); }
+    if (L.verb === 'runner' && e.y + e.h >= L.ground){ e.dead = true; puff(L, e.x + 3, L.ground - 2); }
+  }
+};
+REG.hazards.turret = {
+  label:'Turret', desc:'Fires aimed shots. Can be defeated, except in runners, where shots fly in low or high.', killable:true,
+  spawn(L){
+    const v = L.verb;
+    if (!isScroll(L)) return spawnAt(L, {k:'foe', h:'turret', spr:'turret', kill:true, w:8, h:8, cd:60 + L.rng()*60});
+    if (v === 'shmup'){ L.ents.push({k:'foe', h:'turret', spr:'turret', kill:true, x:12 + L.rng()*(SW - 32), y:-8, w:8, h:8, stop:14 + L.rng()*34, cd:40, life:520}); return; }
+    const hi = L.rng() < .5;
+    L.ents.push({k:'bul', x:SW + 4, y:hi ? L.ground - 27 : L.ground - 6, w:4, h:3, vx:-1.1*L.spd, vy:0});
+  },
+  init(L){ if (!isScroll(L)){ L.n.turret = Math.max(1, Math.round(L.s.density / 1.5)); for (let i = 0; i < L.n.turret; i++) this.spawn(L); } },
+  tick(L){ if (isScroll(L)) every(L, 'turret', L.verb === 'runner' ? 150 : 260, l => this.spawn(l)); else keepAlive(L, 'turret', l => this.spawn(l)); },
+  update(L, e){
+    const p = L.p;
+    if (L.verb === 'shmup'){ if (e.life-- < 0){ e.y += 1; return; } if (e.y < e.stop){ e.y += .6 * L.spd; return; } }
+    if (--e.cd <= 0){
+      e.cd = spawnRate(L, 110);
+      const cx = e.x + e.w/2, cy = e.y + e.h/2, dx = p.x + p.w/2 - cx, dy = p.y + p.h/2 - cy, d = Math.hypot(dx, dy) || 1, sp = 1.15 * L.spd;
+      if (d < 170) L.ents.push({k:'bul', x:cx - 1, y:cy - 1, w:3, h:3, vx:dx/d*sp, vy:dy/d*sp});
+    }
+  }
+};
+REG.hazards.spikes = {
+  label:'Spikes', desc:'Floor spikes in rooms and platforms, ground spikes in runners, mines in shooters.', killable:false,
+  init(){},
+  tick(L){
+    if (L.verb === 'shmup') every(L, 'spikes', 150, l => l.ents.push({k:'foe', h:'spikes', spr:'mine', x:l.rng()*(SW - 8), y:-8, w:6, h:6, vy:.45*l.spd}));
+    else if (L.verb === 'runner') every(L, 'spikes', 105, l => l.ents.push({k:'foe', h:'spikes', spr:'spike', x:SW + 4, y:l.ground - 6, w:6, h:6}));
+  },
+  update(L, e){ if (L.verb === 'shmup') e.y += e.vy; }
+};
+
+// ---------- level ----------
+function buildLevel(state, seed){
+  const L = {s:state, rng:mulberry(seed), verb:state.verb, tiles:new Uint8Array(COLS*ROWS), ents:[], fx:[], t:0, got:0, kills:0, dist:0, won:false, dead:false, why:'', n:{}, tm:{}, inv:45};
+  L.tw = k => state.twists.includes(k); L.has = k => state.hazards.includes(k);
+  L.wrap = L.tw('wrap'); L.spd = L.tw('rush') ? 1.4 : 1; L.mir = L.tw('mirror') ? -1 : 1;
+  L.wind = L.tw('wind') ? (L.rng() < .5 ? -.4 : .4) : 0;
+  const V = REG.verbs[L.verb]; V.build(L);
+  let hz = state.hazards.filter(h => REG.hazards[h]);
+  if (state.goal === 'defeat' && !hz.some(h => REG.hazards[h].killable)) hz = [...hz, 'walker'];
+  L.hz = hz;
+  if (!V.scrolling){
+    if (state.goal === 'collect') for (let i = 0; i < state.count; i++){ const s = pickSpot(L, 40, true); if (s) L.ents.push({k:'item', x:s.x + 1, y:s.y + 1, w:6, h:6, spr:state.item}); }
+    if (state.goal === 'reach'){ const s = farthestSpot(L); if (s) L.ents.push({k:'exit', x:s.x, y:s.y, w:8, h:8, spr:'door'}); }
+  }
+  for (const h of hz) if (REG.hazards[h].init) REG.hazards[h].init(L);
+  for (const t of state.twists) if (REG.twists[t] && REG.twists[t].build) REG.twists[t].build(L);
+  return L;
+}
+function die(L, why){ if (L.won || L.dead) return; L.dead = true; L.why = why; puff(L, L.p.x + 3, L.p.y + 4, 12); }
+function stepLevel(L, I){
+  L.t++;
+  const V = REG.verbs[L.verb], s = L.s;
+  V.update(L, I); if (L.dead) return;
+  for (const n of L.hz){ const hz = REG.hazards[n]; if (hz.tick) hz.tick(L); }
+  for (const t of s.twists){ const tw = REG.twists[t]; if (tw && tw.tick) tw.tick(L); }
+  if (V.scrolling && s.goal === 'collect') every(L, '_item', 105, l => {
+    if (l.verb === 'shmup') l.ents.push({k:'item', x:8 + l.rng()*(SW - 24), y:-8, w:6, h:6, vy:.6, spr:s.item});
+    else l.ents.push({k:'item', x:SW + 4, y:68 + l.rng()*32, w:6, h:6, spr:s.item});
+  });
+  for (const e of L.ents){
+    if (e.dead) continue;
+    if (e.h){ const hz = REG.hazards[e.h]; if (hz && hz.update) hz.update(L, e); }
+    else if (e.k === 'pb' || e.k === 'bul'){ e.x += e.vx; e.y += e.vy; if (!V.scrolling && hitBox(L, e.x, e.y, e.w, e.h)) e.dead = true; }
+    else if (e.k === 'item' && e.vy) e.y += e.vy;
+    if (L.verb === 'runner' && e.k !== 'pb') e.x -= L.scrollV;
+    if (e.k === 'pb' || e.k === 'bul' || V.scrolling){ if (e.x < -16 || e.x > SW + 16 || e.y < -24 || e.y > PH + 8) e.dead = true; }
+  }
+  const p = L.p, pb = {x:p.x + 1, y:p.y + 1, w:p.w - 2, h:p.h - 1};
+  for (const e of L.ents){
+    if (e.dead) continue;
+    if (e.k === 'pb'){
+      for (const f of L.ents) if (!f.dead && f.k === 'foe' && f.kill && !f.safe && ov(e, f)){ f.dead = e.dead = true; L.kills++; puff(L, f.x + 3, f.y + 3); sfx('kill'); break; }
+      continue;
+    }
+    if (!ov(pb, e)) continue;
+    if (e.k === 'item'){ e.dead = true; L.got++; puff(L, e.x + 3, e.y + 3, 4); sfx('coin'); }
+    else if (e.k === 'exit'){ if (s.goal === 'reach') L.won = true; }
+    else if (e.k === 'foe' && !e.safe){
+      if (V.stomp && e.kill && p.vy > .4 && (p.y + p.h) - e.y < 6){ e.dead = true; L.kills++; p.vy = L.verb === 'runner' ? -3.2 : -2.8; puff(L, e.x + 3, e.y + 3); sfx('kill'); }
+      else if (L.inv <= 0) die(L, e.h === 'spikes' ? 'SPIKED' : e.h === 'faller' ? 'CRUSHED' : 'CAUGHT');
+    }
+    else if (e.k === 'bul' && L.inv <= 0) die(L, 'SHOT');
+  }
+  if (!V.scrolling && L.inv <= 0 && touchesTile(L, {x:pb.x, y:pb.y + 2, w:pb.w, h:pb.h - 2}, 2)) die(L, 'SPIKED');
+  L.ents = L.ents.filter(e => !e.dead);
+  for (const f of L.fx){ f.x += f.vx; f.y += f.vy; f.vy += .05; f.life--; }
+  L.fx = L.fx.filter(f => f.life > 0);
+  if (s.goal === 'collect' && L.got >= s.count) L.won = true;
+  if (s.goal === 'defeat' && L.kills >= s.count) L.won = true;
+  if (s.goal === 'survive' && L.t >= s.time * 60) L.won = true;
+  if (s.goal === 'reach' && V.scrolling && L.dist >= s.distance) L.won = true;
+  if (!L.won && L.tw('timer') && s.goal !== 'survive' && L.t >= s.timer * 60) die(L, 'OUT OF TIME');
+  if (L.inv > 0) L.inv--;
+}
+function drawLevel(L){
+  const s = L.s, art = s.art, V = REG.verbs[L.verb];
+  CLIPY = TOP;
+  if (!V.scrolling){
+    for (let cy = 0; cy < ROWS; cy++) for (let cx = 0; cx < COLS; cx++){
+      const t = L.tiles[cy*COLS + cx];
+      if (t) tileDraw(cx, cy, t, art);
+      else if (L.verb === 'topdown' && ((cx + cy) & 3) === 0) pset(cx*8 + 4, cy*8 + 4 + TOP);
+    }
+  } else if (L.verb === 'shmup'){
+    for (const st of L.stars) pset(st.x, st.y + TOP);
+  } else {
+    const gy = TOP + L.ground; hline(0, SW - 1, gy);
+    const off = Math.floor(L.dist) % 12; for (let x = -off; x < SW; x += 12) hline(x, x + 3, gy + 4);
+    const off2 = Math.floor(L.dist * .5) % 20; for (let x = -off2; x < SW; x += 20) pset(x, gy + 10);
+    const far = L.dist * .3, base = Math.floor(far / 28);
+    for (let k = 0; k < 9; k++){ const idx = base + k, bx = Math.round(k*28 - (far % 28)), h = 14 + fnv('b' + idx) % 34, w = 18 + fnv('w' + idx) % 8; frame(bx, gy - h, w, h + 1); if (h > 24) pset(bx + 4, gy - h + 5); }
+  }
+  for (const e of L.ents){
+    if (e.k === 'pb' || e.k === 'bul'){ rect(e.x, e.y + TOP, e.w, e.h, 1); continue; }
+    if (e.h === 'faller' && e.wait > 0){
+      if (L.verb === 'topdown') ditherCircle(Math.round(e.x + 4), Math.round(e.y + 4 + TOP), Math.round(2 + (1 - e.wait/50) * 4));
+      else if ((L.t >> 2) & 1){ const x = Math.round(e.x); hline(x, x + 6, TOP + 1); hline(x + 1, x + 5, TOP + 2); hline(x + 2, x + 4, TOP + 3); pset(x + 3, TOP + 4); }
+      continue;
+    }
+    let dy = e.h - 8; if (e.k === 'item') dy += Math.round(Math.sin((L.t + e.x * 3) * .08));
+    spr(e.spr, e.x + (e.w - 8) / 2, e.y + dy + TOP, e.flip, art);
+  }
+  const p = L.p;
+  if (!L.dead && !(L.inv > 0 && (L.t >> 2) & 1)){
+    const flip = L.verb === 'topdown' ? p.fx < 0 : L.verb === 'shmup' ? false : p.face < 0;
+    spr(s.hero, p.x + (p.w - 8) / 2, p.y + p.h - 8 + TOP, flip, art);
+  }
+  for (const f of L.fx) pset(f.x, f.y + TOP);
+  CLIPY = 0;
+}
+
+// ============================================================
+// 3. LANGUAGE — CART-1 parser and validator
+// ============================================================
+const TEXTKEYS = ['setup', 'but', 'therefore'];
+const BADKEYS = ['and', 'then', 'and then', 'andthen', 'and_then', 'and-then'];
+const SCALARS = {verb:'verb', hero:'sprite', item:'sprite', foe:'sprite', goal:'goal', art:'art', palette:'palette', count:'num', time:'num', distance:'num', timer:'num', density:'num'};
+const LISTK = {hazards:'hazard', twists:'twist'};
+const NUMERIC = ['count', 'time', 'distance', 'timer', 'density'];
+const vocabOf = kind => ({verb:REG.verbs, sprite:SP, goal:REG.goals, art:REG.arts, palette:REG.palettes, hazard:REG.hazards, twist:REG.twists})[kind];
+const isMap = o => o && typeof o === 'object' && !Array.isArray(o);
+function validate(o){
+  const issues = [], add = (sev, path, msg) => issues.push({sev, path, msg});
+  const checkVal = (kind, v, path, label) => {
+    if (kind === 'num'){ if (typeof v !== 'number' || !isFinite(v)) add('error', path, `${label} must be a number.`); return; }
+    const voc = vocabOf(kind);
+    if (typeof v !== 'string' || !voc[v]) add('error', path, `Unknown ${kind} "${v}". Known: ${Object.keys(voc).join(', ')}.`);
+  };
+  if (!isMap(o)){ add('error', [], 'A cartridge is a YAML mapping. Start with "cart: 1".'); return issues; }
+  const KNOWN = ['cart', 'id', 'title', 'author', 'role', 'style', 'world', 'cast', 'beats', 'notes', 'description'];
+  for (const k of Object.keys(o)) if (!KNOWN.includes(k)) add('warn', [k], `Unknown key "${k}" is ignored.`);
+  if (o.cart !== 1) add('error', o.cart == null ? [] : ['cart'], o.cart == null ? 'Missing "cart: 1". It declares the CART-1 protocol version.' : `This console reads cart: 1, not cart: ${o.cart}.`);
+  if (typeof o.id !== 'string' || !/^[a-z0-9][a-z0-9-]{1,23}$/.test(o.id)) add('error', o.id == null ? [] : ['id'], 'id must be 2 to 24 lowercase letters, digits or dashes, like "lunar-post".');
+  if (typeof o.title !== 'string' || !o.title.trim()) add('error', o.title == null ? [] : ['title'], 'Give the cart a title.');
+  else if (o.title.length > 18) add('warn', ['title'], 'Titles over 18 characters run off the title screen.');
+  if (o.role != null && !['spine', 'trouble', 'either'].includes(o.role)) add('error', ['role'], 'role is spine, trouble or either.');
+  const sect = (name, keys) => {
+    if (o[name] == null) return;
+    if (!isMap(o[name])){ add('error', [name], `${name} must be a mapping.`); return; }
+    for (const [k, v] of Object.entries(o[name])){
+      if (!keys[k]){ add('warn', [name, k], `${name}.${k} is not part of CART-1 and is ignored.`); continue; }
+      checkVal(keys[k], v, [name, k], `${name}.${k}`);
+    }
+  };
+  sect('style', {art:'art', palette:'palette'});
+  sect('world', {verb:'verb', hero:'sprite'});
+  sect('cast', {hero:'sprite', item:'sprite', foe:'sprite'});
+  if (!Array.isArray(o.beats) || !o.beats.length){ add('error', o.beats == null ? [] : ['beats'], 'beats must be a list with at least one beat.'); return issues; }
+  if (o.beats.length > 6) add('warn', ['beats'], 'Only the first 6 beats are used.');
+  o.beats.forEach((b, i) => {
+    const P = ['beats', i];
+    if (!isMap(b)){ add('error', P, `Beat ${i + 1} must be a mapping like "- but: …".`); return; }
+    let bad = false;
+    for (const k of Object.keys(b)){
+      if (BADKEYS.includes(k.toLowerCase())){ bad = true; add('error', [...P, k], `"${k}" is not a connector. Beats join with but or therefore, never "and then".`); }
+      else if (!['setup', 'but', 'therefore', 'set', 'add', 'drop', 'note'].includes(k)) add('warn', [...P, k], `Unknown beat key "${k}" is ignored.`);
+    }
+    const tk = TEXTKEYS.filter(k => k in b);
+    if (!tk.length && !bad) add('error', P, `Beat ${i + 1} needs a story line keyed by setup, but or therefore.`);
+    if (tk.length > 1) add('error', [...P, tk[1]], `Beat ${i + 1} has ${tk.length} connectors. Use exactly one.`);
+    if (tk.length === 1){
+      const t = b[tk[0]];
+      if (typeof t !== 'string' || !t.trim()) add('error', [...P, tk[0]], 'The story line must be text.');
+      else if (t.length > 90) add('warn', [...P, tk[0]], 'Story lines over 90 characters run off the story card.');
+      if (i === 0 && tk[0] !== 'setup') add('warn', [...P, tk[0]], 'The first beat reads best as a setup.');
+    }
+    if (b.set == null && b.add == null && b.drop == null) add('warn', P, `Beat ${i + 1} changes no rules, so it plays as an "and then". Add set, add or drop.`);
+    if (b.set != null){
+      if (!isMap(b.set)) add('error', [...P, 'set'], 'set must be a mapping like { goal: reach }.');
+      else for (const [k, v] of Object.entries(b.set)){
+        if (k in SCALARS) checkVal(SCALARS[k], v, [...P, 'set', k], k);
+        else if (k in LISTK){ if (!Array.isArray(v)) add('error', [...P, 'set', k], `${k} must be a list like [walker, chaser].`); else v.forEach(x => checkVal(LISTK[k], x, [...P, 'set', k], k)); }
+        else add('error', [...P, 'set', k], `set cannot change "${k}". Rule keys: ${[...Object.keys(SCALARS), ...Object.keys(LISTK)].join(', ')}.`);
+      }
+    }
+    if (b.add != null){
+      if (!isMap(b.add)) add('error', [...P, 'add'], 'add must be a mapping like { twists: [dark] }.');
+      else for (const [k, v] of Object.entries(b.add)){
+        if (k in LISTK){ if (!Array.isArray(v)) add('error', [...P, 'add', k], `${k} must be a list.`); else v.forEach(x => checkVal(LISTK[k], x, [...P, 'add', k], k)); }
+        else if (NUMERIC.includes(k)) checkVal('num', v, [...P, 'add', k], k);
+        else add('error', [...P, 'add', k], `add works on hazards, twists and ${NUMERIC.join(', ')}.`);
+      }
+    }
+    if (b.drop != null){
+      if (!Array.isArray(b.drop)) add('error', [...P, 'drop'], 'drop must be a list of hazard or twist names.');
+      else b.drop.forEach(x => { if (!REG.hazards[x] && !REG.twists[x]) add('error', [...P, 'drop'], `Cannot drop "${x}": not a hazard or twist.`); });
+    }
+  });
+  return issues;
+}
+function lineOf(src, path){
+  const lines = src.split('\n'); let ln = 0;
+  for (const seg of path){
+    if (typeof seg === 'number'){
+      let count = -1, ind = null;
+      for (let i = ln; i < lines.length; i++){ const m = lines[i].match(/^(\s*)-\s/); if (m){ if (ind === null) ind = m[1].length; if (m[1].length === ind){ count++; if (count === seg){ ln = i; break; } } } }
+    } else {
+      const re = new RegExp('(^|[\\s{,-])' + String(seg).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*:');
+      for (let i = ln; i < lines.length; i++) if (re.test(lines[i])){ ln = i; break; }
+    }
+  }
+  return ln + 1;
+}
+function parseCart(src){
+  let obj;
+  try {
+    if (!window.jsyaml) throw {reason:'The YAML reader did not load. Check the connection and reload the page.'};
+    obj = window.jsyaml.load(src);
+  } catch (e){
+    return {ok:false, cart:null, issues:[{sev:'error', line:e.mark ? e.mark.line + 1 : 1, msg:'YAML: ' + (e.reason || e.message || 'could not read this file')}]};
+  }
+  const issues = validate(obj).map(x => ({...x, line:lineOf(src, x.path)}));
+  return {ok:!issues.some(x => x.sev === 'error'), cart:obj, issues};
+}
+
+// ============================================================
+// 4. PROTOCOL — the weaver
+// ============================================================
+const DEF = {verb:'platform', hero:'astronaut', item:'coin', foe:'blob', goal:'reach', count:5, time:30, distance:1500, timer:45, density:2, hazards:[], twists:[], art:'solid', palette:'paper'};
+const MAXB = 8;
+const cloneS = s => ({...s, hazards:[...s.hazards], twists:[...s.twists]});
+function normalize(s){
+  s.count = clamp(Math.round(s.count), 1, 30); s.time = clamp(Math.round(s.time), 5, 120);
+  s.distance = clamp(Math.round(s.distance), 300, 6000); s.timer = clamp(Math.round(s.timer), 10, 180);
+  s.density = clamp(Math.round(s.density), 1, 5);
+  s.hazards = s.hazards.filter(h => REG.hazards[h]).slice(0, 5); s.twists = s.twists.filter(t => REG.twists[t]);
+  return s;
+}
+function applyBeat(st, b, locked, log, tag){
+  const s = cloneS(st);
+  if (isMap(b.set)) for (const [k, v] of Object.entries(b.set)){
+    if (locked && (k === 'verb' || k === 'hero')){ log.push(`${tag.padEnd(6)}set ${k}`.padEnd(22) + '-> ignored, world belongs to slot I'); continue; }
+    if (k in LISTK){ if (Array.isArray(v)) s[k] = [...new Set(v)]; }
+    else if (k in SCALARS) s[k] = v;
+  }
+  if (isMap(b.add)) for (const [k, v] of Object.entries(b.add)){
+    if (k in LISTK){ if (Array.isArray(v)){ for (const x of v){ if (!s[k].includes(x)) s[k].push(x); } } }
+    else if (NUMERIC.includes(k) && typeof v === 'number') s[k] = (s[k] || 0) + v;
+  }
+  if (Array.isArray(b.drop)) for (const x of b.drop){ s.hazards = s.hazards.filter(h => h !== x); s.twists = s.twists.filter(t => t !== x); }
+  return normalize(s);
+}
+function plural(n){ n = String(n); if (/[^aeiou]y$/.test(n)) return n.slice(0, -1) + 'ies'; if (/(s|x|ch|sh)$/.test(n)) return n + 'es'; return n + 's'; }
+function goalText(s){
+  switch (s.goal){
+    case 'collect': return `collect ${s.count} ${plural(s.item)}`;
+    case 'defeat': return `defeat ${s.count} ${plural(s.foe)}`;
+    case 'survive': return `survive ${s.time} s`;
+    default: return REG.verbs[s.verb] && REG.verbs[s.verb].scrolling ? `travel ${Math.round(s.distance / 10)} m` : 'reach the exit';
+  }
+}
+function diffState(a, b, first){
+  const d = [];
+  if (first){ d.push(REG.verbs[b.verb].label.toLowerCase(), goalText(b)); b.hazards.forEach(h => d.push('+' + h)); b.twists.forEach(t => d.push('+' + t)); return d; }
+  if (a.verb !== b.verb) d.push('genre → ' + b.verb);
+  if (goalText(a) !== goalText(b)) d.push('goal → ' + goalText(b));
+  b.hazards.filter(h => !a.hazards.includes(h)).forEach(h => d.push('+' + h));
+  a.hazards.filter(h => !b.hazards.includes(h)).forEach(h => d.push('−' + h));
+  b.twists.filter(t => !a.twists.includes(t)).forEach(t => d.push('+' + t + (t === 'timer' ? ' ' + b.timer + 's' : '')));
+  a.twists.filter(t => !b.twists.includes(t)).forEach(t => d.push('−' + t));
+  if (a.density !== b.density) d.push('density ' + b.density);
+  if (a.art !== b.art) d.push('art → ' + b.art);
+  if (a.palette !== b.palette) d.push('palette → ' + b.palette);
+  return d;
+}
+function weave(A, B){
+  if (!A && B){ A = B; B = null; }
+  if (!A) return null;
+  const log = [], seed = fnv((A.id || '') + '|' + (B ? B.id : '')), hex = seed.toString(16).toUpperCase().padStart(8, '0');
+  const st = {...DEF, hazards:[], twists:[]};
+  const W = isMap(A.world) ? A.world : null, AS = isMap(A.style) ? A.style : {}, AC = isMap(A.cast) ? A.cast : {};
+  const BS = B && isMap(B.style) ? B.style : {}, BC = B && isMap(B.cast) ? B.cast : {};
+  log.push(`SPLICE CART-1   SEED ${hex}`);
+  if (W){ if (W.verb) st.verb = W.verb; if (W.hero) st.hero = W.hero; }
+  if (AC.hero && !(W && W.hero)) st.hero = AC.hero;
+  if (AC.item) st.item = AC.item; if (AC.foe) st.foe = AC.foe;
+  if (AS.art) st.art = AS.art; if (AS.palette) st.palette = AS.palette;
+  log.push(`I     ${A.id.padEnd(13)}world ${st.verb}/${st.hero}, palette ${st.palette}`);
+  if (!W) log.push('I     no world block: using platform/astronaut');
+  if (B){
+    if (BS.art) st.art = BS.art;
+    if (!AS.palette && BS.palette) st.palette = BS.palette;
+    if (BC.foe) st.foe = BC.foe;
+    if (!AC.item && BC.item) st.item = BC.item;
+    log.push(`II    ${B.id.padEnd(13)}paints art ${st.art}, brings foe ${st.foe}`);
+    if (A.role === 'trouble') log.push('hint  slot I holds a trouble cart');
+    if (B.role === 'spine') log.push('hint  slot II holds a spine cart, its world is ignored');
+  } else log.push('solo  one cart, its own beats alternate');
+  const qa = A.beats.slice(0, 6).map((b, i) => ({b, src:'I', i, cart:A}));
+  const qb = B ? B.beats.slice(0, 6).map((b, i) => ({b, src:'II', i, cart:B})) : [];
+  const seq = [];
+  if (qa.length) seq.push(qa.shift());
+  let turn = 'II';
+  while (qa.length || qb.length){
+    const nx = turn === 'II' ? (qb.shift() || qa.shift()) : (qa.shift() || qb.shift());
+    seq.push(nx); turn = turn === 'II' ? 'I' : 'II';
+  }
+  if (seq.length > MAXB){ log.push(`trim  ${seq.length - MAXB} beats over the limit of ${MAXB}`); seq.length = MAXB; }
+  const beats = []; let cur = normalize(cloneS(st));
+  seq.forEach((q, n) => {
+    const conn = n === 0 ? 'SETUP' : (n % 2 ? 'BUT' : 'THEREFORE');
+    const native = TEXTKEYS.find(k => k in q.b) || '?';
+    const tag = `${q.src}.${q.i + 1}`;
+    log.push(`${tag.padEnd(6)}${native.padEnd(10)}-> ${conn.padEnd(10)}${native.toUpperCase() === conn ? '' : 'rewritten'}`);
+    const prev = cur;
+    cur = applyBeat(cur, q.b, !!B && q.src === 'II', log, tag);
+    if (n > 0 && !diffState(prev, cur, false).length){ cur = {...cur, density:Math.min(5, cur.density + 1)}; log.push(`${tag.padEnd(6)}no change`.padEnd(22) + '-> density +1, no "and then"'); }
+    const finale = n === seq.length - 1 && seq.length > 1;
+    if (finale) cur = {...cur, density:Math.min(5, cur.density + 1)};
+    beats.push({n, conn, text:String(q.b[native] || '').trim(), src:q.src, cart:q.cart.title, cartId:q.cart.id, native, state:cur, diff:diffState(prev, cur, n === 0), finale});
+  });
+  log.push(`ok    ${beats.length} beats, strict but/therefore alternation`);
+  return {title:B ? `${A.title} × ${B.title}` : A.title, titles:[A.title, B ? B.title : null], ids:[A.id, B ? B.id : null], seed, hex, base:beats[0] ? beats[0].state : st, beats, log, solo:!B};
+}
+
+// ============================================================
+// 5. CARTRIDGES — presets
+// ============================================================
+const PRESETS = [
+`cart: 1
+id: lunar-post
+title: Lunar Post
+author: splice
+role: spine
+style:
+  art: outline
+  palette: paper
+world:
+  verb: platform
+  hero: astronaut
+cast:
+  item: letter
+  foe: blob
+beats:
+  - setup: the last mail carrier on the moon has six letters to deliver
+    set: { goal: collect, count: 6, hazards: [walker] }
+  - but: the low gravity makes every jump drift
+    add: { twists: [lowgrav] }
+  - therefore: you climb toward the relay tower to send them home
+    set: { goal: reach }
+    add: { density: 1 }
+  - but: your oxygen starts running out
+    add: { twists: [timer] }
+    set: { timer: 40, goal: collect, count: 4 }
+`,
+`cart: 1
+id: snake-pit
+title: Snake Pit
+author: splice
+role: either
+style:
+  art: solid
+  palette: paper
+world:
+  verb: topdown
+  hero: explorer
+cast:
+  item: gem
+  foe: snake
+beats:
+  - setup: an explorer drops into a temple full of gems
+    set: { goal: collect, count: 5, hazards: [walker] }
+  - but: the snakes wake up and start to hunt
+    add: { hazards: [chaser] }
+  - therefore: grab the idol and find the way out
+    set: { goal: reach }
+  - but: the floor is lined with darts
+    add: { hazards: [spikes, turret] }
+`,
+`cart: 1
+id: star-siege
+title: Star Siege
+author: splice
+role: spine
+style:
+  art: stripe
+  palette: night
+world:
+  verb: shmup
+  hero: ship
+cast:
+  item: star
+  foe: drone
+beats:
+  - setup: a lone fighter guards the last colony
+    set: { goal: defeat, count: 10, hazards: [walker] }
+  - but: the drones learn to dive at you
+    add: { hazards: [chaser] }
+  - therefore: you break through to the mothership
+    set: { goal: reach, distance: 1800 }
+    add: { hazards: [turret] }
+  - but: a meteor storm hits the whole sector
+    add: { hazards: [faller] }
+    set: { goal: survive, time: 30 }
+`,
+`cart: 1
+id: night-shift
+title: Night Shift
+author: splice
+role: spine
+style:
+  art: dither
+  palette: night
+world:
+  verb: runner
+  hero: cat
+cast:
+  item: fish
+  foe: ghost
+beats:
+  - setup: a cat sprints across the rooftops before sunrise
+    set: { goal: reach, distance: 1500, hazards: [spikes] }
+  - but: the fishmonger left his stock out on every ledge
+    set: { goal: collect, count: 8 }
+  - therefore: you keep moving or the ghosts catch up
+    add: { hazards: [chaser] }
+    set: { goal: survive, time: 30 }
+  - but: the city lights go out one by one
+    add: { twists: [dark] }
+    set: { goal: reach, distance: 1600 }
+`,
+`cart: 1
+id: glass-tower
+title: Glass Tower
+author: splice
+role: spine
+style:
+  art: outline
+  palette: night
+world:
+  verb: platform
+  hero: knight
+cast:
+  item: key
+  foe: skull
+beats:
+  - setup: a knight climbs a tower made of glass
+    set: { goal: reach, hazards: [spikes, walker] }
+  - but: the keys to each floor are scattered
+    set: { goal: collect, count: 3 }
+  - therefore: the guards start firing from the walls
+    add: { hazards: [turret] }
+    set: { goal: reach }
+  - but: the glass flips day into night
+    add: { twists: [invert, wrap] }
+    set: { goal: defeat, count: 5 }
+`,
+`cart: 1
+id: frog-market
+title: Frog Market
+author: splice
+role: either
+style:
+  art: solid
+  palette: lcd
+world:
+  verb: platform
+  hero: frog
+cast:
+  item: fly
+  foe: bat
+beats:
+  - setup: a frog needs ten flies before the market closes
+    set: { goal: collect, count: 10, hazards: [walker] }
+  - but: a storm blows in from the harbour
+    add: { twists: [wind], hazards: [faller] }
+  - therefore: you hide under the stalls until it passes
+    set: { goal: survive, time: 25 }
+`,
+`cart: 1
+id: robot-rodeo
+title: Robot Rodeo
+author: splice
+role: trouble
+style:
+  art: stripe
+  palette: lcd
+world:
+  verb: topdown
+  hero: robot
+cast:
+  item: bolt
+  foe: drone
+beats:
+  - setup: the factory robots break loose
+    add: { hazards: [walker], density: 1 }
+  - but: someone rewired your controls backwards
+    add: { twists: [mirror] }
+  - therefore: everything speeds up on the assembly line
+    add: { twists: [rush] }
+    set: { goal: defeat, count: 6 }
+`,
+`cart: 1
+id: blackout
+title: Blackout
+author: splice
+role: trouble
+style:
+  art: dither
+cast:
+  foe: eye
+beats:
+  - setup: the power grid fails
+    add: { twists: [dark] }
+  - but: something in the dark is watching you
+    add: { hazards: [chaser], density: 1 }
+  - therefore: the signal starts to break apart
+    add: { twists: [glitch] }
+    set: { goal: survive, time: 25 }
+`
+];
+const STORE = 'splice-carts-v1';
+const LIB = {}; const ORDER = [];
+function libPut(src, preset){
+  const res = parseCart(src);
+  const id = res.cart && typeof res.cart.id === 'string' ? res.cart.id : null;
+  if (!id) return res;
+  const ex = LIB[id];
+  LIB[id] = {id, src, res, cart:res.cart, ok:res.ok, preset:preset || !!(ex && ex.preset), presetSrc:preset ? src : ex && ex.presetSrc, edited:!preset && !!(ex && ex.preset) && src !== (ex && ex.presetSrc)};
+  if (!ORDER.includes(id)) ORDER.push(id);
+  return res;
+}
+function libSave(){ try { const o = {}; for (const id of ORDER){ const c = LIB[id]; if (c && (!c.preset || c.edited)) o[id] = c.src; } localStorage.setItem(STORE, JSON.stringify(o)); } catch (e){} }
+function libLoad(){ try { const o = JSON.parse(localStorage.getItem(STORE) || '{}'); for (const id in o) libPut(o[id], false); } catch (e){} }
+const cartOf = id => id && LIB[id] && LIB[id].ok ? LIB[id].cart : null;
+
+// ============================================================
+// 6. SOUND
+// ============================================================
+const AU = {ctx:null, on:true};
+function audioUnlock(){ if (!AU.ctx){ try { AU.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e){} } if (AU.ctx && AU.ctx.state === 'suspended') AU.ctx.resume().catch(() => {}); }
+const SFX = {
+  jump:[[330,660,.09,'square']], coin:[[988,988,.05,'square'],[1319,1319,.12,'square',.05]], die:[[440,60,.45,'sawtooth']],
+  shoot:[[900,300,.05,'square']], kill:[[220,60,.12,'square']], card:[[660,660,.05,'triangle']],
+  clear:[[523,523,.08,'square'],[659,659,.08,'square',.08],[784,784,.08,'square',.16],[1047,1047,.22,'square',.24]],
+  start:[[392,392,.08,'square'],[784,784,.16,'square',.08]],
+  boot:[[262,262,.12,'square'],[330,330,.12,'square',.12],[392,392,.12,'square',.24],[523,523,.34,'square',.36]],
+  crash:[[140,40,.6,'sawtooth']], end:[[523,523,.15,'square'],[392,392,.15,'square',.15],[440,440,.15,'square',.3],[523,523,.5,'square',.45]]
+};
+function sfx(name){
+  const c = AU.ctx; if (!c || !AU.on || c.state !== 'running') return;
+  const t0 = c.currentTime;
+  for (const [f0, f1, d, type, delay = 0] of SFX[name] || []){
+    const o = c.createOscillator(), g = c.createGain();
+    o.type = type; o.frequency.setValueAtTime(f0, t0 + delay); o.frequency.exponentialRampToValueAtTime(Math.max(30, f1), t0 + delay + d);
+    g.gain.setValueAtTime(.05, t0 + delay); g.gain.exponentialRampToValueAtTime(.0005, t0 + delay + d);
+    o.connect(g).connect(c.destination); o.start(t0 + delay); o.stop(t0 + delay + d + .02);
+  }
+}
+
+// ============================================================
+// 7. CONSOLE STATE MACHINE
+// ============================================================
+const G = {mode:'off', plan:null, bi:0, L:null, t:0, f:0, deaths:0, clock:0, paused:false};
+const CON = {slots:['lunar-post', 'snake-pit'], power:false, listeners:{}};
+function emit(ev, data){ (CON.listeners[ev] || []).slice().forEach(fn => { try { fn(data); } catch (e){ console.error(e); } }); }
+const IN = {keys:new Set(), pad:new Set(), prev:{a:false, start:false, up:false, select:false}};
+function readInput(){
+  const d = k => IN.keys.has(k) || IN.pad.has(k);
+  const s = {x:(d('right') ? 1 : 0) - (d('left') ? 1 : 0), y:(d('down') ? 1 : 0) - (d('up') ? 1 : 0), a:d('a'), start:d('start'), select:d('select')};
+  s.aP = s.a && !IN.prev.a; s.startP = s.start && !IN.prev.start; s.upP = s.y < 0 && !IN.prev.up; s.selectP = s.select && !IN.prev.select;
+  IN.prev = {a:s.a, start:s.start, up:s.y < 0, select:s.select};
+  return s;
+}
+const beatSeed = () => (G.plan.seed + G.bi * 7919) >>> 0;
+function toTitle(){ G.mode = 'title'; G.t = 0; }
+function toCard(){ G.mode = 'card'; G.t = 0; sfx('card'); emit('beat', G.plan.beats[G.bi]); }
+function startBeat(){ G.L = buildLevel(G.plan.beats[G.bi].state, beatSeed()); G.mode = 'play'; G.t = 0; G.paused = false; }
+function bootConsole(){
+  const A = cartOf(CON.slots[0]), B = cartOf(CON.slots[1]);
+  G.plan = weave(A, B); G.bi = 0; G.deaths = 0; G.clock = 0; G.L = null;
+  if (!G.plan){ G.mode = 'nocart'; G.t = 0; }
+  else { G.mode = 'boot'; G.t = 0; sfx('boot'); emit('weave', G.plan); }
+  renderPanel();
+}
+function tick(){
+  G.f++;
+  const I = readInput();
+  switch (G.mode){
+    case 'boot': { G.t++; const len = 40 + G.plan.log.length * 6 + 50; if (G.t > len || ((I.aP || I.startP) && G.t > 20)) toTitle(); break; }
+    case 'title': G.t++; if ((I.startP || I.aP) && G.t > 10){ G.bi = 0; G.deaths = 0; G.clock = 0; sfx('start'); toCard(); } break;
+    case 'card': { G.t++; const full = Math.ceil(G.plan.beats[G.bi].text.length / 1.6) + 10; if ((I.aP || I.startP) && G.t > 12){ if (G.t < full) G.t = full; else startBeat(); } break; }
+    case 'play':
+      if (I.startP){ G.paused = !G.paused; break; }
+      if (G.paused) break;
+      if (I.selectP) G.L.won = true;
+      G.clock++; stepLevel(G.L, I);
+      if (G.L.dead){ G.mode = 'dead'; G.t = 0; G.deaths++; sfx('die'); emit('death', {beat:G.bi, why:G.L.why}); }
+      else if (G.L.won){ G.mode = 'clear'; G.t = 0; sfx('clear'); emit('clear', {beat:G.bi}); }
+      break;
+    case 'dead':
+      G.t++; for (const f of G.L.fx){ f.x += f.vx; f.y += f.vy; f.vy += .05; f.life--; }
+      if (G.t > 75){ G.L = buildLevel(G.plan.beats[G.bi].state, beatSeed()); G.L.inv = 70; G.mode = 'play'; }
+      break;
+    case 'clear':
+      G.t++;
+      if (G.t > 80){ G.bi++; if (G.bi >= G.plan.beats.length){ G.mode = 'end'; G.t = 0; sfx('end'); emit('end', {deaths:G.deaths, frames:G.clock}); } else toCard(); }
+      break;
+    case 'end': G.t++; if ((I.startP || I.aP) && G.t > 40) toTitle(); break;
+    case 'nocart': case 'crash': G.t++; break;
+  }
+}
+
+// ---------- screens ----------
+function banner(lines){
+  const w = Math.max(...lines.map(l => tw(l))) + 14, h = lines.length * 8 + 7, x = (SW - w) >> 1, y = TOP + ((PH - h) >> 1);
+  rect(x, y, w, h, 1); frame(x - 1, y - 1, w + 2, h + 2, 0); frame(x - 2, y - 2, w + 4, h + 4, 1);
+  lines.forEach((l, i) => text(l, (SW - tw(l)) >> 1, y + 4 + i * 8, 0));
+}
+function drawHUD(){
+  const b = G.plan.beats[G.bi], L = G.L, s = L.s, V = REG.verbs[s.verb];
+  rect(0, 0, SW, TOP, 0);
+  text(`${G.bi + 1}/${G.plan.beats.length}`, 2, 2); text(b.conn, 26, 2);
+  let g;
+  if (s.goal === 'collect') g = `${plural(s.item)} ${L.got}/${s.count}`;
+  else if (s.goal === 'defeat') g = `${plural(s.foe)} ${L.kills}/${s.count}`;
+  else if (s.goal === 'survive') g = `SURVIVE ${Math.max(0, Math.ceil(s.time - L.t / 60))}`;
+  else g = V.scrolling ? `GO ${Math.min(99, Math.floor(L.dist / s.distance * 100))}%` : 'FIND THE EXIT';
+  rtext(g, SW - 2, 2);
+  const tws = s.twists.filter(t => t !== 'timer').map(t => REG.twists[t] ? REG.twists[t].label : t).join(' ').slice(0, 24);
+  text(tws, 2, 9);
+  let right = `DEATHS ${G.deaths}`;
+  if (L.tw('timer') && s.goal !== 'survive') right = `TIME ${Math.max(0, Math.ceil(s.timer - L.t / 60))}  ` + right;
+  rtext(right, SW - 2, 9);
+  hline(0, SW - 1, TOP - 1);
+}
+function drawCard(){
+  const P = G.plan, b = P.beats[G.bi], s = b.state;
+  cls(0);
+  text(`BEAT ${G.bi + 1} OF ${P.beats.length}${b.finale ? ' · FINAL' : ''}`, 8, 8);
+  rtext(P.solo ? b.cart : `SLOT ${b.src} · ${b.cart}`, SW - 8, 8);
+  hline(8, SW - 9, 16);
+  ctext(b.conn, 26, 1, 3);
+  const lines = wrapWords(b.text, 44); let left = Math.max(0, Math.floor((G.t - 8) * 1.6));
+  lines.forEach((ln, i) => { const part = ln.slice(0, Math.max(0, left)); left -= ln.length + 1; text(part, (SW - tw(ln)) >> 1, 52 + i * 8); });
+  const goal = 'GOAL  ' + goalText(s); const gw = tw(goal) + 12;
+  rect((SW - gw) >> 1, 90, gw, 11, 1); ctext(goal, 93, 0);
+  const extra = s.twists.map(t => (REG.twists[t] ? REG.twists[t].label : t) + (t === 'timer' ? ` ${s.timer}S` : ''));
+  const hz = s.hazards.map(h => plural(h));
+  if (hz.length) ctext(hz.join(' · ').slice(0, 46), 106);
+  if (extra.length) ctext(('+ ' + extra.join(' + ')).slice(0, 46), 115);
+  const full = Math.ceil(b.text.length / 1.6) + 10;
+  if (G.t >= full && (G.f >> 4) & 1) ctext('PRESS A', 129);
+}
+function drawTitle(){
+  const P = G.plan, s0 = P.base; cls(0);
+  frame(3, 3, SW - 6, SH - 6); frame(5, 5, SW - 10, SH - 10);
+  ctext(P.solo ? 'SPLICE SP-2 · SOLO CART' : 'SPLICE SP-2 · SLOT I × SLOT II', 12);
+  if (P.solo) ctext(P.titles[0], 42, 1, 2);
+  else { ctext(P.titles[0], 28, 1, 2); ctext('×', 44, 1, 2); ctext(P.titles[1], 60, 1, 2); }
+  ctext(`${REG.verbs[s0.verb].label} · ${P.beats.length} BEATS · SEED ${P.hex.slice(0, 4)}`, 80);
+  hline(12, SW - 13, 108);
+  const px = ((G.f * .6) % (SW + 80)) - 30;
+  spr(s0.foe, px - 28, 100, false, s0.art); spr(s0.hero, px, 100 - (Math.floor(G.f / 8) % 2), false, s0.art); spr(s0.item, px + 26, 99 + Math.round(Math.sin(G.f * .1)), false, s0.art);
+  if ((G.f >> 5) & 1) ctext('PRESS START', 118);
+  ctext('CART-1 PROTOCOL · BUT / THEREFORE', 130);
+}
+function drawBoot(){
+  const P = G.plan, t = G.t; cls(0);
+  ctext('SPLICE', 22, 1, 4);
+  if (t < 36){ const cut = 22 + Math.floor(t / 36 * 20); rect(0, cut, SW, 44 - cut, 0); }
+  else ctext('TWO-SLOT ENTERTAINMENT SYSTEM', 48);
+  const k = Math.max(0, Math.floor((t - 40) / 6)), shown = P.log.slice(0, k), view = shown.slice(-8);
+  view.forEach((ln, i) => text(ln.replace(/\s+/g, ' ').slice(0, 46), 4, 64 + i * 8));
+  if ((G.f >> 3) & 1) rect(4 + (view.length ? Math.min(46, view[view.length - 1].replace(/\s+/g, ' ').length) * 4 : 0), 64 + Math.max(0, view.length - 1) * 8, 3, 5);
+}
+function drawEnd(){
+  const P = G.plan; cls(0); frame(3, 3, SW - 6, SH - 6);
+  ctext('THE END', 24, 1, 3);
+  ctext(P.title, 54);
+  const secs = Math.floor(G.clock / 60);
+  ctext(`${P.beats.length} BEATS · ${G.deaths} DEATHS · ${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`, 68);
+  ctext(P.solo ? 'ADD A SECOND CART FOR A NEW GAME' : 'SWAP THE CARTS FOR A NEW GAME', 92);
+  if ((G.f >> 5) & 1) ctext('PRESS START', 116);
+}
+function drawNoCart(){
+  cls(0); ctext('NO CARTRIDGE', 34, 1, 2);
+  const x = 80, y = 60; frame(x, y, 32, 28); rect(x + 8, y + 3, 16, 2); frame(x + 4, y + 8, 24, 16); if ((G.f >> 5) & 1){ hline(x + 12, x + 20, y - 6); hline(x + 13, x + 19, y - 5); hline(x + 14, x + 18, y - 4); hline(x + 15, x + 17, y - 3); }
+  ctext('INSERT A CART INTO SLOT I', 100); ctext('THEN PRESS RESET', 110);
+}
+function drawCrash(){
+  for (let i = 0; i < FB.length; i++) FB[i] = Math.random() < .35 ? 1 : 0;
+  for (let k = 0; k < 6; k++){ const y = (Math.random() * SH) | 0; rect(0, y, SW, 1 + (Math.random() * 4 | 0), Math.random() < .5 ? 1 : 0); }
+  banner(['CARTRIDGE CHANGED', 'WHILE POWERED', 'PRESS RESET']);
+}
+function render(){
+  switch (G.mode){
+    case 'off': return;
+    case 'nocart': drawNoCart(); break;
+    case 'crash': drawCrash(); break;
+    case 'boot': drawBoot(); break;
+    case 'title': drawTitle(); break;
+    case 'card': drawCard(); break;
+    case 'end': drawEnd(); break;
+    case 'play': case 'dead': case 'clear':
+      cls(0); drawLevel(G.L); drawHUD();
+      if (G.mode === 'dead') banner(['OUCH', G.L.why || 'HIT', 'TRY AGAIN']);
+      else if (G.mode === 'clear') banner(['BEAT CLEAR', G.bi + 1 < G.plan.beats.length ? 'NEXT: ' + G.plan.beats[G.bi + 1].conn : 'LAST BEAT DONE']);
+      else if (G.paused) banner(['PAUSED', 'START TO RESUME']);
+      break;
+  }
+  blit();
+}
+
+// ---------- blit ----------
+const scr = $('scr'), sctx = scr.getContext('2d');
+const img = sctx.createImageData(SW, SH), D32 = new Uint32Array(img.data.buffer);
+const rgbCache = {};
+function abgr(hex){ if (rgbCache[hex]) return rgbCache[hex]; const n = parseInt(hex.slice(1), 16); return rgbCache[hex] = ((255 << 24) | ((n & 255) << 16) | (((n >> 8) & 255) << 8) | ((n >> 16) & 255)) >>> 0; }
+function blit(){
+  let pal = 'night', inv = false, dark = false, glitch = false;
+  if (G.plan && ['title', 'boot', 'end'].includes(G.mode)) pal = G.plan.base.palette;
+  if (G.plan && ['card', 'play', 'dead', 'clear'].includes(G.mode)){ const s = G.plan.beats[G.bi].state; pal = s.palette; inv = s.twists.includes('invert'); }
+  if (G.L && ['play', 'dead', 'clear'].includes(G.mode)){ dark = G.L.tw('dark'); glitch = G.L.tw('glitch') && G.mode === 'play'; }
+  const P = (REG.palettes[pal] || REG.palettes.paper).c;
+  let bg = abgr(P[0]), ink = abgr(P[1]); if (inv){ const t = bg; bg = ink; ink = t; }
+  const cx = dark ? G.L.p.x + G.L.p.w / 2 : 0, cy = dark ? G.L.p.y + G.L.p.h / 2 + TOP : 0, R = 38;
+  for (let y = 0; y < SH; y++){
+    let off = 0;
+    if (glitch && y >= TOP && ((y * 7 + (G.f >> 2) * 13) % 97) < 6) off = ((G.f * 31 + y * 17) % 9) - 4;
+    for (let x = 0; x < SW; x++){
+      let sx = x + off; if (sx < 0) sx += SW; else if (sx >= SW) sx -= SW;
+      let v = FB[y*SW + sx];
+      if (dark && y >= TOP && v){ const dx = x - cx, dy = y - cy, d2 = dx*dx + dy*dy; if (d2 > R*R) v = 0; else if (d2 > (R - 8) * (R - 8) && ((x + y) & 1)) v = 0; }
+      D32[y*SW + x] = v ? ink : bg;
+    }
+  }
+  sctx.putImageData(img, 0, 0);
+}
+
+// ============================================================
+// 8. UI — hardware, shelf, panel
+// ============================================================
+function spriteSVG(name){
+  const rows = SPRITE_SRC[name] || SPRITE_SRC.blob; let r = '';
+  rows.forEach((row, y) => { let x = 0; while (x < 8){ if (row[x] === '#'){ let x2 = x; while (x2 < 8 && row[x2] === '#') x2++; r += `<rect x="${x}" y="${y}" width="${x2 - x}" height="1"/>`; x = x2; } else x++; } });
+  return `<svg viewBox="0 0 8 8" shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">${r}</svg>`;
+}
+const roleMark = r => r === 'spine' ? 'I' : r === 'trouble' ? 'II' : 'I · II';
+function cartEl(c){
+  const d = document.createElement('div');
+  const w = isMap(c.world) ? c.world : {}, cs = isMap(c.cast) ? c.cast : {};
+  const icon = w.hero || cs.hero || cs.foe || 'blob';
+  d.className = 'cart pat' + (fnv(c.id) % 6);
+  d.innerHTML = `<div class="c-grip"></div><div class="c-label"><div class="c-plate"><div class="c-icon">${spriteSVG(icon)}</div><div class="c-txt"><b></b><span></span></div></div><div class="c-code"><i></i><i></i></div></div>`;
+  d.querySelector('b').textContent = c.title;
+  d.querySelector('.c-txt span').textContent = w.verb ? (REG.verbs[w.verb] ? REG.verbs[w.verb].label : w.verb) : 'Trouble cart';
+  const codes = d.querySelectorAll('.c-code i');
+  codes[0].textContent = 'SP2-' + c.id.replace(/-/g, '').slice(0, 4).toUpperCase();
+  codes[1].textContent = roleMark(c.role || 'either');
+  return d;
+}
+let toastT = 0;
+function toast(msg){ const t = $('toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 3800); }
+
+function renderSlots(animIdx){
+  for (let i = 0; i < 2; i++){
+    const box = $('slot' + i), id = CON.slots[i], c = cartOf(id);
+    box.innerHTML = '';
+    if (c){
+      const el = cartEl(c); el.setAttribute('role', 'button'); el.tabIndex = 0;
+      el.setAttribute('aria-label', `${c.title} in slot ${i ? 'II' : 'I'}. Click to eject.`); el.title = 'Click to eject';
+      if (animIdx === i) el.classList.add('in');
+      const ej = e => { if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return; e.preventDefault(); eject(i); };
+      el.addEventListener('click', ej); el.addEventListener('keydown', ej);
+      box.appendChild(el);
+    } else {
+      const g = document.createElement('button'); g.className = 'ghost'; g.innerHTML = `<b>Slot ${i ? 'II' : 'I'}</b><span>Empty</span><span>Insert a cart</span>`;
+      g.addEventListener('click', e => { if (e.detail) g.blur(); $('shelf').scrollIntoView({behavior:'smooth', block:'nearest'}); toast(`Pick a cartridge from the shelf for slot ${i ? 'II' : 'I'}.`); });
+      box.appendChild(g);
+    }
+  }
+}
+function renderShelf(){
+  const sh = $('shelf'); sh.innerHTML = '';
+  for (const id of ORDER){
+    const c = LIB[id]; if (!c) continue;
+    const b = document.createElement('button'); b.className = 'cartbtn'; b.draggable = true; b.dataset.id = id;
+    const si = CON.slots.indexOf(id);
+    if (si >= 0){ b.classList.add('inslot'); b.dataset.slot = si ? 'II' : 'I'; }
+    if (!c.ok) b.classList.add('bad');
+    b.appendChild(cartEl(c.cart));
+    const m = document.createElement('span'); m.className = 'meta';
+    const roleTxt = c.cart.role === 'spine' ? 'best in slot I' : c.cart.role === 'trouble' ? 'best in slot II' : 'works in either slot';
+    m.innerHTML = `<b></b><br>${c.ok ? roleTxt : 'has errors, open in IDE'}${c.edited ? ' · edited' : !c.preset ? ' · yours' : ''}`;
+    m.querySelector('b').textContent = c.cart.title || id;
+    if (si >= 0) m.querySelector('b').dataset.slot = si ? 'II' : 'I';
+    b.appendChild(m);
+    b.setAttribute('aria-label', `${c.cart.title}${si >= 0 ? ', in slot ' + (si ? 'II' : 'I') : ''}. ${c.ok ? 'Insert into console.' : 'Has errors.'}`);
+    b.addEventListener('click', e => { if (e.detail) b.blur(); if (!c.ok){ openInIDE(id); return; } shelfInsert(id); });
+    b.addEventListener('dragstart', e => { e.dataTransfer.setData('text/plain', id); e.dataTransfer.effectAllowed = 'move'; });
+    sh.appendChild(b);
+  }
+  const n = document.createElement('button'); n.className = 'cartbtn newcart';
+  n.innerHTML = '<div class="cart"><div class="newface">+ NEW</div></div><span class="meta"><b>Write a cartridge</b><br>opens the IDE</span>';
+  n.addEventListener('click', () => { newCart(); setView('ide'); });
+  sh.appendChild(n);
+}
+function shelfInsert(id){
+  const si = CON.slots.indexOf(id);
+  if (si >= 0){ toast(`That cart is already in slot ${si ? 'II' : 'I'}.`); return; }
+  const free = CON.slots.indexOf(null);
+  if (free < 0){ toast('Both slots are full. Click a cart in the console to eject it, or drag this one onto a slot.'); return; }
+  insert(free, id);
+}
+function insert(i, id){
+  if (!cartOf(id)) return false;
+  const other = CON.slots.indexOf(id); if (other >= 0 && other !== i) CON.slots[other] = null;
+  CON.slots[i] = id;
+  renderSlots(i); renderShelf(); emit('insert', {slot:i, id});
+  if (CON.power) crash(); else renderPanel();
+  return true;
+}
+function eject(i){
+  if (!CON.slots[i]) return;
+  const el = $('slot' + i).querySelector('.cart');
+  const id = CON.slots[i]; CON.slots[i] = null;
+  const done = () => { renderSlots(); renderShelf(); };
+  if (el && !matchMedia('(prefers-reduced-motion: reduce)').matches){ el.classList.add('out'); setTimeout(done, 280); } else done();
+  emit('eject', {slot:i, id});
+  if (CON.power) crash(); else renderPanel();
+}
+function swapSlots(){ CON.slots.reverse(); renderSlots(); renderShelf(); if (CON.power) bootConsole(); else renderPanel(); toast(CON.slots[0] && CON.slots[1] ? 'Swapped. Slot I now sets the world, slot II brings the trouble.' : 'Swapped.'); }
+function crash(){ G.mode = 'crash'; G.t = 0; G.plan = null; sfx('crash'); renderPanel(); }
+function setPower(on){
+  if (on === CON.power) return;
+  CON.power = on;
+  $('bPower').setAttribute('aria-pressed', String(on)); $('led').classList.toggle('on', on);
+  const gl = $('glass');
+  if (on){ gl.classList.remove('off', 'shut'); void gl.offsetWidth; gl.classList.add('boot'); bootConsole(); }
+  else { gl.classList.remove('boot'); gl.classList.add('shut'); setTimeout(() => { if (!CON.power){ gl.classList.add('off'); gl.classList.remove('shut'); } }, 330); G.mode = 'off'; renderPanel(); }
+  emit('power', on);
+}
+function resetConsole(){ if (!CON.power){ toast('Switch the power on first.'); return; } const gl = $('glass'); gl.classList.remove('boot'); void gl.offsetWidth; gl.classList.add('boot'); bootConsole(); }
+
+const MODE_LABEL = {off:'Off', nocart:'No cartridge', crash:'Crashed', boot:'Weaving', title:'Title screen', card:'Story card', play:'Playing', dead:'Retry', clear:'Beat clear', end:'The end'};
+function previewPlan(){ return weave(cartOf(CON.slots[0]), cartOf(CON.slots[1])); }
+function renderPlanList(ol, plan, active){
+  ol.innerHTML = '';
+  if (!plan){ ol.innerHTML = '<li class="empty">Insert a cartridge to see the story the console weaves.</li>'; return; }
+  plan.beats.forEach((b, i) => {
+    const li = document.createElement('li'); if (i === active) li.className = 'now';
+    li.innerHTML = `<span class="conn c-${b.conn.toLowerCase()}">${b.conn}</span><div><p></p><small></small><span class="diff">${b.diff.map(d => `<em>${esc(d)}</em>`).join('')}</span></div>`;
+    li.querySelector('p').textContent = b.text;
+    li.querySelector('small').textContent = `${plan.solo ? '' : 'Slot ' + b.src + ' · '}${b.cart}${b.finale ? ' · finale' : ''}`;
+    ol.appendChild(li);
+  });
+}
+function renderPanel(){
+  const plan = G.plan || previewPlan();
+  const active = ['card', 'play', 'dead', 'clear'].includes(G.mode) ? G.bi : -1;
+  renderPlanList($('beats'), plan, active);
+  $('trace').textContent = plan ? plan.log.join('\n') : 'No cartridges inserted.';
+  $('planMeta').textContent = plan ? `${plan.title} · seed ${plan.hex}` : 'no carts';
+  updateStatus();
+}
+let lastStatus = '';
+function updateStatus(){
+  const beat = active => G.plan ? `Beat ${G.bi + 1}/${G.plan.beats.length}` : '';
+  const key = [CON.power, G.mode, G.bi, G.deaths].join('|');
+  if (key === lastStatus) return; lastStatus = key;
+  $('chipPower').textContent = CON.power ? 'On' : 'Off'; $('chipPower').className = 'chip' + (CON.power ? ' rec' : '');
+  $('chipMode').textContent = MODE_LABEL[G.mode] || G.mode; $('chipMode').className = 'chip' + (G.mode === 'play' ? ' live' : '');
+  const showBeat = ['card', 'play', 'dead', 'clear'].includes(G.mode) && G.plan;
+  $('chipBeat').hidden = !showBeat; if (showBeat) $('chipBeat').textContent = `${beat()} · ${G.plan.beats[G.bi].conn}`;
+  $('rigStatus').innerHTML = `${CON.power ? 'Power on' : 'Power off'}<span>${esc(showBeat ? beat() + ' · ' + G.plan.beats[G.bi].conn + ' · deaths ' + G.deaths : (MODE_LABEL[G.mode] || ''))}</span>`;
+  if (showBeat){ $('beats').querySelectorAll('li').forEach((li, i) => li.classList.toggle('now', i === G.bi)); }
+}
+
+// controller + keyboard
+const KEYMAP = {ArrowLeft:'left', ArrowRight:'right', ArrowUp:'up', ArrowDown:'down', KeyA:'left', KeyD:'right', KeyW:'up', KeyS:'down', Space:'a', KeyZ:'a', KeyX:'a', KeyJ:'a', KeyK:'a', Enter:'start', ShiftLeft:'select', ShiftRight:'select'};
+let view = 'console';
+addEventListener('keydown', e => {
+  if (view !== 'console') return;
+  const t = e.target;
+  if (t.closest && t.closest('input,textarea,select')) return;
+  if (t.closest && t.closest('button,[role="button"],summary') && (e.code === 'Space' || e.code === 'Enter')) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = KEYMAP[e.code]; if (!k) return;
+  e.preventDefault(); IN.keys.add(k); audioUnlock();
+});
+addEventListener('keyup', e => { const k = KEYMAP[e.code]; if (k) IN.keys.delete(k); });
+addEventListener('blur', () => { IN.keys.clear(); IN.pad.clear(); });
+$('pad').querySelectorAll('[data-k]').forEach(b => {
+  const k = b.dataset.k;
+  const down = e => { e.preventDefault(); audioUnlock(); IN.pad.add(k); b.classList.add('held'); try { b.setPointerCapture(e.pointerId); } catch (_){ } };
+  const up = () => { IN.pad.delete(k); b.classList.remove('held'); };
+  b.addEventListener('pointerdown', down); b.addEventListener('pointerup', up); b.addEventListener('pointercancel', up); b.addEventListener('lostpointercapture', up);
+  b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); IN.pad.add(k); b.classList.add('held'); } });
+  b.addEventListener('keyup', e => { if (e.key === 'Enter' || e.key === ' ') up(); });
+  b.addEventListener('contextmenu', e => e.preventDefault());
+});
+function press(k, ms = 120){ IN.pad.add(k); setTimeout(() => IN.pad.delete(k), ms); }
+$('bPower').addEventListener('click', e => { if (e.detail) e.currentTarget.blur(); audioUnlock(); setPower(!CON.power); });
+$('bReset').addEventListener('click', e => { if (e.detail) e.currentTarget.blur(); audioUnlock(); resetConsole(); });
+$('bSwap').addEventListener('click', e => { if (e.detail) e.currentTarget.blur(); swapSlots(); });
+$('bSound').addEventListener('click', e => { AU.on = !AU.on; e.currentTarget.setAttribute('aria-pressed', String(AU.on)); e.currentTarget.textContent = AU.on ? 'Sound on' : 'Sound off'; if (AU.on) audioUnlock(); if (e.detail) e.currentTarget.blur(); });
+$('bEditI').addEventListener('click', () => { const id = CON.slots[0] || CON.slots[1]; if (id) openInIDE(id); else { newCart(); setView('ide'); } });
+for (let i = 0; i < 2; i++){
+  const box = $('slot' + i);
+  box.addEventListener('dragover', e => { e.preventDefault(); box.classList.add('drop'); });
+  box.addEventListener('dragleave', () => box.classList.remove('drop'));
+  box.addEventListener('drop', e => { e.preventDefault(); box.classList.remove('drop'); const id = e.dataTransfer.getData('text/plain'); if (id && cartOf(id)) insert(i, id); });
+}
+
+// ============================================================
+// 9. IDE
+// ============================================================
+const ED = {id:null, wSlot:0, timer:0};
+const srcEl = $('src'), hlEl = $('hl'), gutEl = $('gutter');
+const CONN_RE = /^(setup|but|therefore)$/, OP_RE = /^(set|add|drop)$/;
+function isVocab(w){ return !!(REG.verbs[w] || REG.hazards[w] || REG.twists[w] || REG.goals[w] || REG.arts[w] || REG.palettes[w] || SP[w]); }
+function hlLine(line){
+  let code = line, com = '';
+  const m = line.match(/(^|\s)#.*$/);
+  if (m){ code = line.slice(0, m.index + m[1].length); com = line.slice(m.index + m[1].length); }
+  let out = '';
+  const lead = code.match(/^(\s*)(-\s+)?/); out += esc(lead[1]); if (lead[2]) out += `<span class="t-dash">${esc(lead[2])}</span>`;
+  const rest = code.slice(lead[0].length);
+  const re = /([A-Za-z_][\w-]*)(\s*:)(?=\s|$|[\]},])|(-?\d+(?:\.\d+)?)(?![\w-])|([\[\]{},])|("[^"]*"|'[^']*')|([^\s\[\]{},]+|\s+)/g;
+  let t;
+  while ((t = re.exec(rest))){
+    if (t[1]){ const w = t[1], lw = w.toLowerCase(); const cl = CONN_RE.test(w) ? 't-conn' : OP_RE.test(w) ? 't-op' : BADKEYS.includes(lw) ? 't-bad' : 't-key'; out += `<span class="${cl}">${esc(w)}</span>${esc(t[2])}`; }
+    else if (t[3]) out += `<span class="t-num">${esc(t[3])}</span>`;
+    else if (t[4]) out += `<span class="t-punc">${esc(t[4])}</span>`;
+    else if (t[5]) out += esc(t[5]);
+    else if (t[6]) out += isVocab(t[6]) ? `<span class="t-voc">${esc(t[6])}</span>` : esc(t[6]);
+  }
+  if (com) out += `<span class="t-com">${esc(com)}</span>`;
+  return out;
+}
+function edRefresh(){
+  const src = srcEl.value, lines = src.split('\n');
+  hlEl.innerHTML = lines.map(hlLine).join('\n') + '\n ';
+  const res = parseCart(src);
+  const sev = {}; res.issues.forEach(x => { if (!sev[x.line] || x.sev === 'error') sev[x.line] = x.sev; });
+  gutEl.innerHTML = lines.map((_, i) => `<div class="${sev[i + 1] === 'error' ? 'err' : sev[i + 1] === 'warn' ? 'warn' : ''}">${i + 1}</div>`).join('') + '<div>&nbsp;</div>';
+  const errs = res.issues.filter(x => x.sev === 'error').length, warns = res.issues.length - errs;
+  const st = $('edState');
+  st.textContent = errs ? `${errs} error${errs > 1 ? 's' : ''}` : warns ? `Valid · ${warns} warning${warns > 1 ? 's' : ''}` : 'Valid';
+  st.className = 'chip' + (errs ? ' rec' : ' live');
+  const pl = $('problems'); pl.innerHTML = '';
+  if (!res.issues.length){ pl.innerHTML = '<li class="ok">No problems. Every beat changes the rules and joins with but or therefore.</li>'; }
+  res.issues.slice().sort((a, b) => (a.sev === b.sev ? a.line - b.line : a.sev === 'error' ? -1 : 1)).forEach(x => {
+    const li = document.createElement('li'); li.className = x.sev === 'error' ? 'err' : 'warn';
+    li.innerHTML = `<b>L${x.line}</b><i>${x.sev === 'error' ? 'Error' : 'Warn'}</i><span></span>`; li.querySelector('span').textContent = x.msg;
+    li.addEventListener('click', () => gotoLine(x.line)); pl.appendChild(li);
+  });
+  const fid = res.cart && typeof res.cart.id === 'string' ? res.cart.id : (ED.id || 'cart');
+  $('fname').textContent = fid + '.cart.yaml';
+  ['bBurn', 'bPlayI', 'bPlayII'].forEach(id => $(id).disabled = !res.ok);
+  ED.res = res; syncScroll(); renderWeavePreview();
+}
+function gotoLine(n){ const lines = srcEl.value.split('\n'); let pos = 0; for (let i = 0; i < n - 1 && i < lines.length; i++) pos += lines[i].length + 1; srcEl.focus(); srcEl.setSelectionRange(pos, pos + (lines[n - 1] || '').length); srcEl.scrollTop = Math.max(0, (n - 4) * 20); syncScroll(); }
+function syncScroll(){ hlEl.scrollTop = srcEl.scrollTop; hlEl.scrollLeft = srcEl.scrollLeft; gutEl.scrollTop = srcEl.scrollTop; }
+srcEl.addEventListener('scroll', syncScroll);
+srcEl.addEventListener('input', () => { hlEl.innerHTML = srcEl.value.split('\n').map(hlLine).join('\n') + '\n '; syncScroll(); clearTimeout(ED.timer); ED.timer = setTimeout(edRefresh, 160); });
+srcEl.addEventListener('keydown', e => {
+  if (e.key === 'Tab'){ e.preventDefault(); const s = srcEl.selectionStart, en = srcEl.selectionEnd; srcEl.setRangeText('  ', s, en, 'end'); srcEl.dispatchEvent(new Event('input')); }
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's'){ e.preventDefault(); burn(); }
+});
+function renderLib(){
+  const ul = $('libList'); ul.innerHTML = '';
+  for (const id of ORDER){
+    const c = LIB[id]; if (!c) continue;
+    const li = document.createElement('li'), b = document.createElement('button');
+    b.setAttribute('aria-current', String(id === ED.id));
+    b.innerHTML = `<b></b><span></span>`;
+    b.querySelector('b').textContent = c.cart.title || id;
+    if (c.edited) b.querySelector('b').insertAdjacentHTML('beforeend', '<span class="tag">edited</span>');
+    else if (!c.preset) b.querySelector('b').insertAdjacentHTML('beforeend', '<span class="tag">yours</span>');
+    if (!c.ok) b.querySelector('b').insertAdjacentHTML('beforeend', '<span class="tag">errors</span>');
+    b.querySelector('span').textContent = id + '.cart.yaml';
+    b.addEventListener('click', () => loadIntoEditor(id));
+    li.appendChild(b); ul.appendChild(li);
+  }
+  $('libCount').textContent = ORDER.length + ' carts';
+  const sel = $('wPartner'), cur = sel.value; sel.innerHTML = '<option value="">None (solo)</option>';
+  for (const id of ORDER){ if (!LIB[id].ok) continue; const o = document.createElement('option'); o.value = id; o.textContent = LIB[id].cart.title; sel.appendChild(o); }
+  sel.value = ORDER.includes(cur) ? cur : (ORDER.includes('snake-pit') && ED.id !== 'snake-pit' ? 'snake-pit' : 'lunar-post');
+}
+function loadIntoEditor(id){
+  const c = LIB[id]; if (!c) return;
+  ED.id = id; srcEl.value = c.src; srcEl.scrollTop = 0; srcEl.scrollLeft = 0;
+  $('bRestore').hidden = !c.edited; $('bDelete').hidden = c.preset; $('bDelete').textContent = 'Delete'; $('bDelete').dataset.armed = '';
+  renderLib(); edRefresh();
+}
+function newCart(){
+  let n = 1, id = 'my-cart'; while (LIB[id]) id = 'my-cart-' + (++n);
+  ED.id = null;
+  srcEl.value = `cart: 1
+id: ${id}
+title: My Cart
+author: you
+role: either
+style:
+  art: outline
+  palette: paper
+world:
+  verb: platform
+  hero: knight
+cast:
+  item: coin
+  foe: blob
+beats:
+  - setup: a hero wakes up in a strange place
+    set: { goal: collect, count: 5, hazards: [walker] }
+  - but: the floor starts to fall away
+    add: { hazards: [faller] }
+  - therefore: run for the exit before it collapses
+    set: { goal: reach }
+`;
+  $('bRestore').hidden = true; $('bDelete').hidden = true;
+  renderLib(); edRefresh();
+}
+function burn(quiet){
+  const res = parseCart(srcEl.value);
+  if (!res.ok){ toast('Fix the errors before burning. The problems list shows where.'); return null; }
+  libPut(srcEl.value, false); libSave();
+  ED.id = res.cart.id;
+  $('bRestore').hidden = !LIB[ED.id].edited; $('bDelete').hidden = LIB[ED.id].preset;
+  renderLib(); renderShelf(); renderSlots(); renderPanel();
+  if (!quiet) toast(`Burned ${res.cart.title} to the shelf.`);
+  return res.cart.id;
+}
+function playFromEditor(slot){
+  const id = burn(true); if (!id) return;
+  setView('console');
+  const other = CON.slots[1 - slot] === id ? null : CON.slots[1 - slot];
+  CON.slots[slot] = id; CON.slots[1 - slot] = other;
+  renderSlots(slot); renderShelf();
+  audioUnlock();
+  if (CON.power) resetConsole(); else setPower(true);
+  toast(`${LIB[id].cart.title} is in slot ${slot ? 'II' : 'I'}. Press Start.`);
+}
+function openInIDE(id){ setView('ide'); loadIntoEditor(id); }
+function renderWeavePreview(){
+  const res = ED.res, partner = cartOf($('wPartner').value);
+  let plan = null;
+  if (res && res.ok){ const me = res.cart; const p = partner && partner.id !== me.id ? partner : null; plan = ED.wSlot === 0 ? weave(me, p) : weave(p || me, p ? me : null); }
+  renderPlanList($('wBeats'), plan, -1);
+  if (!plan) $('wBeats').innerHTML = '<li class="empty">Fix the errors to preview the weave.</li>';
+  $('wTrace').textContent = plan ? plan.log.join('\n') : '';
+}
+$('wPartner').addEventListener('change', renderWeavePreview);
+$('wI').addEventListener('click', () => { ED.wSlot = 0; $('wI').setAttribute('aria-selected', 'true'); $('wI').setAttribute('aria-checked', 'true'); $('wII').setAttribute('aria-selected', 'false'); $('wII').setAttribute('aria-checked', 'false'); renderWeavePreview(); });
+$('wII').addEventListener('click', () => { ED.wSlot = 1; $('wII').setAttribute('aria-selected', 'true'); $('wII').setAttribute('aria-checked', 'true'); $('wI').setAttribute('aria-selected', 'false'); $('wI').setAttribute('aria-checked', 'false'); renderWeavePreview(); });
+$('bBurn').addEventListener('click', () => burn());
+$('bPlayI').addEventListener('click', () => playFromEditor(0));
+$('bPlayII').addEventListener('click', () => playFromEditor(1));
+$('bNew').addEventListener('click', newCart);
+$('bCopy').addEventListener('click', async () => { try { await navigator.clipboard.writeText(srcEl.value); toast('Copied the YAML.'); } catch (e){ srcEl.focus(); srcEl.select(); toast('Selected the YAML. Press Ctrl+C or Cmd+C to copy.'); } });
+$('bRestore').addEventListener('click', () => { const c = LIB[ED.id]; if (!c || !c.presetSrc) return; libPut(c.presetSrc, true); libSave(); loadIntoEditor(ED.id); renderShelf(); renderSlots(); renderPanel(); toast('Restored the original cartridge.'); });
+$('bDelete').addEventListener('click', e => {
+  const b = e.currentTarget, id = ED.id; if (!id || !LIB[id] || LIB[id].preset) return;
+  if (!b.dataset.armed){ b.dataset.armed = '1'; b.textContent = 'Click again to delete'; setTimeout(() => { b.dataset.armed = ''; b.textContent = 'Delete'; }, 3000); return; }
+  libRemove(id); toast('Deleted the cartridge.');
+});
+function libRemove(id){
+  if (!LIB[id] || LIB[id].preset) return false;
+  delete LIB[id]; ORDER.splice(ORDER.indexOf(id), 1); libSave();
+  CON.slots = CON.slots.map(s => s === id ? null : s);
+  renderShelf(); renderSlots(); renderPanel();
+  if (ED.id === id) loadIntoEditor(ORDER[0]);
+  else renderLib();
+  return true;
+}
+
+// ============================================================
+// 10. DOCS — vocabulary from the live registry
+// ============================================================
+function renderVocab(){
+  const tbl = (title, reg, extra) => `<h3>${title}</h3><div class="tbl"><table><thead><tr><th>Name</th><th>Meaning</th></tr></thead><tbody>${Object.entries(reg).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${esc(v.desc || v.label || '')}${extra ? extra(k, v) : ''}</td></tr>`).join('')}</tbody></table></div>`;
+  $('vocab').innerHTML =
+    tbl('Verbs <code>world.verb</code>', REG.verbs) + tbl('Goals <code>goal</code>', REG.goals) + tbl('Hazards <code>hazards</code>', REG.hazards) +
+    tbl('Twists <code>twists</code>', REG.twists) + tbl('Art <code>style.art</code>', REG.arts) + tbl('Palettes <code>style.palette</code>', REG.palettes, (k, v) => ` <code>${v.c.join(' / ')}</code>`) +
+    `<h3>Sprites <code>hero item foe</code></h3><div class="vgrid">${Object.keys(SPRITE_SRC).map(k => `<figure>${spriteSVG(k)}<figcaption>${esc(k)}</figcaption></figure>`).join('')}</div>`;
+}
+
+// ============================================================
+// 11. VIEWS, PUBLIC API, BOOT
+// ============================================================
+const HINTS = {console:'Insert two cartridges, switch the power on, press Start.', ide:'Write a cartridge in CART-1 YAML. It validates and weaves as you type.', protocol:'How carts are written, checked and woven together.', api:'Drive the console and extend the language from JavaScript.'};
+function setView(v){
+  view = v;
+  document.querySelectorAll('.seg [role="tab"]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.v === v)));
+  ['console', 'ide', 'protocol', 'api'].forEach(n => $('v-' + n).hidden = n !== v);
+  $('viewHint').textContent = HINTS[v];
+  if (v === 'ide'){ if (!ED.id && !srcEl.value) loadIntoEditor(CON.slots[0] || ORDER[0]); else edRefresh(); }
+  if (v === 'protocol') renderVocab();
+  IN.keys.clear();
+  try { history.replaceState(null, '', v === 'console' ? location.pathname + location.search : '#' + v); } catch (e){}
+}
+document.querySelectorAll('.seg [role="tab"]').forEach((b, i, all) => {
+  b.addEventListener('click', () => setView(b.dataset.v));
+  b.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ e.preventDefault(); const n = all[(i + (e.key === 'ArrowRight' ? 1 : all.length - 1)) % all.length]; n.focus(); setView(n.dataset.v); } });
+});
+
+function refreshAfterRegister(){ for (const id of ORDER) libPut(LIB[id].src, LIB[id].preset && !LIB[id].edited); renderVocab(); renderShelf(); renderSlots(); renderPanel(); if (view === 'ide') edRefresh(); }
+const resolveCart = x => typeof x === 'string' ? cartOf(x) : x && x.cart === 1 ? x : null;
+window.Splice = {
+  version:'1.0.0', protocol:'CART-1',
+  parse:parseCart, validate,
+  weave:(a, b) => weave(resolveCart(a), resolveCart(b)),
+  vocab:() => ({verbs:Object.keys(REG.verbs), hazards:Object.keys(REG.hazards), twists:Object.keys(REG.twists), goals:Object.keys(REG.goals), arts:Object.keys(REG.arts), palettes:Object.keys(REG.palettes), sprites:Object.keys(SPRITE_SRC)}),
+  library:{
+    list:() => ORDER.slice(), get:id => LIB[id] ? LIB[id].cart : null,
+    add(src){ const r = parseCart(src); if (r.ok){ libPut(src, false); libSave(); renderShelf(); renderLib(); } return r; },
+    remove:libRemove
+  },
+  console:{
+    insert:(slot, id) => insert(slot ? 1 : 0, id), eject:slot => eject(slot ? 1 : 0), swap:swapSlots,
+    power:on => { audioUnlock(); setPower(on === undefined ? !CON.power : !!on); }, reset:resetConsole, press,
+    on(ev, fn){ (CON.listeners[ev] = CON.listeners[ev] || []).push(fn); return () => { CON.listeners[ev] = CON.listeners[ev].filter(f => f !== fn); }; },
+    get plan(){ return G.plan; },
+    get status(){ return {power:CON.power, mode:G.mode, beat:G.plan ? G.bi : null, deaths:G.deaths, slots:CON.slots.slice()}; }
+  },
+  register:{
+    verb(name, mod){ if (!mod || typeof mod.build !== 'function' || typeof mod.update !== 'function' || typeof mod.solid !== 'function') throw new Error('A verb needs build, update and solid functions.'); mod.spots = mod.spots || (() => []); REG.verbs[name] = mod; refreshAfterRegister(); },
+    hazard(name, mod){ if (!mod || typeof mod.update !== 'function') throw new Error('A hazard needs an update function.'); REG.hazards[name] = Object.assign({init(){}, tick(){}}, mod); refreshAfterRegister(); },
+    twist(name, mod){ REG.twists[name] = Object.assign({label:name, desc:''}, mod); refreshAfterRegister(); },
+    art(name, mod){ if (!mod || typeof mod.fn !== 'function') throw new Error('An art style needs fn(x, y, edge).'); REG.arts[name] = mod; refreshAfterRegister(); },
+    palette(name, mod){ if (!mod || !Array.isArray(mod.c) || mod.c.length !== 2) throw new Error('A palette needs c: [paper, ink].'); REG.palettes[name] = mod; refreshAfterRegister(); },
+    sprite(name, rows){ if (!Array.isArray(rows) || rows.length !== 8) throw new Error('A sprite is eight strings of eight characters.'); prepSprite(name, rows); refreshAfterRegister(); }
+  }
+};
+
+// boot
+PRESETS.forEach(src => libPut(src, true));
+libLoad();
+CON.slots = CON.slots.map(id => cartOf(id) ? id : null);
+renderShelf(); renderSlots(); renderPanel(); renderLib();
+const hv = (location.hash || '').slice(1);
+if (['ide', 'protocol', 'api'].includes(hv)) setView(hv);
+setPower(true);
+
+let last = performance.now(), acc = 0, uiT = 0;
+function loop(now){
+  const dt = Math.min(.1, (now - last) / 1000); last = now;
+  if (CON.power){
+    acc += dt; let n = 0;
+    while (acc >= 1/60 && n < 5){ tick(); acc -= 1/60; n++; }
+    if (n >= 5) acc = 0;
+    render();
+  } else acc = 0;
+  if (now - uiT > 120){ uiT = now; updateStatus(); }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+})();
+</script>
+
+</body></html>
